@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>python3-textile</Name>
+		<Homepage>https://textile-lang.com/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>asis</License>
+		<IsA>library</IsA>
+		<Summary>A Python port of Textile, A humane web text generator.</Summary>
+		<Description>
+			Python-textile is a Python port of Textile, Dean Allen’s humane web text generator.
+		</Description>
+		<Archive sha1sum="7c479bfd5d20d02a13687ff5b907345dfd093427" type="targz">
+			https://github.com/textile/python-textile/archive/4.0.1.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>python3</Dependency>
+			<Dependency>python3-setuptools</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>python3-textile</Name>
+		<RuntimeDependencies>
+			<Dependency>python3-pillow</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="all">/</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-03-03</Date>
+			<Version>4.0.1</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

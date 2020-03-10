@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>libdazzle</Name>
+		<Homepage>https://gitlab.gnome.org/GNOME/libdazzle</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>library</IsA>
+		<Summary>The libdazzle library is a companion library to GObject and Gtk+.</Summary>
+		<Description>
+			The libdazzle library is a companion library to GObject and Gtk+. It provides various features that we wish were in the underlying library but cannot for various reasons. In most cases, they are wildly out of scope for those libraries. In other cases, our design isn't quite generic enough to work for everyone.
+		</Description>
+		<Archive sha1sum="9a91998e19b9337d44cbd4843b7112144b5ce22b" type="tarxz">
+			https://download.gnome.org/sources/libdazzle/3.34/libdazzle-3.34.1.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>meson</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>vala-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>libdazzle</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>libdazzle-devel</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency release="current">libdazzle</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+			<Path fileType="header">/usr/include</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-01-30</Date>
+			<Version>3.34.1</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>compiz-core</Name>
+		<Homepage>https://gitlab.com/compiz/compiz-core</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>MIT</License>
+		<License>GPLv2</License>
+		<License>LGPLv2.1</License>
+		<IsA>app</IsA>
+		<IsA>library</IsA>
+		<Summary>Compiz 0.8.x core project.</Summary>
+		<Description>
+			Compiz is an OpenGL compositing manager that uses GLX_EXT_texture_from_pixmap for binding redirected top-level windows to texture objects. It has a flexible plug-in system and it is designed to run well on most graphics hardware.
+		</Description>
+		<Archive sha1sum="93d486bb8a1a19b67bf22bb313ec075753765ad6" type="tarxz">
+			https://gitlab.com/compiz/compiz-core/uploads/96d2abf9f25c4900a3bdc191e2c6033d/compiz-0.8.16.1.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>intltool</Dependency>
+			<Dependency>dbus-devel</Dependency>
+			<Dependency>fuse-devel</Dependency>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>libSM-devel</Dependency>
+			<Dependency>libXi-devel</Dependency>
+			<Dependency>libpng-devel</Dependency>
+			<Dependency>librsvg-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+			<Dependency>libxslt-devel</Dependency>
+			<Dependency>libwnck2-devel</Dependency>
+			<Dependency>mesa-glu-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>libXcursor-devel</Dependency>
+			<Dependency>libXinerama-devel</Dependency>
+			<Dependency>desktop-file-utils</Dependency>
+			<Dependency>libXcomposite-devel</Dependency>
+			<Dependency>libjpeg-turbo-devel</Dependency>
+			<Dependency>startup-notification-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>compiz-core</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>dbus</Dependency>
+			<Dependency>fuse</Dependency>
+			<Dependency>gtk2</Dependency>
+			<Dependency>mesa</Dependency>
+			<Dependency>zlib</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>libSM</Dependency>
+			<Dependency>libXi</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libICE</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libpng</Dependency>
+			<Dependency>libXext</Dependency>
+			<Dependency>librsvg</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>libwnck2</Dependency>
+			<Dependency>mesa-glu</Dependency>
+			<Dependency>libXfixes</Dependency>
+			<Dependency>libXrandr</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libXcursor</Dependency>
+			<Dependency>libXdamage</Dependency>
+			<Dependency>libXrender</Dependency>
+			<Dependency>libXinerama</Dependency>
+			<Dependency>libXcomposite</Dependency>
+			<Dependency>startup-notification</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>compiz-core-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">compiz-core</Dependency>
+			<Dependency>startup-notification-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+			<Dependency>libICE-devel</Dependency>
+			<Dependency>libSM-devel</Dependency>
+			<Dependency>libXcomposite-devel</Dependency>
+			<Dependency>libXinerama-devel</Dependency>
+			<Dependency>libXcursor-devel</Dependency>
+			<Dependency>libXdamage-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>libXext-devel</Dependency>
+			<Dependency>libXi-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+			<Path fileType="header">/usr/include</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="2">
+			<Date>2019-12-26</Date>
+			<Version>0.8.16.1</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

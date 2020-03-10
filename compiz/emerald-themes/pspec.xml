@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>emerald-themes</Name>
+		<Homepage>https://gitlab.com/compiz/emerald-themes</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<License>GPLv3</License>
+		<IsA>data</IsA>
+		<Summary>Themes for Emerald Compiz decorator.</Summary>
+		<Description>Themes for Emerald Compiz decorator.</Description>
+		<Archive sha1sum="853d20006af23b33a701a0a00600f3b45cb4ae6e" type="tarxz">
+			https://gitlab.com/compiz/emerald-themes/uploads/59fb196746698e41ed0f16988600b216/emerald-themes-0.8.16.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<!--
+			<Dependency></Dependency>
+			-->
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>emerald-themes</Name>
+		<RuntimeDependencies>
+			<!--
+			<Dependency></Dependency>
+			-->
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-12-26</Date>
+			<Version>0.8.16</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

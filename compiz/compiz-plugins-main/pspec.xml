@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>compiz-plugins-main</Name>
+		<Homepage>https://gitlab.com/compiz/compiz-plugins-main</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>library</IsA>
+		<Summary>compiz-plugins-main 0.8.x project.</Summary>
+		<Description>Futher development of Compiz 0.8.x series (compiz-reloaded).</Description>
+		<Archive sha1sum="b76632507a517f2685be15617391a1d24aac87ad" type="tarxz">
+			https://gitlab.com/compiz/compiz-plugins-main/uploads/04ce73e38045e608944b5ec668820f18/compiz-plugins-main-0.8.16.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>bcop</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>intltool</Dependency>
+			<Dependency>pango-devel</Dependency>
+			<Dependency>gettext-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+			<Dependency>librsvg-devel</Dependency>
+			<Dependency>mesa-glu-devel</Dependency>
+			<Dependency>compiz-core-devel</Dependency>
+			<Dependency>util-linux</Dependency>
+			<Dependency>libxslt-devel</Dependency>
+			<Dependency>libjpeg-turbo-devel</Dependency>
+			<Dependency>at-spi2-atk-devel</Dependency>
+			<Dependency>at-spi2-core-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>compiz-plugins-main</Name>
+		<RuntimeDependencies>
+			<Dependency>dbus</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>libSM</Dependency>
+			<Dependency>libXi</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libICE</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libgcc</Dependency>
+			<Dependency>libXext</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>mesa-glu</Dependency>
+			<Dependency>libXfixes</Dependency>
+			<Dependency>libXrandr</Dependency>
+			<Dependency>libXcursor</Dependency>
+			<Dependency>libXdamage</Dependency>
+			<Dependency>libXrender</Dependency>
+			<Dependency>libXinerama</Dependency>
+			<Dependency>at-spi2-core</Dependency>
+			<Dependency>libXcomposite</Dependency>
+			<Dependency>libjpeg-turbo</Dependency>
+			<Dependency>startup-notification</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>compiz-plugins-main-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">compiz-plugins-main</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+			<Path fileType="header">/usr/include</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="2">
+			<Date>2019-12-26</Date>
+			<Version>0.8.16</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

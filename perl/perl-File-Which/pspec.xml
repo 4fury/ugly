@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>perl-File-Which</Name>
+		<Homepage>https://metacpan.org/pod/File::Which</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv1</License>
+		<License>Artistic</License>
+		<IsA>library</IsA>
+		<Summary>File::Which - Perl implementation of the which utility as an API.</Summary>
+		<Description>
+			File::Which finds the full or relative paths to executable programs on the system. This is normally the function of which utility. which is typically implemented as either a program or a built in shell command. On some platforms, such as Microsoft Windows it is not provided as part of the core operating system. This module provides a consistent API to this functionality regardless of the underlying platform.
+		</Description>
+		<Archive sha1sum="3a1b54e0a4e470e62958749cffcf87bad027bfb4" type="targz">
+			https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-Which-1.23.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<!--
+			<Dependency></Dependency>
+			-->
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>perl-File-Which</Name>
+		<RuntimeDependencies>
+			<!--
+			<Dependency></Dependency>
+			-->
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+			<Path fileType="man">/usr/share/man</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-12-12</Date>
+			<Version>1.23</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>

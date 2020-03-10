@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>compizconfig-python</Name>
+		<Homepage>https://gitlab.com/compiz/compizconfig-python</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>library</IsA>
+		<Summary>compizconfig-python 0.8.x project.</Summary>
+		<Description>
+			Python bindings for libraries/plugins for compizconfig-settings. Futher development of Compiz 0.8.x series (compiz-reloaded).
+		</Description>
+		<Archive sha1sum="7dec3569289d8e69a7fa50d91459289be36659a3" type="tarxz">
+			https://gitlab.com/compiz/compizconfig-python/uploads/fd7870f01f72f594bc6f284ae5719d38/compizconfig-python-0.8.16.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cython</Dependency>
+			<Dependency>python-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>libcompizconfig-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>compizconfig-python</Name>
+		<RuntimeDependencies>
+			<Dependency>glib2</Dependency>
+			<Dependency>libSM</Dependency>
+			<Dependency>libXi</Dependency>
+			<Dependency>libICE</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libXext</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>libXfixes</Dependency>
+			<Dependency>libXrandr</Dependency>
+			<Dependency>libXcursor</Dependency>
+			<Dependency>libXdamage</Dependency>
+			<Dependency>libXinerama</Dependency>
+			<Dependency>libXcomposite</Dependency>
+			<Dependency>libcompizconfig</Dependency>
+			<Dependency>startup-notification</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+			<Path fileType="library">/usr/lib/python2.7</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-12-26</Date>
+			<Version>0.8.16</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

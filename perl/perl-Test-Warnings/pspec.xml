@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>perl-Test-Warnings</Name>
+		<Homepage>https://metacpan.org/pod/Test::Warnings</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv1</License>
+		<License>Artistic</License>
+		<IsA>library</IsA>
+		<Summary>Test::Warnings - Test for warnings and the lack of them.</Summary>
+		<Description>This module is intended to be used as a drop-in replacement for Test::NoWarnings.</Description>
+		<Archive sha1sum="9bbad94d0fbfcda31d0f7b2c3945791ad4674810" type="targz">
+			https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Warnings-0.027.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<!--
+			<Dependency></Dependency>
+			-->
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>perl-Test-Warnings</Name>
+		<RuntimeDependencies>
+			<!--
+			<Dependency></Dependency>
+			-->
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+			<Path fileType="man">/usr/share/man</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-12-12</Date>
+			<Version>0.027</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>bcop</Name>
+		<Homepage>https://gitlab.com/compiz/compiz-bcop</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>library</IsA>
+		<Summary>compiz-bcop 0.8.x project.</Summary>
+		<Description>Futher development of Compiz 0.8.x series (compiz-reloaded).</Description>
+		<Archive sha1sum="a82b60d1fed42b01efef81b37bb06c80408f51b8" type="tarxz">
+			https://gitlab.com/compiz/compiz-bcop/uploads/f304a07726d865d3b7b3a6fec3be1ba7/compiz-bcop-0.8.16.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>libxslt-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>bcop</Name>
+		<RuntimeDependencies>
+			<!--
+			<Dependency></Dependency>
+			-->
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin/bcop</Path>
+			<Path fileType="data">/usr/share/bcop/bcop.xslt</Path>
+			<Path fileType="header">/usr/share/pkgconfig</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-12-26</Date>
+			<Version>0.8.16</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

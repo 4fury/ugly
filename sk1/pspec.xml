@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>sk1</Name>
+		<Homepage>https://sk1project.net/sk1/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<Summary>sK1 2.0 - advanced vector graphics editor.</Summary>
+		<Description>
+			sK1 is an open source cross-platform vector graphics editor like CorelDRAW, Adobe Illustrator, or Freehand. The major feature of sK1 is a professional precise printing and prepress ready PDF output.
+		</Description>
+		<Archive sha1sum="aef5f1f838faf145bc222b6a9d7cb4b8c411d946" type="targz">
+			https://downloads.sk1project.net/sk1/2.0rc4/sk1-2.0rc4.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>lcms2-devel</Dependency>
+			<Dependency>wxGTK-devel</Dependency>
+			<Dependency>python3-devel</Dependency>
+			<Dependency>python3-setuptools</Dependency>
+			<Dependency>imagemagick-devel</Dependency>
+			<Dependency>python3-cairo-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>sk1</Name>
+		<RuntimeDependencies>
+			<Dependency>wxGTK2.8</Dependency>
+			<Dependency>wxPython</Dependency>
+			<Dependency>python3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>lcms2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>imagemagick</Dependency>
+			<!-- <Dependency>uniconverter</Dependency> -->
+			<Dependency>python3-cups</Dependency>
+			<Dependency>python3-pillow</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib/sk1-wx-2.0rc4</Path>
+			<Path fileType="data">/usr/lib/sk1-wx-2.0rc4/LICENSE</Path>
+			<Path fileType="data">/usr/share/applications</Path>
+			<Path fileType="data">/usr/share/icons</Path>
+			<Path fileType="data">/usr/share/pixmaps</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-01-25</Date>
+			<Version>2.0_rc4</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>gtk-theme-vertex</Name>
+		<Homepage>https://github.com/horst3180/vertex-theme</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>data</IsA>
+		<Summary>Vertex is a theme for GTK 3, GTK 2, Gnome-Shell and Cinnamon.</Summary>
+		<Description>
+			Vertex is a theme for GTK 3, GTK 2, Gnome-Shell and Cinnamon. It supports GTK 3 and GTK 2 based desktop environments like Gnome, Cinnamon, Mate, XFCE, Budgie, Pantheon, etc. Themes for the Browsers Chrome/Chromium and Firefox are included, too.
+		</Description>
+		<Archive sha1sum="852e8119990ae95aafde3e5d8b776bece145db89" type="targz">
+			https://github.com/Kogiku/vertex-theme/archive/20180519.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>sassc</Dependency>
+			<Dependency>libsass-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>gtk-theme-vertex</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk2-engines-murrine</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="data">/usr/share/themes</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-03-03</Date>
+			<Version>2018.05.19</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>glfw</Name>
+		<Homepage>https://www.glfw.org/</Homepage>
+		<Packager>
+			<Name>PisiLinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>as-is</License>
+		<IsA>library</IsA>
+		<Summary>The Portable OpenGL FrameWork</Summary>
+		<Description>
+			GLFW is a free, Open Source, portable framework for OpenGL application development. In short, it is a single library providing a powerful, portable API for otherwise operating system specific tasks such as opening an OpenGL window, and reading keyboard, mouse and joystick input.
+		</Description>
+		<Archive sha1sum="c5b400ebbf5d436469d7c72fb5f3db6e53478e62" type="tarbz2">
+			mirrors://sourceforge/glfw/glfw-3.3.1.tar.bz2
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cmake</Dependency>
+			<Dependency>doxygen</Dependency>
+			<Dependency>xorg-app-devel</Dependency>
+			<Dependency>mesa-glu-devel</Dependency>
+			<Dependency>mesa-devel</Dependency>
+			<Dependency>libXi-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>libXcursor-devel</Dependency>
+			<Dependency>libXxf86vm-devel</Dependency>
+			<Dependency>libXinerama-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>glfw</Name>
+		<RuntimeDependencies>
+			<Dependency>mesa</Dependency>
+			<Dependency>libXi</Dependency>
+			<Dependency>libXrandr</Dependency>
+			<Dependency>libXxf86vm</Dependency>
+			<Dependency>libXcursor </Dependency>
+			<Dependency>libXinerama</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>glfw-devel</Name>
+		<Summary>Development files for glfw</Summary>
+		<RuntimeDependencies>
+			<Dependency release="current">glfw</Dependency>
+			<Dependency>mesa-devel</Dependency>
+			<Dependency>libXi-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>libXxf86vm-devel</Dependency>
+			<Dependency>libXinerama-devel</Dependency>
+			<Dependency>libXcursor-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="data">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="9">
+			<Date>2020-01-05</Date>
+			<Version>3.3.1</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="8">
+			<Date>2015-01-25</Date>
+			<Version>3.1</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Hakan Yıldız</Name>
+			<Email>hknyldz93@gmail.com</Email>
+		</Update>
+		<Update release="7">
+			<Date>2015-01-25</Date>
+			<Version>3.1.1</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Hakan Yıldız</Name>
+			<Email>hknyldz93@gmail.com</Email>
+		</Update>
+		<Update release="6">
+			<Date>2015-01-25</Date>
+			<Version>3.1-1</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Hakan Yıldız</Name>
+			<Email>hknyldz93@gmail.com</Email>
+		</Update>
+		<Update release="5">
+			<Date>2014-05-16</Date>
+			<Version>3.0.4</Version>
+			<Comment>Release bump.</Comment>
+			<Name>Marcin Bojara</Name>
+			<Email>marcin@pisilinux.org</Email>
+		</Update>
+		<Update release="4">
+			<Date>2014-03-09</Date>
+			<Version>3.0.4</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Yusuf Aydemir</Name>
+			<Email>yusuf.aydemir@pisilinux.org</Email>
+		</Update>
+		<Update release="3">
+			<Date>2013-10-08</Date>
+			<Version>2.7.7</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>Serdar Soytetir</Name>
+			<Email>kaptan@pisilinux.org</Email>
+		</Update>
+		<Update release="2">
+			<Date>2013-08-25</Date>
+			<Version>2.7.7</Version>
+			<Comment>Release bump.</Comment>
+			<Name>Marcin Bojara</Name>
+			<Email>marcin@pisilinux.org</Email>
+		</Update>
+		<Update release="1">
+			<Date>2012-11-21</Date>
+			<Version>2.7.7</Version>
+			<Comment>First release</Comment>
+			<Name>Marcin Bojara</Name>
+			<Email>marcin@pisilinux.org</Email>
+		</Update>
+	</History>
+</PISI>
+

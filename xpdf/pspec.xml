@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>xpdf</Name>
+		<Homepage>http://www.xpdfreader.com/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<IsA>utility</IsA>
+		<Summary>Xpdf - a PDF viewer and related tools.</Summary>
+		<Description>
+			Xpdf is an open source viewer for Portable Document Format (PDF) files. (These are also sometimes also called 'Acrobat' files, from the name of Adobe's PDF software.)  The Xpdf project also includes a PDF text extractor, PDF-to-PostScript converter, and various other utilities.
+		</Description>
+		<Archive sha1sum="2b22ad40749e151a095d28a6cf4c9e5727f8d643" type="targz">
+			https://xpdfreader-dl.s3.amazonaws.com/xpdf-4.02.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cmake</Dependency>
+			<Dependency>zlib-devel</Dependency>
+			<Dependency>lcms2-devel</Dependency>
+			<Dependency>libpng-devel</Dependency>
+			<Dependency>libpaper-devel</Dependency>
+			<Dependency>freetype-devel</Dependency>
+			<Dependency>qt5-base-devel</Dependency>
+			<Dependency>fontconfig-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>xpdf</Name>
+		<RuntimeDependencies>
+			<Dependency>zlib</Dependency>
+			<Dependency>lcms2</Dependency>
+			<Dependency>libpng</Dependency>
+			<Dependency>libpaper</Dependency>
+			<Dependency>freetype</Dependency>
+			<Dependency>qt5-base</Dependency>
+			<Dependency>fontconfig</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="man">/usr/share/man/man1</Path>
+			<Path fileType="man">/usr/share/man/man5</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-10-18</Date>
+			<Version>4.0.2</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>gnome-builder</Name>
+		<Homepage>https://gitlab.gnome.org/GNOME/gnome-builder</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<Summary>A toolsmith for GNOME-based applications.</Summary>
+		<Description>
+			A tool to help you write and contribute to great GNOME-based applications.
+		</Description>
+		<Archive sha1sum="a5e10680d9cbab64b76509ce7110a5bde402a2d7" type="tarxz">
+			https://download.gnome.org/sources/gnome-builder/3.34/gnome-builder-3.34.1.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>meson</Dependency>
+			<!-- <Dependency>cmake</Dependency> -->
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>libpeas-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+			<Dependency>pango-devel</Dependency>
+			<Dependency>vte-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>libdazzle-devel</Dependency>
+			<Dependency>json-glib-devel</Dependency>
+			<Dependency>vala-devel</Dependency>
+			<Dependency>appstream-glib-devel</Dependency>
+			<Dependency>desktop-file-utils</Dependency>
+			<Dependency>gtksourceview3-devel</Dependency>
+			<!-- <Dependency>llvm-clang-devel</Dependency> -->
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>gnome-builder</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="all">/</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-01-30</Date>
+			<Version>3.34.1</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

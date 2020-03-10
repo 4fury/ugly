@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>perl-Capture-Tiny</Name>
+		<Homepage>https://metacpan.org/pod/Capture::Tiny</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>Apache_2</License>
+		<IsA>library</IsA>
+		<Summary>Capture::Tiny - Capture STDOUT and STDERR from Perl, XS or external programs.</Summary>
+		<Description>
+			Capture::Tiny provides a simple, portable way to capture almost anything sent to STDOUT or STDERR, regardless of whether it comes from Perl, from XS code or from an external program. Optionally, output can be teed so that it is captured while being passed through to the original filehandles.
+		</Description>
+		<Archive sha1sum="35e08cb2d811334afdebf3bca64ff3bd7a7ef560" type="targz">
+			https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Capture-Tiny-0.48.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<!--
+			<Dependency></Dependency>
+			-->
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>perl-Capture-Tiny</Name>
+		<RuntimeDependencies>
+			<!--
+			<Dependency></Dependency>
+			-->
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+			<Path fileType="man">/usr/share/man</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-12-12</Date>
+			<Version>0.48</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

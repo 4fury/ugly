@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>python3-regex</Name>
+		<Homepage>https://bitbucket.org/mrabarnett/mrab-regex/src/hg/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>custom</License>
+		<IsA>library</IsA>
+		<Summary>This regex implementation is backwards-compatible with the standard ‘re’ module, but offers additional functionality.</Summary>
+		<Description>This regex implementation is backwards-compatible with the standard ‘re’ module, but offers additional functionality.</Description>
+		<Archive sha1sum="a127346120a901ed5ab0b6e930db1e87f39ec78e" type="targz">
+			https://files.pythonhosted.org/packages/e8/76/8ac7f467617b9cfbafcef3c76df6f22b15de654a62bea719792b00a83195/regex-2020.2.20.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>python3-devel</Dependency>
+			<Dependency>python3-setuptools</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>python3-regex</Name>
+		<RuntimeDependencies>
+			<Dependency>python3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="all">/</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-03-03</Date>
+			<Version>2020.01.20</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

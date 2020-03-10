@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>xmlrpc-c</Name>
+		<Homepage>http://xmlrpc-c.sourceforge.net/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>BSD</License>
+		<IsA>library</IsA>
+		<Summary>A lightweight RPC library based on XML and HTTP.</Summary>
+		<Description>
+			XML-RPC is a quick-and-easy way to make procedure calls over the Internet. It converts the procedure call into an XML document, sends it to a remote server using HTTP, and gets back the response as XML.
+		</Description>
+		<Archive sha1sum="6f7501c07ceb7769ee724251ddf516156f033df8" type="targz">
+			https://sourceforge.net/projects/xmlrpc-c/files/Xmlrpc-c%20Super%20Stable/1.51.03/xmlrpc-c-1.51.03.tgz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>openssl-devel</Dependency>
+			<Dependency>curl-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>xmlrpc-c</Name>
+		<RuntimeDependencies>
+			<Dependency>openssl</Dependency>
+			<Dependency>curl</Dependency>
+			<Dependency>libgcc</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>xmlrpc-c-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">xmlrpc-c</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-12-20</Date>
+			<Version>1.51.03</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

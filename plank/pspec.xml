@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>plank</Name>
+		<Homepage>https://launchpad.net/plank</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<License>LGPLv2.1</License>
+		<IsA>app</IsA>
+		<Summary>a simple linux dock.</Summary>
+		<Description>
+			Plank is meant to be the simplest dock on the planet. The goal is to provide just what a dock needs and absolutely nothing more. It is, however, a library which can be extended to create other dock programs with more advanced features.
+		</Description>
+		<Archive sha1sum="baecfc133f9eccfe03037218af3b0acaf1a5f9ae" type="tarxz">
+			https://launchpadlibrarian.net/437987337/plank-0.11.89.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>vala-devel</Dependency>
+			<Dependency>bamf-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>libgee-devel</Dependency>
+			<Dependency>libwnck3-devel</Dependency>
+			<Dependency>gnome-menus-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>plank</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>bamf</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>libXi</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libgee</Dependency>
+			<Dependency>libwnck3</Dependency>
+			<Dependency>libXfixes</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>gnome-menus</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="config">/etc</Path>
+			<Path fileType="executable">/usr/bin/plank</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>plank-devel</Name>
+		<RuntimeDependencies>
+			<Dependency>libgee-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>bamf-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+			<Dependency release="current">plank</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-02-07</Date>
+			<Version>0.11.89</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

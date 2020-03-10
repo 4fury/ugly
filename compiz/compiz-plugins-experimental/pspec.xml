@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>compiz-plugins-experimental</Name>
+		<Homepage>https://gitlab.com/compiz/compiz-plugins-experimental</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>library</IsA>
+		<Summary>compiz-plugins-experimental 0.8.x project.</Summary>
+		<Description>
+			Experimental Compiz compositing manager plugins. Futher development of Compiz 0.8.x series (compiz-reloaded).
+		</Description>
+		<Archive sha1sum="b7ac1f367ed26878f2e3e295f1d0ee554e59682b" type="tarxz">
+			http://northfield.ws/projects/compiz/releases/0.8.16/compiz-plugins-experimental-0.8.16.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>intltool</Dependency>
+			<Dependency>bcop</Dependency>
+			<Dependency>glew-devel</Dependency>
+			<Dependency>util-linux</Dependency>
+			<Dependency>curl-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>libxslt-devel</Dependency>
+			<Dependency>mesa-glu-devel</Dependency>
+			<Dependency>compiz-core-devel</Dependency>
+			<Dependency>libXScrnSaver-devel</Dependency>
+			<Dependency>compiz-plugins-main-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>compiz-plugins-experimental</Name>
+		<RuntimeDependencies>
+			<Dependency>curl</Dependency>
+			<Dependency>glew</Dependency>
+			<Dependency>mesa</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>libSM</Dependency>
+			<Dependency>libXi</Dependency>
+			<Dependency>libICE</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libXext</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>mesa-glu</Dependency>
+			<Dependency>libXfixes</Dependency>
+			<Dependency>libXrandr</Dependency>
+			<Dependency>libXcursor</Dependency>
+			<Dependency>libXdamage</Dependency>
+			<Dependency>libXinerama</Dependency>
+			<Dependency>libXcomposite</Dependency>
+			<Dependency>startup-notification</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-12-27</Date>
+			<Version>0.8.16</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

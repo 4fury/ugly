@@ -1,0 +1,26 @@
+--- a/doc/geh.1	2019-12-10 23:55:34.910363415 +0300
++++ b/doc/geh.1	2019-12-10 23:54:14.823370667 +0300
+@@ -13,6 +13,21 @@
+       i ~/.thumbnails according to freedesktop.org's thumbnail
+       specification.
+ .PP
++.SH KEYBINDINGS
++    \fBf\fR - zoom to fit.
++    \fBF\fR - full mode showing only the current picture.
++    \fBs\fR - slide mode showing a large picture and one row of thumbnails.
++    \fBS\fR - open save picture dialog.
++    \fBR\fR - open rename picture dialog.
++    \fBtT\fR - thumbnail mode showing only thumbnails.
++    \fBqQ\fR - quit.
++    \fBnN\fR - show/select next image.
++    \fBpP\fR - show/select previous image.
++    \fB+\fR - zoom in current image.
++    \fB-\fR - zoom out current image.
++    \fB0\fR - zoom current image to original size.
++    \fBF11\fR - toggle fullscreen mode.
++.PP
+ .SH SEE ALSO
+-For more information check out the geh project page at:
+-https://projects.pekdon.net/projects/geh
++    For more information check out the geh project page at:
++    https://projects.pekdon.net/projects/geh

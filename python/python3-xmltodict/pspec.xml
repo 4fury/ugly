@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>python3-xmltodict</Name>
+		<Homepage>https://github.com/martinblech/xmltodict</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>MIT</License>
+		<IsA>library</IsA>
+		<Summary>Python module that makes working with XML feel like you are working with JSON.</Summary>
+		<Description>Python module that makes working with XML feel like you are working with JSON.</Description>
+		<Archive sha1sum="ef6388d34e025b6a7447bcbf27e039f7c75117d4" type="targz">
+			https://github.com/martinblech/xmltodict/archive/v0.12.0.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>python3</Dependency>
+			<Dependency>python3-setuptools</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>python3-xmltodict</Name>
+		<RuntimeDependencies>
+			<Dependency>python3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-03-09</Date>
+			<Version>0.12.0</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

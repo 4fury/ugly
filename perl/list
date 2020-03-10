@@ -1,0 +1,13 @@
+ExtUtils*
+Mock-config
+Capture-Tiny
+File-Which
+Devel-CheckLib
+Test-Number-Delta
+Test-Warnings
+Font-FreeType
+Cairo
+Cairo-Gobject
+Glib
+Glib-Object-Introspection
+Gtk3

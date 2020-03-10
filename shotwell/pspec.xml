@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>shotwell</Name>
+		<Homepage>https://wiki.gnome.org/Apps/Shotwell</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>lilian2water@gmail.com</Email>
+		</Packager>
+		<License>LGPLv2.1</License>
+		<IsA>app:gui</IsA>
+		<PartOf>multimedia.graphics</PartOf>
+		<Summary>Digital photo organizer</Summary>
+		<Description>
+			Shotwell is a personal photo manager.
+		</Description>
+		<Archive sha1sum="f2631d380e64b6d8ff9a81c3b545cd26452c0f6f" type="tarxz">
+			https://download.gnome.org/sources/shotwell/0.30/shotwell-0.30.8.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gsettings-desktop-schemas-devel</Dependency>
+			<Dependency>meson</Dependency>
+			<Dependency>itstool</Dependency>
+			<Dependency>gcr-devel</Dependency>
+			<Dependency>vala-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>webp-devel</Dependency>
+			<Dependency>sqlite-devel</Dependency>
+			<Dependency>libgee-devel</Dependency>
+			<Dependency>libraw-devel</Dependency>
+			<Dependency>libsoup-devel</Dependency>
+			<Dependency>libgudev-devel</Dependency>
+			<Dependency>libgexiv2-devel</Dependency>
+			<Dependency>gstreamer-devel</Dependency>
+			<Dependency>json-glib-devel</Dependency>
+			<Dependency>libgphoto2-devel</Dependency>
+			<Dependency>gst-plugins-base-devel</Dependency>
+		</BuildDependencies>
+		<Patches>
+			<!-- <Patch level="1">ru-translated.patch</Patch> -->
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>shotwell</Name>
+		<RuntimeDependencies>
+			<Dependency>gsettings-desktop-schemas</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libgee</Dependency>
+			<Dependency>libraw</Dependency>
+			<Dependency>sqlite</Dependency>
+			<Dependency>libexif</Dependency>
+			<Dependency>libsoup</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>libgudev</Dependency>
+			<Dependency>gstreamer</Dependency>
+			<Dependency>libgexiv2</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libgphoto2</Dependency>
+			<Dependency>gst-plugins-base</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="executable">/usr/libexec</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="library">/usr/lib/shotwell</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="3">
+			<Date>2020-02-28</Date>
+			<Version>0.30.8</Version>
+			<Comment>Ver. bump</Comment>
+			<Email>lilian2water@gmail.com</Email>
+			<Name>fury</Name>
+		</Update>
+		<Update release="2">
+			<Date>2019-09-11</Date>
+			<Version>0.30.7</Version>
+			<Comment>Ver. bump</Comment>
+			<Email>lilian2water@gmail.com</Email>
+			<Name>fury</Name>
+		</Update>
+		<Update release="1">
+			<Date>2019-08-01</Date>
+			<Version>0.30.4</Version>
+			<Comment>First build.</Comment>
+			<Email>lilian2water@gmail.com</Email>
+			<Name>fury</Name>
+		</Update>
+	</History>
+</PISI>

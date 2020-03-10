@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>glade</Name>
+		<Homepage>https://glade.gnome.org/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPL2</License>
+		<License>LGPL2</License>
+		<IsA>app:gui</IsA>
+		<PartOf>programming.misc</PartOf>
+		<Summary>A user interface disigner.</Summary>
+		<Description>
+			Glade is a RAD tool to enable quick and easy development of user interfaces for the GTK+ toolkit and the GNOME desktop environment. The user interfaces designed in Glade are saved as XML, and by using the GtkBuilder GTK+ object these can be loaded by applications dynamically as needed.
+		</Description>
+		<Archive sha1sum="66f34413fc7796cb2c205a943af2d766fc47b2e4" type="tarxz">
+			https://download.gnome.org/sources/glade/3.22/glade-3.22.2.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gtk-doc</Dependency>
+			<Dependency>itstool</Dependency>
+			<Dependency>intltool</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>python-six</Dependency>
+			<Dependency>docbook-xsl</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+			<Dependency>python3-devel</Dependency>
+			<Dependency>libxslt-devel</Dependency>
+			<Dependency>python-pygobject3-devel</Dependency>
+			<Dependency>python3-pygobject3-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>glade</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>python3</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>glade-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">glade</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-02-27</Date>
+			<Version>3.22.2</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

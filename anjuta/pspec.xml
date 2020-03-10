@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>anjuta</Name>
+		<Homepage>https://wiki.gnome.org/Apps/Anjuta</Homepage>
+		<Packager>
+			<Name>PisiLinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app:gui</IsA>
+		<Summary>Versatile software development studio.</Summary>
+		<Description>
+			Features a number of advanced programming facilities including project management, application wizard, interactive debugger, source editor, version control, GUI designer, profiler and many more tools. Focuses on providing simple and usable user interface, yet powerful for efficient development. It supports the following programming languages: C, C++, Java, Javascript, Python, Vala.
+		</Description>
+		<Archive sha1sum="a2feeb1a1c5582dbee56ad62b3ad6435cc022ebd" type="tarxz">
+			https://download.gnome.org/sources/anjuta/3.34/anjuta-3.34.0.tar.xz
+		</Archive>
+		<Patches>
+			<!-- <Patch level="1">fix-missing-bracket.patch</Patch> -->
+		</Patches>
+		<BuildDependencies>
+			<Dependency>python3</Dependency>
+			<Dependency>itstool</Dependency>
+			<Dependency>intltool</Dependency>
+			<Dependency>gdl-devel</Dependency>
+			<Dependency>vte-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>vala-devel</Dependency>
+			<Dependency>glade-devel</Dependency>
+			<Dependency>gnutls-devel</Dependency>
+			<Dependency>libgda-devel</Dependency>
+			<Dependency>python-devel</Dependency>
+			<Dependency>python3-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+			<Dependency>gtksourceview3-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>anjuta</Name>
+		<RuntimeDependencies>
+			<Dependency>gdl</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>vala</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>glade</Dependency>
+			<Dependency>libgcc</Dependency>
+			<Dependency>libgda</Dependency>
+			<Dependency>python3</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>gtksourceview3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="library">/usr/lib/girepository-1.0/Anjuta-3.0.typelib</Path>
+			<Path fileType="library">/usr/lib/girepository-1.0/IAnjuta-3.0.typelib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+			<Path fileType="doc">/usr/share/gtk-doc</Path>
+		</Files>
+   </Package>
+
+	<Package>
+		<Name>anjuta-devel</Name>
+		<Summary>Development files for anjuta</Summary>
+		<RuntimeDependencies>
+			<Dependency release="current">anjuta</Dependency>
+			<Dependency>gdl-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="12">
+			<Date>2020-01-29</Date>
+			<Version>3.34.0</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="11">
+			<Date>2015-05-22</Date>
+			<Version>3.16.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Ayhan Yalçınsoy</Name>
+			<Email>ayhanyalcinsoy@pisilinux.org</Email>
+		</Update>
+		<Update release="10">
+			<Date>2014-07-13</Date>
+			<Version>3.13.1</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Aydın Demirel</Name>
+			<Email>aydin.demirel@pisilinux.org</Email>
+		</Update>
+		<Update release="9">
+			<Date>2014-05-18</Date>
+			<Version>3.12.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Osman Erkan</Name>
+			<Email>osman.erkan@pisilinux.org</Email>
+		</Update>
+		<Update release="8">
+			<Date>2013-12-28</Date>
+			<Version>3.10.2</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Osman Erkan</Name>
+			<Email>osman.erkan@pisilinux.org</Email>
+		</Update>
+		<Update release="7">
+			<Date>2013-10-20</Date>
+			<Version>3.10.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Yusuf Aydemir</Name>
+			<Email>yusuf.aydemir@pisilinux.org</Email>
+		</Update>
+		<Update release="6">
+			<Date>2013-10-19</Date>
+			<Version>3.8.4</Version>
+			<Comment>Remove unused direct dependency's.</Comment>
+			<Name>Ertuğrul Erata</Name>
+			<Email>ertugrulerata@gmail.com</Email>
+		</Update>
+		<Update release="5">
+			<Date>2013-09-09</Date>
+			<Version>3.8.4</Version>
+			<Comment>Rebuild for gtksourceview3 bump.</Comment>
+			<Name>Erdinç Gültekin</Name>
+			<Email>erdincgultekin@pisilinux.org</Email>
+		</Update>
+		<Update release="4">
+			<Date>2013-08-31</Date>
+			<Version>3.8.4</Version>
+			<Comment>missing dep.</Comment>
+			<Name>Erdinç Gültekin</Name>
+			<Email>erdincgultekin@pisilinux.org</Email>
+		</Update>
+		<Update release="3">
+			<Date>2013-08-30</Date>
+			<Version>3.8.4</Version>
+			<Comment>missing dep.</Comment>
+			<Name>Erdinç Gültekin</Name>
+			<Email>erdincgultekin@pisilinux.org</Email>
+		</Update>
+		<Update release="2">
+			<Date>2013-08-26</Date>
+			<Version>3.8.4</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Aydın Demirel</Name>
+			<Email>aydin.demirel@pisilinux.org</Email>
+		</Update>
+		<Update release="1">
+			<Date>2013-03-15</Date>
+			<Version>3.6.1</Version>
+			<Comment>First release.</Comment>
+			<Name>Aydın Demirel</Name>
+			<Email>aydin@demirel.web.tr</Email>
+		</Update>
+	</History>
+</PISI>
+

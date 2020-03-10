@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>googletest</Name>
+		<Homepage>https://github.com/google/googletest</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>BSD-3-Clause</License>
+		<IsA>library</IsA>
+		<PartOf>programming.tool</PartOf>
+		<Summary>Googletest - Google Testing and Mocking Framework.</Summary>
+		<Description>Googletest - Google Testing and Mocking Framework.</Description>
+		<Archive sha1sum="9c89be7df9c5e8cb0bc20b3c4b39bf7e82686770" type="targz">
+			https://github.com/google/googletest/archive/release-1.10.0.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cmake</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>googletest</Name>
+		<RuntimeDependencies>
+			<Dependency>cmake</Dependency>
+			<Dependency>libgcc</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>googletest-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">googletest</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+			<Path fileType="header">/usr/include</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-12-21</Date>
+			<Version>1.10.0</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

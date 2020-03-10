@@ -1,0 +1,40 @@
+--- a/data/themes/Industrial/gtk.css	2019-02-24 19:36:39.000000000 +0300
++++ b/data/themes/Industrial/gtk.css	2019-11-20 09:08:40.873545250 +0300
+@@ -8,17 +8,32 @@
+ }
+ 
+ #time {
+-	font: 12px Sans;
++	font: 12px Noto Sans;
+ 	color: #ffffff;
+ }
+ 
+ #prompt {
+-	font: 14px Sans;
+-	color: #000000;
++	font: 24px Noto Sans;
++	font-weight: bold;
++	background-color: rgba(40, 40, 40, 0.85);
++	border-radius: 4px;
++	padding: 8px 12px;
++	color: #ffffff;
++}
++
++#login_entry,
++#user_list {
++	font: 16px Noto Sans;
+ }
+ 
+ #bottom_pane label,
+ #bottom_pane GtkLabel {
+-	font: 12px Sans;
+-	color: #9E9D9B;
++	font: 12px Noto Sans;
++	color: #ffffff;
+ }
++
++#bottom_pane button:hover label,
++#bottom_pane button:hover GtkLabel {
++	color: #282828;
++}
++

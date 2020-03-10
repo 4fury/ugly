@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>ponysay</Name>
+		<Homepage>https://github.com/erkin/ponysay</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app</IsA>
+		<Summary>Pony rewrite of cowsay.</Summary>
+		<Description>Ponysay — cowsay reimplemention for ponies. Today your terminal, tomorrow the world!</Description>
+		<Archive sha1sum="42405f37c04c97e6dccf6b2872586eecbe569923" type="zip">
+			https://codeload.github.com/erkin/ponysay/zip/12eba07d6cf03c76408fc22e79b693f7cbd56dd2
+		</Archive>
+		<BuildDependencies>
+			<Dependency>python3</Dependency>
+			<Dependency>python3-setuptools</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>ponysay</Name>
+		<RuntimeDependencies>
+			<Dependency>python3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="man">/usr/share/man/man6</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-02-28</Date>
+			<Version>3.0.4</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>menulibre</Name>
+		<Homepage>https://launchpad.net/menulibre</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<Summary>MenuLibre is an advanced FreeDesktop.org compliant menu editor.</Summary>
+		<Description>MenuLibre is an advanced menu editor that provides modern features in a clean, easy-to-use interface.</Description>
+		<Archive sha1sum="2a5427532df9d07cff4ef4fd014d1ed583a244c2" type="targz">
+			https://launchpad.net/menulibre/2.2/2.2.1/+download/menulibre-2.2.1.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>intltool</Dependency>
+			<Dependency>python</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>python3-six</Dependency>
+			<Dependency>python3-psutil</Dependency>
+			<Dependency>python3-setuptools</Dependency>
+			<Dependency>python-distutils-extra</Dependency>
+			<Dependency>python3-pygobject3-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>menulibre</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk3</Dependency>
+			<Dependency>gnome-menus</Dependency>
+			<Dependency>python3-psutil</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib/python3.6/site-packages</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-01-15</Date>
+			<Version>2.2.1</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

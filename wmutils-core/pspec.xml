@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>wmutils-core</Name>
+		<Homepage>https://github.com/wmutils/core</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>ISC</License>
+		<IsA>X11</IsA>
+		<Summary>Set of window manipulation tools</Summary>
+		<Description>
+			wmutils' core is a set of tools for X windows manipulation. Each tool only has one purpose, to make it as flexible and reliable as possible.
+		</Description>
+		<Archive sha1sum="1f0a36ea9d0eb7cfda5ce6dc3ec970800d650b41" type="targz">
+			https://github.com/wmutils/core/archive/v1.5.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>libxcb-devel</Dependency>
+			<Dependency>xcb-util-devel</Dependency>
+			<Dependency>xcb-util-cursor-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>wmutils-core</Name>
+		<RuntimeDependencies>
+			<Dependency>libxcb</Dependency>
+			<Dependency>xcb-util</Dependency>
+			<Dependency>xcb-util-cursor</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin/chwb</Path>
+			<Path fileType="executable">/usr/bin/chwso</Path>
+			<Path fileType="executable">/usr/bin/ignw</Path>
+			<Path fileType="executable">/usr/bin/killw</Path>
+			<Path fileType="executable">/usr/bin/lsw</Path>
+			<Path fileType="executable">/usr/bin/mapw</Path>
+			<Path fileType="executable">/usr/bin/pfw</Path>
+			<Path fileType="executable">/usr/bin/slw</Path>
+			<Path fileType="executable">/usr/bin/wattr</Path>
+			<Path fileType="executable">/usr/bin/wmp</Path>
+			<Path fileType="executable">/usr/bin/wmv</Path>
+			<Path fileType="executable">/usr/bin/wrs</Path>
+			<Path fileType="executable">/usr/bin/wtf</Path>
+			<Path fileType="executable">/usr/bin/wtp</Path>
+			<Path fileType="man">/usr/share/man/man1</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-10-20</Date>
+			<Version>1.5</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+
