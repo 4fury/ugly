@@ -20,11 +20,11 @@
 		<BuildDependencies>
 			<Dependency>meson</Dependency>
 			<Dependency>cmake</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>wayland-devel</Dependency>
+			<Dependency>wayland-cursor</Dependency>
 			<Dependency>wayland-client</Dependency>
 			<Dependency>wayland-protocols-devel</Dependency>
-			<Dependency>wayland-devel</Dependency>
-			<Dependency>cairo-devel</Dependency>
-			<Dependency>wayland-cursor</Dependency>
 		</BuildDependencies>
 	</Source>
 

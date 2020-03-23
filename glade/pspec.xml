@@ -23,12 +23,17 @@
 			<Dependency>gtk-doc</Dependency>
 			<Dependency>itstool</Dependency>
 			<Dependency>intltool</Dependency>
+			<Dependency>yelp-tools</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>python-six</Dependency>
 			<Dependency>docbook-xsl</Dependency>
-			<Dependency>libxml2-devel</Dependency>
+			<Dependency>gnome-common</Dependency>
 			<Dependency>python3-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
 			<Dependency>libxslt-devel</Dependency>
+			<Dependency>gettext-devel</Dependency>
+			<Dependency>webkit2gtk-devel</Dependency>
+			<!-- <Dependency>xorg-server-xvfb</Dependency> -->
 			<Dependency>python-pygobject3-devel</Dependency>
 			<Dependency>python3-pygobject3-devel</Dependency>
 			<Dependency>gobject-introspection-devel</Dependency>
@@ -45,7 +50,9 @@
 			<Dependency>pango</Dependency>
 			<Dependency>libxml2</Dependency>
 			<Dependency>python3</Dependency>
+			<Dependency>libsoup</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>webkit2gtk</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>

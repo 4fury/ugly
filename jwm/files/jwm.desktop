@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[ja_JP]=JWM Session
+Comment=JWM Session
+Exec=/usr/bin/jwm
+GenericName[ja_JP]=JWM
+GenericName=JWM
+Icon=exec
+MimeType=
+Name[ja_JP]=jwm
+Name=jwm
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

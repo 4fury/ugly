@@ -14,7 +14,6 @@
 		<Description>Package Manager is PiSi's easy-to-use graphical user interface.</Description>
 		<Archive sha1sum="a23b03ecf870a777d6ca66931ea6682f782a468e" type="targz">
 			file:///git/pm.tar.gz
-			<!-- https://github.com/PisiLinuxNew/package-manager/archive/package-manager-4.2.2.1.tar.gz -->
 		</Archive>
 		<BuildDependencies>
 			<Dependency>docutils</Dependency>
@@ -52,8 +51,8 @@
 			<Date>2020-03-10</Date>
 			<Version>4.2.2.1</Version>
 			<Comment>Rebuild.</Comment>
-			<Name>Ayhan Yalçınsoy</Name>
-			<Email>ayhanyalcinsoy@pisilinux.org</Email>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
 		</Update>
 		<Update release="17">
 			<Date>2020-01-20</Date>

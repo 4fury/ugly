@@ -20,20 +20,22 @@ def setup():
                --disable-asserts \
                --disable-checks \
                --disable-embedded-tests \
-               --disable-x11-autolaunch \
-               --enable-x11-autolaunch=no \
                --disable-modular-tests \
                --disable-doxygen-docs \
                --disable-libaudit \
                --disable-silent-rules \
                --enable-inotify \
                --enable-user-session \
+               --with-xml=expat \
                --with-system-pid-file=/run/dbus/pid \
                --with-system-socket=/run/dbus/system_bus_socket \
                --with-console-auth-dir=/run/console/ \
                --with-session-socket-dir=/tmp \
                --with-dbus-user=dbus \
-               --disable-xml-docs"
+               --enable-abstract-sockets=auto \
+               --disable-xml-docs \
+               --disable-x11-autolaunch \
+               --disable-systemd --with-x"
 
     if get.buildTYPE() == "emul32":
         options += "\

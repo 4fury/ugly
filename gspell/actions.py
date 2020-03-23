@@ -4,18 +4,12 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import shelltools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-w = "-Wno-incompatible-pointer-types -Wno-discarded-qualifiers \
--Wno-deprecated-declarations -Wno-unused-result"
-
 def setup():
-	pisitools.cflags.add(w)
-	shelltools.export("LDFLAGS", "%s" % get.LDFLAGS())
-	autotools.configure()
+	autotools.configure("--disable-static")
 
 def build():
 	autotools.make()
@@ -23,5 +17,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING*", "COPYRIGHT", "NEWS", "README")
+	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README")
 

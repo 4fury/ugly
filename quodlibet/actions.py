@@ -8,7 +8,7 @@ from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import pisitools
 
-shelltools.export("PYTHONDONTWRITEBYTECODE", "1")
+#shelltools.export("PYTHONDONTWRITEBYTECODE", "1")
 
 def build():
 	pythonmodules.compile(pyVer = "3")

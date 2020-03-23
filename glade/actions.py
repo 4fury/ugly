@@ -9,20 +9,17 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+shelltools.export("PYTHON", "/usr/bin/python3")
+
+flags = "-Wno-deprecated-declarations \
+-Wno-unused-variable -Wno-pointer-compare \
+-Wno-unused-function"
+
 def setup():
-	shelltools.export("PYTHON", "/usr/bin/python3")
-
-	shelltools.export("CFLAGS", \
-	"%s -Wno-deprecated-declarations \
-	-Wno-unused-variable \
-	-Wno-pointer-compare \
-	-Wno-unused-function" % get.CFLAGS())
-
-	autotools.configure("\
-	\
-	--enable-gladeui \
-	--enable-python \
-	--enable-introspection --disable-webkit2gtk")
+	pisitools.cflags.add(flags)
+	autotools.autoreconf("-fi")
+	shelltools.system("sed -i 's|AX_CHECK|#AX_CHECK|' configure")
+	autotools.configure("--enable-python --enable-gladeui")
 
 def build():
 	autotools.make()
@@ -30,5 +27,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING*", "NEWS", "README", "TODO")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING*", "NEWS", "README")
 

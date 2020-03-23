@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>gspell</Name>
+		<Homepage>https://wiki.gnome.org/Projects/gspell</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>LGPLv2.1</License>
+		<IsA>library</IsA>
+		<Summary>gspell - a spell-checking library for GTK applications.</Summary>
+		<Description>gspell provides a flexible API to add spell-checking to a GTK application.</Description>
+		<Archive sha1sum="9eb1b7b75826d3e78589896bb0f27f42e7b1a7db" type="tarxz">
+			https://download.gnome.org/sources/gspell/1.8/gspell-1.8.3.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>iso-codes</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>vala-devel</Dependency>
+			<Dependency>enchant2-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>gspell</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>enchant2</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>gspell-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">gspell</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>enchant2-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-03-22</Date>
+			<Version>1.8.3</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

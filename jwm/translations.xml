@@ -1,0 +1,7 @@
+<PISI>
+	<Source>
+		<Name>jwm</Name>
+		<Summary xml:lang="hu">Joe's Window Manager</Summary>
+		<Description xml:lang="hu">A JWM egy C-ben írt ablakkezelő, ami a modern gépek mellett a régebbi és gyengébb gépeken is elmegy. Számos pehelysúlyú rendszer ezt használja alapból.</Description>
+	</Source>
+</PISI>

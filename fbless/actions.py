@@ -6,16 +6,12 @@
 
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import get
-
-#def setup():
-#	pythonmodules.configure()
 
 def build():
-	pythonmodules.compile(pyVer = "3")
+	pythonmodules.compile()
 
 def install():
-	pythonmodules.install(pyVer = "3")
+	pythonmodules.install()
 
-	pisitools.dodoc("LICENSE_GPL", "README.md")
+	pisitools.dodoc("AUTHORS", "LICENSE", "README")
 

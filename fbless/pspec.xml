@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>fbless</Name>
+		<Homepage>http://pybookreader.narod.ru/misc.html</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app:console</IsA>
+		<Summary>fb2 console reader.</Summary>
+		<Description>fbless - консольный ридер FB2 файлов. Может открывать файлы, сжатые при помощи zip, gzip и bzip2.</Description>
+		<Archive sha1sum="4f8dc16a2fba91c0475d489e3d2ac70ecdbad81b" type="zip">
+			https://codeload.github.com/kaytrance/fbless/zip/1bc6451c4e54ca17a8990dfc9f7f8aa0b428ed8b
+		</Archive>
+		<BuildDependencies>
+			<Dependency>ncurses-devel</Dependency>
+			<Dependency>python-setuptools</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>fbless</Name>
+		<RuntimeDependencies>
+			<Dependency>python</Dependency>
+			<Dependency>ncurses</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib/</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-03-13</Date>
+			<Version>0.2.4</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

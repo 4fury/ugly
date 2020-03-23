@@ -8,18 +8,14 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-options = "--disable-cinnamon --disable-gnome-shell \
---disable-metacity --disable-unity --disable-plank"
-
-def setup():
-	autotools.autoreconf("-fi")
-	autotools.configure(options)
+#def setup():
+#	autotools.configure()
 
 def build():
 	autotools.make()
 
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+	autotools.rawInstall("DESTDIR=%s PREFIX=/usr" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "COPYING", "HACKING.md", "README.md")
+	pisitools.dodoc("README.md")
 
