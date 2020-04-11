@@ -8,12 +8,12 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-options = "--disable-cinnamon --disable-gnome-shell \
+options = "--prefix=/usr --disable-cinnamon --disable-gnome-shell \
 --disable-metacity --disable-unity --disable-plank"
 
 def setup():
 	autotools.autoreconf("-fi")
-	autotools.configure(options)
+	autotools.rawConfigure(options)
 
 def build():
 	autotools.make()

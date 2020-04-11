@@ -1,17 +1,15 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
 # Licensed under the GNU General Public License, version 3.
-# See the file https://www.gnu.org/licenses/gpl.txt
+# See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-options = "--enable-backup --enable-printing \
---with-notes --with-tasks --with-contacts"
-
 def setup():
-	autotools.configure(options)
+	autotools.configure()
 
 def build():
 	autotools.make()
@@ -19,5 +17,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "FAQ", "README", "TRANSLATORS")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "THANKS")
 

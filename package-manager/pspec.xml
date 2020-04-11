@@ -12,7 +12,7 @@
 		<IsA>app:gui</IsA>
 		<Summary>PiSi graphical user interface</Summary>
 		<Description>Package Manager is PiSi's easy-to-use graphical user interface.</Description>
-		<Archive sha1sum="a23b03ecf870a777d6ca66931ea6682f782a468e" type="targz">
+		<Archive sha1sum="a68c7094485ce6e82c6aee4e6a204aa3f623c497" type="targz">
 			file:///git/pm.tar.gz
 		</Archive>
 		<BuildDependencies>
@@ -47,9 +47,9 @@
 	</Package>
 
 	<History>
-		<Update release="18">
-			<Date>2020-03-10</Date>
-			<Version>4.2.2.1</Version>
+		<Update release="20">
+			<Date>2020-04-02</Date>
+			<Version>4.2.3</Version>
 			<Comment>Rebuild.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

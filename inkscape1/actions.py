@@ -10,26 +10,11 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	shelltools.system("sed -i '16a#include <cstring>' src/extension/prefdialog/widget.h")
-	shelltools.system("sed -i '525a\ \ \ \ /*' src/inkscape-application.cpp")
-	shelltools.system("sed -i '534a\ \ \ \ */' src/inkscape-application.cpp")
-
-	shelltools.system("sed -i '66a\ \ \ \ /*' src/inkview-application.cpp")
-	shelltools.system("sed -i '69a\ \ \ \ */' src/inkview-application.cpp")
-
-	shelltools.system("sed -i 's/python/python3/g' CMakeScripts/Dist.cmake")
-	shelltools.system("find . -iname 'CMakeLists.txt' -exec sed -i 's/python/python3/g' {} \;")
-
 	shelltools.makedirs("build")
-
 	shelltools.cd("build")
-	cmaketools.configure("\
+	cmaketools.configure("-DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release \
 	\
-	-DWITH_DBUS=OFF \
-	-DWITH_PROFILING=OFF \
-	\
-	-DCMAKE_BUILD_TYPE=Debug \
-	-DCMAKE_INSTALL_PREFIX=/usr", sourceDir = '..')
+	-DWITH_IMAGE_MAGICK=OFF -DBUILD_TESTING=OFF", sourceDir = '..')
 
 def build():
 	shelltools.cd("build")
@@ -37,8 +22,8 @@ def build():
 
 def install():
 	shelltools.cd("build")
-	cmaketools.install()
+	cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
 
 	shelltools.cd("..")
-	pisitools.dodoc("AUTHORS", "CONTRIBUTING.md", "COPYING", "INSTALL.md", "NEWS.md", "README.md", "TRANSLATORS")
+	pisitools.dodoc("AUTHORS", "CONTRIBUTING.md", "COPYING", "NEWS.md", "README.md", "TRANSLATORS")
 

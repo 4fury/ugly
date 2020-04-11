@@ -1,0 +1,113 @@
+diff --git a/src/extension/CMakeLists.txt b/src/extension/CMakeLists.txt
+index 5708c2e..fb0ec94 100644
+--- a/src/extension/CMakeLists.txt
++++ b/src/extension/CMakeLists.txt
+@@ -226,8 +226,8 @@ if(WITH_MAGICK)
+ 		internal/bitmap/normalize.h
+ 		internal/bitmap/oilPaint.cpp
+ 		internal/bitmap/oilPaint.h
+-		internal/bitmap/opacity.cpp
+-		internal/bitmap/opacity.h
++#		internal/bitmap/opacity.cpp
++#		internal/bitmap/opacity.h
+ 		internal/bitmap/raise.cpp
+ 		internal/bitmap/raise.h
+ 		internal/bitmap/reduceNoise.cpp
+diff --git a/src/extension/init.cpp b/src/extension/init.cpp
+index 5a95fb8..0941c9a 100644
+--- a/src/extension/init.cpp
++++ b/src/extension/init.cpp
+@@ -93,7 +93,7 @@
+ #include "internal/bitmap/negate.h"
+ #include "internal/bitmap/normalize.h"
+ #include "internal/bitmap/oilPaint.h"
+-#include "internal/bitmap/opacity.h"
++//#include "internal/bitmap/opacity.h"
+ #include "internal/bitmap/raise.h"
+ #include "internal/bitmap/reduceNoise.h"
+ #include "internal/bitmap/sample.h"
+@@ -218,7 +218,7 @@ init()
+     Internal::Bitmap::Negate::init();
+     Internal::Bitmap::Normalize::init();
+     Internal::Bitmap::OilPaint::init();
+-    Internal::Bitmap::Opacity::init();
++    //Internal::Bitmap::Opacity::init();
+     Internal::Bitmap::Raise::init();
+     Internal::Bitmap::ReduceNoise::init();
+     Internal::Bitmap::Sample::init();
+diff --git a/src/extension/internal/bitmap/channel.cpp b/src/extension/internal/bitmap/channel.cpp
+index f26a9f9..9f9275f 100644
+--- a/src/extension/internal/bitmap/channel.cpp
++++ b/src/extension/internal/bitmap/channel.cpp
+@@ -29,7 +29,7 @@ Channel::applyEffect(Magick::Image *image) {
+ 	else if (!strcmp(_layerName, "Yellow Channel"))		layer = Magick::YellowChannel;
+ 	else if (!strcmp(_layerName, "Black Channel"))		layer = Magick::BlackChannel;
+ 	else if (!strcmp(_layerName, "Opacity Channel"))	layer = Magick::OpacityChannel;
+-	else if (!strcmp(_layerName, "Matte Channel"))		layer = Magick::MatteChannel;		
++	else if (!strcmp(_layerName, "Alpha Channel"))		layer = Magick::AlphaChannel;
+ 	
+ 	image->channel(layer);
+ }
+@@ -57,7 +57,7 @@ Channel::init()
+ 				"<option value='Yellow Channel'>" N_("Yellow Channel") "</option>\n"
+ 				"<option value='Black Channel'>" N_("Black Channel") "</option>\n"
+ 				"<option value='Opacity Channel'>" N_("Opacity Channel") "</option>\n"
+-				"<option value='Matte Channel'>" N_("Matte Channel") "</option>\n"
++				"<option value='Alpha Channel'>" N_("Alpha Channel") "</option>\n"
+ 			"</param>\n"
+ 			"<effect>\n"
+ 				"<object-type>all</object-type>\n"
+diff --git a/src/extension/internal/bitmap/crop.cpp b/src/extension/internal/bitmap/crop.cpp
+index c69b402..5f37fdc 100644
+--- a/src/extension/internal/bitmap/crop.cpp
++++ b/src/extension/internal/bitmap/crop.cpp
+@@ -26,7 +26,7 @@ Crop::applyEffect(Magick::Image *image) {
+     int width = image->baseColumns() - (_left + _right);
+     int height = image->baseRows() - (_top + _bottom);
+     if (width > 0 and height > 0) {
+-        image->crop(Magick::Geometry(width, height, _left, _top, false, false));
++        image->crop(Magick::Geometry(width, height, _left, _top));
+         image->page("+0+0");
+     }
+ }
+diff --git a/src/extension/internal/bitmap/level.cpp b/src/extension/internal/bitmap/level.cpp
+index aaf3168..727b05d 100644
+--- a/src/extension/internal/bitmap/level.cpp
++++ b/src/extension/internal/bitmap/level.cpp
+@@ -20,8 +20,8 @@ namespace Bitmap {
+ 	
+ void
+ Level::applyEffect(Magick::Image* image) {
+-	Magick::Quantum black_point = Magick::Color::scaleDoubleToQuantum(_black_point / 100.0);
+-	Magick::Quantum white_point = Magick::Color::scaleDoubleToQuantum(_white_point / 100.0);
++	Magick::Quantum black_point = static_cast<Magick::Quantum>(_black_point / 100.0);
++	Magick::Quantum white_point = static_cast<Magick::Quantum>(_white_point / 100.0);
+ 	image->level(black_point, white_point, _mid_point);
+ }
+ 
+diff --git a/src/extension/internal/bitmap/levelChannel.cpp b/src/extension/internal/bitmap/levelChannel.cpp
+index 497d6ce..ffe3068 100644
+--- a/src/extension/internal/bitmap/levelChannel.cpp
++++ b/src/extension/internal/bitmap/levelChannel.cpp
+@@ -29,9 +29,9 @@ LevelChannel::applyEffect(Magick::Image* image) {
+ 	else if (!strcmp(_channelName, "Yellow Channel"))	channel = Magick::YellowChannel;
+ 	else if (!strcmp(_channelName, "Black Channel"))	channel = Magick::BlackChannel;
+ 	else if (!strcmp(_channelName, "Opacity Channel"))	channel = Magick::OpacityChannel;
+-	else if (!strcmp(_channelName, "Matte Channel"))	channel = Magick::MatteChannel;
+-	Magick::Quantum black_point = Magick::Color::scaleDoubleToQuantum(_black_point / 100.0);
+-	Magick::Quantum white_point = Magick::Color::scaleDoubleToQuantum(_white_point / 100.0);
++	else if (!strcmp(_channelName, "Alpha Channel"))	channel = Magick::AlphaChannel;
++	Magick::Quantum black_point = static_cast<Magick::Quantum>(_black_point / 100.0);
++	Magick::Quantum white_point = static_cast<Magick::Quantum>(_white_point / 100.0);
+ 	image->levelChannel(channel, black_point, white_point, _mid_point);
+ }
+ 
+@@ -61,7 +61,7 @@ LevelChannel::init()
+ 				"<option value='Yellow Channel'>" N_("Yellow Channel") "</option>\n"
+ 				"<option value='Black Channel'>" N_("Black Channel") "</option>\n"
+ 				"<option value='Opacity Channel'>" N_("Opacity Channel") "</option>\n"
+-				"<option value='Matte Channel'>" N_("Matte Channel") "</option>\n"
++				"<option value='Alpha Channel'>" N_("Alpha Channel") "</option>\n"
+ 			"</param>\n"
+ 			"<param name=\"blackPoint\" gui-text=\"" N_("Black Point:") "\" type=\"float\" min=\"0.0\" max=\"100.0\">0.0</param>\n"			
+ 			"<param name=\"whitePoint\" gui-text=\"" N_("White Point:") "\" type=\"float\" min=\"0.0\" max=\"100.0\">100.0</param>\n"			

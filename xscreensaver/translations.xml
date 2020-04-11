@@ -1,0 +1,9 @@
+<PISI>
+	<Source>
+		<Name>xscreensaver</Name>
+		<Summary xml:lang="tr">Bir kaç güzel ekran koruyucu</Summary>
+		<Summary xml:lang="hu">Egy csomó képernyővédő</Summary>
+		<Description xml:lang="tr">XScreenSaver, X11 Pencere Sistemi kullanan pek çok Linux ve Unix sistemle birlikte gelen ekran koruyucusu koleksiyonudur. İlk sürümü 1992 yılında yayınlanmıştır.</Description>
+		<Description xml:lang="hu">Az XScreenSaver egy képernyővédő program, amely már 1992 óta létezik, és számos képernyővédővel lepi meg a felhasználót, továbbá lehetővé teszi a képernyő zárolását nem integrált asztali környezeteknél.</Description>
+	</Source>
+</PISI>

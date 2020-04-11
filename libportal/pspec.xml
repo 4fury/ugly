@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>libportal</Name>
+		<Homepage>https://github.com/flatpak/libportal</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>LGPLv2</License>
+		<IsA>library</IsA>
+		<Summary>Flatpak portal library.</Summary>
+		<Description>libportal provides GIO-style async APIs for most Flatpak portals.</Description>
+		<Archive sha1sum="1cf65dc6c1a6c3ea053715c1d3bb728db03c021b" type="tarxz">
+			https://github.com/flatpak/libportal/releases/download/0.3/libportal-0.3.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>meson</Dependency>
+			<Dependency>gtk-doc</Dependency>
+			<Dependency>glib2-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>libportal</Name>
+		<RuntimeDependencies>
+			<Dependency>glib2</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="all">/</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-04-07</Date>
+			<Version>0.3</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

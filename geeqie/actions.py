@@ -4,17 +4,18 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import shelltools
+from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+options = "--disable-map --disable-pdf --disable-gtk3 --disable-debug-log"
+
 def setup():
-	shelltools.system("meson --prefix=/usr . build")
+	autotools.configure(options)
 
 def build():
-	shelltools.system("ninja -C build")
+	autotools.make()
 
 def install():
-	shelltools.system("DESTDIR=%s ninja -C build install" % get.installDIR())
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS*", "README")

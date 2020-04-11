@@ -1,53 +1,46 @@
-<?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>xst</Name>
-		<Homepage>https://github.com/gnotclub/xst</Homepage>
-		<Packager>
-			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
-		</Packager>
-		<License>MIT</License>
-		<!--
-		<IsA></IsA>
-		<PartOf></PartOf>
-		-->
-		<Summary>st fork that uses Xresources and some pretty good patches</Summary>
-		<Description>st fork that uses Xresources and some pretty good patches</Description>
-		<Archive sha1sum="4eabf0bfc3b1e9e0a3e38243cde41afa2f1ea83e" type="targz">
+    <Source>
+        <Name>xst</Name>
+        <Homepage>https://github.com/gnotclub/xst</Homepage>
+        <Packager>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Packager>
+        <License>MIT</License>
+        <Summary>st fork that uses Xresources and some pretty good patches</Summary>
+        <Description>st fork that uses Xresources and some pretty good patches</Description>
+        <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXft-devel</Dependency>
+        </BuildDependencies>
+        <Archive type="binary" sha1sum="4eabf0bfc3b1e9e0a3e38243cde41afa2f1ea83e">
 			https://codeload.github.com/gnotclub/xst/tar.gz/v0.7.2
 		</Archive>
-		<BuildDependencies>
-			<Dependency>libX11-devel</Dependency>
-			<Dependency>libXft-devel</Dependency>
-			<Dependency>libXext-devel</Dependency>
-		</BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>xst</Name>
-		<RuntimeDependencies>
-			<Dependency>libX11</Dependency>
-			<Dependency>libXft</Dependency>
-			<Dependency>libXext</Dependency>
-			<Dependency>xorg-app</Dependency>
-		</RuntimeDependencies>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
-			<Path fileType="data">/usr/share/info/xst.info</Path>
-			<Path fileType="man">/usr/share/man/man1/xst.1</Path>
-			<Path fileType="doc">/usr/share/doc</Path>
-		</Files>
-	</Package>
-
-	<History>
-		<Update release="1">
-			<Date>2019-08-11</Date>
-			<Version>0.7.2</Version>
-			<Comment>First release</Comment>
-			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
-		</Update>
-	</History>
+    </Source>
+    <Package>
+        <Name>xst</Name>
+        <Summary>st fork that uses Xresources and some pretty good patches</Summary>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXft</Dependency>
+            <Dependency>xorg-app</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/info/xst.info</Path>
+            <Path fileType="man">/usr/share/man/man1/xst.1</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-08-11</Date>
+            <Version>0.7.2</Version>
+            <Comment>First release</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
+    </History>
 </PISI>

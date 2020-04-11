@@ -24,6 +24,7 @@
 	<Package>
 		<Name>ccsm</Name>
 		<RuntimeDependencies>
+			<Dependency>python-pygobject</Dependency>			
 			<Dependency>python-pygobject3</Dependency>
 			<Dependency>compizconfig-python</Dependency>
 		</RuntimeDependencies>

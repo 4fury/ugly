@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>inkscape1</Name>
@@ -13,41 +13,51 @@
 		<License>MPL</License>
 		<IsA>app:gui</IsA>
 		<PartOf>multimedia.graphics</PartOf>
-		<Summary>Inkscape GTK+3 pre-release beta.</Summary>
+		<Summary>Inkscape GTK+3 release candidate.</Summary>
 		<Description>
 			Inkscape is a professional vector graphics editor for Linux, Windows and macOS. It's free and open source.
 		</Description>
-		<Archive sha1sum="b8a938c93ab45e64be0c43f016def9dced368f40" type="tarbz2">
-			https://gitlab.com/inkscape/inkscape/-/archive/INKSCAPE_1_0_BETA2/inkscape-INKSCAPE_1_0_BETA2.tar.bz2
+		<Archive sha1sum="057c64f29c30ad77e1751d4a3da921d4daed68ac" type="tarbz2">
+			https://gitlab.com/inkscape/inkscape/-/archive/INKSCAPE_1_0_RC1/inkscape-INKSCAPE_1_0_RC1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
 			<Dependency>potrace</Dependency>
+			<Dependency>gc-devel</Dependency>
+			<Dependency>intltool</Dependency>
+			<Dependency>gsl-devel</Dependency>
+			<Dependency>gdl-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>popt-devel</Dependency>
+			<Dependency>lcms2-devel</Dependency>
 			<Dependency>boost-devel</Dependency>
+			<Dependency>aalib-devel</Dependency>
+			<Dependency>gdlmm-devel</Dependency>
+			<Dependency>aspell-devel</Dependency>
+			<Dependency>gtkmm3-devel</Dependency>
+			<Dependency>libwpg-devel</Dependency>
+			<Dependency>libcdr-devel</Dependency>
 			<Dependency>libwpd-devel</Dependency>
+			<Dependency>liblqr-devel</Dependency>
+			<Dependency>python-devel</Dependency>
+			<Dependency>libxslt-devel</Dependency>
+			<Dependency>libsoup-devel</Dependency>
 			<Dependency>python3-devel</Dependency>
 			<Dependency>poppler-devel</Dependency>
 			<Dependency>libyaml-devel</Dependency>
 			<Dependency>libvisio-devel</Dependency>
 			<Dependency>libspiro-devel</Dependency>
 			<Dependency>gtkspell3-devel</Dependency>
+			<Dependency>dbus-glib-devel</Dependency>
+			<!-- <Dependency>googletest-devel</Dependency> -->
+			<Dependency>librevenge-devel</Dependency>
+			<!-- <Dependency>imagemagick-devel</Dependency> -->
+			<Dependency>libart_lgpl-devel</Dependency>
+			<Dependency>poppler-glib-devel</Dependency>
+			<Dependency>desktop-file-utils</Dependency>
 			<Dependency>libjpeg-turbo-devel</Dependency>
 			<Dependency>GraphicsMagick-devel</Dependency>
-			<Dependency>gc-devel</Dependency>
-			<Dependency>gsl-devel</Dependency>
-			<Dependency>gdl-devel</Dependency>
-			<Dependency>gtk3-devel</Dependency>
-			<Dependency>aspell-devel</Dependency>
-			<Dependency>gtkmm3-devel</Dependency>
-			<Dependency>libwpg-devel</Dependency>
-			<Dependency>libcdr-devel</Dependency>
-			<Dependency>libxslt-devel</Dependency>
-			<Dependency>libsoup-devel</Dependency>
-			<Dependency>dbus-glib-devel</Dependency>
-			<Dependency>googletest-devel</Dependency>
-			<Dependency>librevenge-devel</Dependency>
-			<Dependency>imagemagick-devel</Dependency>
-			<Dependency>poppler-glib-devel</Dependency>
+			<Dependency>appstream-glib-devel</Dependency>
 			<Dependency>double-conversion-devel</Dependency>
 		</BuildDependencies>
 	</Source>
@@ -84,12 +94,12 @@
 			<Dependency>libxslt</Dependency>
 			<Dependency>pangomm</Dependency>
 			<Dependency>poppler</Dependency>
-			<Dependency>libyaml</Dependency>
+			<!-- <Dependency>libyaml</Dependency> -->
 			<Dependency>freetype</Dependency>
 			<Dependency>harfbuzz</Dependency>
 			<Dependency>libvisio</Dependency>
-			<Dependency>libspiro</Dependency>
-			<Dependency>dbus-glib</Dependency>
+			<!-- <Dependency>libspiro</Dependency> -->
+			<!-- <Dependency>dbus-glib</Dependency> -->
 			<Dependency>gtkspell3</Dependency>
 			<Dependency>libsigc++</Dependency>
 			<Dependency>fontconfig</Dependency>
@@ -111,6 +121,13 @@
 	</Package>
 
 	<History>
+		<Update release="5">
+			<Date>2020-04-11</Date>
+			<Version>2020.04.09</Version>
+			<Comment>Release candidate 1.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="4">
 			<Date>2019-12-05</Date>
 			<Version>2019.12.03</Version>

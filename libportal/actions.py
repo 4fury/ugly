@@ -9,7 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	shelltools.system("meson --prefix=/usr . build")
+	shelltools.system("meson build . --prefix=/usr")
 
 def build():
 	shelltools.system("ninja -C build")
@@ -17,4 +17,5 @@ def build():
 def install():
 	shelltools.system("DESTDIR=%s ninja -C build install" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS*", "README")
+	pisitools.dodoc("COPYING", "NEWS", "README.md")
+
