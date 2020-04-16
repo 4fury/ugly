@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>gtksourceview4</Name>
+		<Homepage>https://wiki.gnome.org/Projects/GtkSourceView</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>LGPLv2.1</License>
+		<IsA>library</IsA>
+		<PartOf>desktop.gnome2</PartOf>
+		<Summary>gtksourceview version 4.</Summary>
+		<Description>
+			GtkSourceView is a GNOME library that extends GtkTextView, the standard GTK+ widget for multiline text editing. GtkSourceView adds support for syntax highlighting, undo/redo, file loading and saving, search and replace, a completion system, printing, displaying line numbers, and other features typical of a source code editor.
+		</Description>
+		<Archive sha1sum="e5e11ff5d391e77e986425a2c944f321988f3033" type="tarxz">
+			https://download.gnome.org/sources/gtksourceview/4.0/gtksourceview-4.0.3.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>gtksourceview4</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>gtksourceview4-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">gtksourceview4</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/share/pkgconfig</Path>
+			<Path fileType="header">/usr/include</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>gtksourceview4-docs</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">gtksourceview4</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="data">/usr/share/gtk-doc/html</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-04-14</Date>
+			<Version>4.0.3</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

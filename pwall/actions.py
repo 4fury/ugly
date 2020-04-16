@@ -4,15 +4,14 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import shelltools
-
-def setup():
-	shelltools.system("mv setup-sk1.py setup.py")
+from pisi.actionsapi import pisitools
 
 def build():
-	pythonmodules.compile()
+	shelltools.cd("src")
+	for t in ["*.c"]:
+		shelltools.system("gcc -D LINUX  -o ../pwall %s -I. -g -lm `pkg-config --libs --cflags gtk+-3.0`" % t)
 
 def install():
-	pythonmodules.install()
+	pisitools.dobin("pwall")
 

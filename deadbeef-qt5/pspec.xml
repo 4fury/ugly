@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>deadbeef-qt5</Name>
+		<Homepage>https://github.com/VolkMilit/deadbeef-qt5</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>unknown</License>
+		<IsA>library</IsA>
+		<PartOf>desktop.misc</PartOf>
+		<Summary>This plugin provides a Qt interface for deadbeef.</Summary>
+		<Description>This plugin provides a Qt interface for deadbeef.</Description>
+		<Archive sha1sum="ca96c0eebd7ebaa4053f3a2fb62a0f2d61e68cd8" type="zip">
+			https://github.com/VolkMilit/deadbeef-qt5/archive/5c83b1444a3b2f5dc824bb4586f76249469d6caa.zip
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cmake</Dependency>
+			<Dependency>deadbeef</Dependency>
+			<Dependency>qt5-linguist</Dependency>
+			<Dependency>qt5-base-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>deadbeef-qt5</Name>
+		<RuntimeDependencies>
+			<Dependency>libgcc</Dependency>
+			<Dependency>qt5-base</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-04-14</Date>
+			<Version>2019.10.30</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

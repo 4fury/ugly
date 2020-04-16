@@ -8,7 +8,7 @@ from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import shelltools
 
 def setup():
-	shelltools.system("ln -s setup-uc2.py setup.py")
+	shelltools.system("mv setup-uc2.py setup.py")
 
 def build():
 	pythonmodules.compile()

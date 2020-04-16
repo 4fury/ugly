@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>gtranslator</Name>
+		<Homepage>https://wiki.gnome.org/Apps/Gtranslator</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>office.misc</PartOf>
+		<Summary>GNOME Translation Editor.</Summary>
+		<Description>
+			Formerly known as Gtranslator, GNOME Translation Editor is an enhanced gettext po file editor for the GNOME desktop environment. It handles all forms of gettext po files and include very useful features like Find/Replace, Translation Memory, different Translator Profiles, Messages Table (for having an overview of the translations/messages in the po file), Easy Navigation and Editing of translation messages and comments of the translation where accurate.
+		</Description>
+		<Archive sha1sum="e26522ab3680777520ea417586db7e93d444a441" type="tarxz">
+			https://download.gnome.org/sources/gtranslator/3.34/gtranslator-3.34.0.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>git</Dependency>
+			<Dependency>meson</Dependency>
+			<Dependency>itstool</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>libgda-devel</Dependency>
+			<Dependency>gspell-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+			<Dependency>libsoup-devel</Dependency>
+			<Dependency>gettext-devel</Dependency>
+			<Dependency>json-glib-devel</Dependency>
+			<Dependency>libdazzle-devel</Dependency>
+			<Dependency>gtksourceview4-devel</Dependency>
+			<Dependency>gsettings-desktop-schemas-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>gtranslator</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>gspell</Dependency>
+			<Dependency>libgda</Dependency>
+			<Dependency>gettext</Dependency>
+			<Dependency>libsoup</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>json-glib</Dependency>
+			<Dependency>gtksourceview4</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="header">/usr/include/gtr-marshal.h</Path>
+			<Path fileType="man">/usr/share/man/man1</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-04-14</Date>
+			<Version>3.34.0</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

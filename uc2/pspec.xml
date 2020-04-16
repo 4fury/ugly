@@ -1,15 +1,16 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
-		<Name>uniconverter</Name>
-		<Homepage>https://sk1project.net/uc2/</Homepage>
+		<Name>uniconvertor</Name>
+		<Homepage>https://sk1project.net/</Homepage>
 		<Packager>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Packager>
 		<License>GPLv3</License>
 		<IsA>app:gui</IsA>
+		<PartOf>multimedia.graphics</PartOf>
 		<Summary>UniConvertor 2.0 - Universal graphics translator.</Summary>
 		<Description>
 			UniConvertor is an universal graphics translator. It is a command line tool/library which uses SK2 document object model to convert one file format to another.
@@ -19,9 +20,10 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>lcms2-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
 			<Dependency>pango-devel</Dependency>
 			<Dependency>python-devel</Dependency>
-			<Dependency>python-pillow</Dependency>
+			<!-- <Dependency>python-pillow</Dependency> -->
 			<Dependency>imagemagick-devel</Dependency>
 			<Dependency>python-setuptools</Dependency>
 			<Dependency>python-cairo-devel</Dependency>
@@ -29,14 +31,17 @@
 	</Source>
 
 	<Package>
-		<Name>uniconverter</Name>
+		<Name>uniconvertor</Name>
 		<RuntimeDependencies>
-			<Dependency>python</Dependency>
-			<Dependency>cairo</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>lcms2</Dependency>
+			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>
+			<Dependency>python</Dependency>
 			<Dependency>imagemagick</Dependency>
+			<Dependency>python-cairo</Dependency>
+			<Dependency>python-pillow</Dependency>
+			<Dependency>python-reportlab</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
@@ -48,7 +53,7 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-01-25</Date>
+			<Date>2020-04-16</Date>
 			<Version>2.0_rc4</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
