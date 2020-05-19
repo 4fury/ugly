@@ -6,9 +6,12 @@
 
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import shelltools
+from pisi.actionsapi import get
 
 def setup():
-	shelltools.system("mv setup-sk1.py setup.py")
+	for z in ["src/sk1.*"]:
+		shelltools.chmod(z, mode = 0644)
+	shelltools.export("CFLAGS", get.CFLAGS())
 
 def build():
 	pythonmodules.compile()

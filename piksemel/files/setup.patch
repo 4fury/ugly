@@ -1,0 +1,14 @@
+--- a/setup.py	2009-02-13 22:19:59.000000000 +0300
++++ b/setup.py	2020-05-14 12:45:36.863375302 +0300
+@@ -54,9 +54,9 @@
+         if test.endswith(".py"):
+             if 0 != subprocess.call(["tests/" + test]):
+                 fail += 1
+-                print test, "failed!"
++                print (test, "failed!")
+     if not fail:
+-        print "all tests passed :)"
++        print ("all tests passed :)")
+         sys.exit(0)
+     sys.exit(1)
+ 

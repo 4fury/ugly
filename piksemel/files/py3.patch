@@ -1,0 +1,38 @@
+--- a/src/pyiks.c	2009-02-13 22:19:59.000000000 +0300
++++ b/src/pyiks.c	2020-05-14 12:50:31.584051752 +0300
+@@ -266,7 +266,7 @@
+ Document_dealloc(Document *self)
+ {
+ 	if (self->document) iks_delete(self->document);
+-	self->ob_type->tp_free((PyObject *)self);
++	self->ob_base->tp_free((PyObject *)self);
+ }
+ 
+ static PyObject *
+@@ -344,7 +344,7 @@
+ 	if (self->doc) {
+ 		Py_DECREF(self->doc);
+ 	}
+-	self->ob_type->tp_free((PyObject *)self);
++	self->ob_base->tp_free((PyObject *)self);
+ }
+ 
+ static PyObject *
+@@ -421,7 +421,7 @@
+ 	if (!ret) return NULL;
+ 
+ 	for (attr = iks_attrib(self->node); attr; attr = iks_next(attr)) {
+-		p = PyString_FromString(iks_name(attr));
++		p = PyLong_FromString(iks_name(attr));
+ 		if (p) PyList_Append(ret, p);
+ 	}
+ 
+@@ -999,7 +999,7 @@
+ {
+ 	PyObject *m;
+ 
+-	m = Py_InitModule("piksemel", methods);
++	m = Py_Initialize("piksemel", methods);
+ 	/* constants */
+ 	PyModule_AddIntConstant(m, "TAG", IKS_TAG);
+ 	PyModule_AddIntConstant(m, "ATTRIBUTE", IKS_ATTRIBUTE);

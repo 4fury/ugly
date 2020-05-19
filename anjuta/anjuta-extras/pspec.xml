@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>anjuta-extras</Name>
+		<Homepage>https://github.com/GNOME/anjuta-extras</Homepage>
+		<Packager>
+			<Name>PisiLinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app</IsA>
+		<PartOf>programming.environment</PartOf>
+		<Summary>Extra plugins for Anjuta IDE.</Summary>
+		<Description>Extra plugins for Anjuta IDE.</Description>
+		<Archive sha1sum="bfd3feeb3061e9d90c592a55c15ac6abc627b8bc" type="tarxz">
+			https://download.gnome.org/sources/anjuta-extras/3.26/anjuta-extras-3.26.0.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>itstool</Dependency>
+			<Dependency>intltool</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>anjuta-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>anjuta-extras</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>gdl</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>anjuta</Dependency>
+			<Dependency>libgcc</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/anjuta</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="4">
+			<Date>2020-04-30</Date>
+			<Version>3.26.0</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="3">
+			<Date>2015-05-22</Date>
+			<Version>3.10.0</Version>
+			<Comment>Rebuild</Comment>
+			<Name>Ayhan Yalçınsoy</Name>
+			<Email>ayhanyalcinsoy@pisilinux.org</Email>
+		</Update>
+		<Update release="2">
+			<Date>2013-10-20</Date>
+			<Version>3.10.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Yusuf Aydemir</Name>
+			<Email>yusuf.aydemir@pisilinux.org</Email>
+		</Update>
+		<Update release="1">
+			<Date>2013-10-14</Date>
+			<Version>3.8.0</Version>
+			<Comment>First release.</Comment>
+			<Name>Aydın Demirel</Name>
+			<Email>aydin.demirel@pisilinux.org</Email>
+		</Update>
+	</History>
+</PISI>
+

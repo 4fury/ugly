@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>app:gui</IsA>
+		<PartOf>multimedia.graphics</PartOf>
 		<Summary>Geeqie is a lightweight image viewer for Linux, BSDs and compatibles.</Summary>
 		<Description>
 			Geeqie can be used as a simple, fast, database-free image viewer, but equally it can be used to manage large collections of images.
@@ -21,9 +22,11 @@
 			<Dependency>intltool</Dependency>
 			<Dependency>gtk2-devel</Dependency>
 			<Dependency>tiff-devel</Dependency>
+			<Dependency>webp-devel</Dependency>
 			<Dependency>lcms2-devel</Dependency>
 			<Dependency>lua51-devel</Dependency>
 			<Dependency>exiv2-devel</Dependency>
+			<Dependency>openjpeg2-devel</Dependency>
 			<Dependency>libjpeg-turbo-devel</Dependency>
 			<Dependency>ffmpegthumbnailer-devel</Dependency>
 		</BuildDependencies>
@@ -34,6 +37,7 @@
 		<RuntimeDependencies>
 			<Dependency>gtk2</Dependency>
 			<Dependency>tiff</Dependency>
+			<Dependency>webp</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>lcms2</Dependency>
@@ -42,6 +46,7 @@
 			<Dependency>zenity</Dependency>
 			<Dependency>libgcc</Dependency>
 			<Dependency>gphoto2</Dependency>
+			<Dependency>openjpeg2</Dependency>
 			<Dependency>exiv2-libs</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libjpeg-turbo</Dependency>

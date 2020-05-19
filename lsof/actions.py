@@ -28,3 +28,4 @@ def install():
 
 	pisitools.doman("Lsof.8")
 	pisitools.dodoc("00*", "README.md")
+

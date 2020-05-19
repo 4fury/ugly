@@ -6,9 +6,10 @@
 
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import shelltools
+from pisi.actionsapi import get
 
 def setup():
-	shelltools.system("mv setup-uc2.py setup.py")
+	shelltools.export("CFLAGS", get.CFLAGS())
 
 def build():
 	pythonmodules.compile()

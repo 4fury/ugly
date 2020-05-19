@@ -1,0 +1,125 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>devhelp</Name>
+		<Homepage>https://wiki.gnome.org/Apps/Devhelp</Homepage>
+		<Packager>
+			<Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<Summary>Tools for creating Yelp documentation</Summary>
+		<Description>yelp-tools is a collection of scripts and build utilities to help create, manage, and publish documentation for Yelp and the web.</Description>
+		<Archive sha1sum="06dfa91aaef426d3d9d6f410bbe5f1c3e442dd20" type="tarxz">
+			https://download.gnome.org/sources/devhelp/3.28/devhelp-3.28.1.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<!--
+			<Dependency>meson</Dependency>
+			<Dependency>cmake</Dependency>
+			-->
+			<Dependency>itstool</Dependency>
+			<Dependency>gtk-doc</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>amtk-devel</Dependency>
+			<Dependency>python-six</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>webkit2gtk-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+			<Dependency>gsettings-desktop-schemas-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>devhelp</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libsoup</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>webkit2gtk</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>devhelp-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">devhelp</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>webkit2gtk-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+			<Dependency>gsettings-desktop-schemas-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="doc">/usr/share/gtk-doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="7">
+			<Date>2020-04-30</Date>
+			<Version>3.28.1</Version>
+			<Comment>Ver. up</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="6">
+			<Date>2014-03-06</Date>
+			<Version>3.10.0</Version>
+			<Comment>Dep Fix</Comment>
+			<Name>Varol Maksutoğlu</Name>
+			<Email>waroi@pisilinux.org</Email>
+		</Update>
+		<Update release="5">
+			<Date>2013-12-22</Date>
+			<Version>3.10.0</Version>
+			<Comment>Rebuild</Comment>
+			<Name>Yusuf Aydemir</Name>
+			<Email>yusuf.aydemir@pisilinux.org</Email>
+		</Update>
+		<Update release="4">
+			<Date>2013-10-20</Date>
+			<Version>3.10.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Yusuf Aydemir</Name>
+			<Email>yusuf.aydemir@pisilinux.org</Email>
+		</Update>
+		<Update release="3">
+			<Date>2013-10-14</Date>
+			<Version>2.32.0</Version>
+			<Comment>Rebuild for icu4c</Comment>
+			<Name>Osman Erkan</Name>
+			<Email>osman.erkan@pisilinux.org</Email>
+		</Update>	  
+		<Update release="2">
+			<Date>2013-07-28</Date>
+			<Version>2.32.0</Version>
+			<Comment>Dep Fixed</Comment>
+			<Name>Osman Erkan</Name>
+			<Email>osman.erkan@pisilinux.org</Email>
+		</Update>
+		<Update release="1">
+			<Date>2012-11-22</Date>
+			<Version>2.32.0</Version>
+			<Comment>First release</Comment>
+			<Name>Osman Erkan</Name>
+			<Email>osman.erkan@pisilinux.org</Email>
+		</Update>
+	</History>
+</PISI>

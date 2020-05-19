@@ -1,0 +1,25 @@
+diff -r 184eb474c083 configmanager.cpp
+--- a/src/configmanager.cpp	Sun Nov 26 21:13:19 2017 +0100
++++ b/src/configmanager.cpp	Fri Dec 01 21:07:57 2017 +0100
+@@ -617,7 +617,7 @@
+ #else
+ 	registerOption("Grammar/Language Tool URL", &grammarCheckerConfig->languageToolURL, "http://localhost:8081/", &pseudoDialog->lineEditGrammarLTUrl);
+ #endif
+-	registerOption("Grammar/Language Tool Path", &grammarCheckerConfig->languageToolPath, "", &pseudoDialog->lineEditGrammarLTPath);
++    registerOption("Grammar/Language Tool Path", &grammarCheckerConfig->languageToolPath, "/usr/share/languagetool:/usr/share/java/languagetool/*", &pseudoDialog->lineEditGrammarLTPath);
+ 	registerOption("Grammar/Language Tool Arguments", &grammarCheckerConfig->languageToolArguments, "org.languagetool.server.HTTPServer -p 8081", &pseudoDialog->lineEditGrammarLTArguments);
+ 	registerOption("Grammar/Language Tool Java Path", &grammarCheckerConfig->languageToolJavaPath, "java", &pseudoDialog->lineEditGrammarLTJava);
+ 	registerOption("Grammar/Language Tool Autorun", &grammarCheckerConfig->languageToolAutorun, true, &pseudoDialog->checkBoxGrammarLTAutorun);
+diff -r 184eb474c083 grammarcheck.cpp
+--- a/src/grammarcheck.cpp	Sun Nov 26 21:13:19 2017 +0100
++++ b/src/grammarcheck.cpp	Fri Dec 01 21:07:57 2017 +0100
+@@ -901,7 +901,7 @@
+     }
+     triedToStart = true;
+     startTime = 0;
+-    if (ltPath == "" || !QFileInfo(ltPath).exists()) return;
++    if (ltPath == "") return;
+     javaProcess = new QProcess();
+     connect(javaProcess, SIGNAL(finished(int)), javaProcess, SLOT(deleteLater()));
+     connect(this, SIGNAL(destroyed()), javaProcess, SLOT(deleteLater()));
+

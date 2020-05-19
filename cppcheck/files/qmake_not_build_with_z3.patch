@@ -1,0 +1,29 @@
+--- a/gui/gui.pro	2020-05-10 12:31:19.000000000 +0300
++++ b/gui/gui.pro	2020-05-13 13:53:03.070440953 +0300
+@@ -6,8 +6,7 @@
+ DEPENDPATH += . \
+     ../lib
+ INCLUDEPATH += . \
+-    ../lib \
+-    ../externals/z3/include
++    ../lib
+ QT += widgets
+ QT += printsupport
+ 
+@@ -15,15 +14,7 @@
+     LIBS += -l../bin/cppcheck-core
+     DEFINES += CPPCHECKLIB_IMPORT
+ }
+-LIBS += -L$$PWD/../externals -L$$PWD/../externals/z3/bin
+-
+-# z3
+-win32 {
+-    LIBS += -llibz3
+-} else {
+-    LIBS += -lz3
+-}
+-QMAKE_CXXFLAGS += -DUSE_Z3
++LIBS += -L$$PWD/../externals
+ 
+ DESTDIR = .
+ RCC_DIR = temp

@@ -8,10 +8,16 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-options = "--disable-map --disable-pdf --disable-gtk3 --disable-debug-log"
+e = "--enable-lirc \
+     --disable-pdf \
+     --disable-map \
+     --disable-gtk3 \
+     --disable-gpu-accel \
+     --disable-debug-log \
+    "
 
 def setup():
-	autotools.configure(options)
+	autotools.configure(e)
 
 def build():
 	autotools.make()

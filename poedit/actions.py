@@ -9,7 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure()
+	autotools.configure("--without-cld2 --without-cpprest")
 
 def build():
 	autotools.make()

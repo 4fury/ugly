@@ -1,0 +1,11 @@
+--- a/qt/qtr.pro	2018-05-01 20:21:08.322550033 +0300
++++ b/qt/qtr.pro	2020-05-19 11:13:10.463346580 +0300
+@@ -11,7 +11,7 @@
+ man.path = /share/man/man1/
+ man.files = transmission-qt.1
+ 
+-CONFIG += qt thread debug link_pkgconfig c++11 warn_on
++CONFIG += qt thread release link_pkgconfig c++11 warn_on
+ QT += network dbus
+ PKGCONFIG = fontconfig libcurl openssl libevent
+ 

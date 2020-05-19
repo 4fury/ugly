@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>amtk</Name>
+		<Homepage>https://wiki.gnome.org/Projects/Amtk</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>LGPLv2.1</License>
+		<IsA>library</IsA>
+		<PartOf>desktop.toolkit.gtk</PartOf>
+		<Summary>Actions, Menus and Toolbars Kit for GTK applications.</Summary>
+		<Description>
+			Amtk is the acronym for “Actions, Menus and Toolbars Kit”. It is a basic GtkUIManager replacement based on GAction. It is suitable for both a traditional UI or a modern UI with a GtkHeaderBar.
+		</Description>
+		<Archive sha1sum="b31628d65bfaa7619fc828a58e70b79e0fdffcba" type="tarxz">
+			https://download.gnome.org/sources/amtk/5.0/amtk-5.0.2.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gtk-doc</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>python-six</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>amtk</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>amtk-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">amtk</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="doc">/usr/share/gtk-doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-04-30</Date>
+			<Version>5.0.2</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

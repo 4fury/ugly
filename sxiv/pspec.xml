@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>sxiv</Name>
+		<Homepage>https://github.com/muennich/sxiv</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app</IsA>
+		<PartOf>desktop.misc</PartOf>
+		<Summary>Simple X Image Viewer.</Summary>
+		<Description>
+			The sole purpose of sxiv is to be the perfect image viewer for me. It is free software so that you can use it and modify it for your needs. Please file a bug report if something does not work as documented or expected. Contributions are welcome but there is no guarantee that they will be incorporated.
+		</Description>
+		<Archive sha1sum="663fd8ed46930e08ce9b5dd6e6573634563bd773" type="targz">
+			https://github.com/muennich/sxiv/archive/v26.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>imlib2-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>libXft-devel</Dependency>
+			<Dependency>giflib-devel</Dependency>
+			<Dependency>libexif-devel</Dependency>
+			<Dependency>freetype-devel</Dependency>
+			<Dependency>fontconfig-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>sxiv</Name>
+		<RuntimeDependencies>
+			<Dependency>giflib</Dependency>
+			<Dependency>imlib2</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libXft</Dependency>
+			<Dependency>libexif</Dependency>
+			<Dependency>fontconfig</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-04-30</Date>
+			<Version>26</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

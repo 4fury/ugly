@@ -11,8 +11,9 @@ def build():
 	autotools.make("PREFIX=/usr")
 
 def install():
-	pisitools.dobin("xst")
+	pisitools.dobin("st")
 
 	pisitools.dodoc("README.md", "doc/LICENSE", "doc/Xresources")
-	pisitools.doman("doc/xst.1")
-	pisitools.doinfo("doc/xst.info")
+	pisitools.doman("doc/st.1")
+	pisitools.doinfo("doc/st.info")
+

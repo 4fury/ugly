@@ -12,14 +12,14 @@
 		<IsA>app:gui</IsA>
 		<Summary>A cross-platform translation editor.</Summary>
 		<Description>This program is a simple translation editor for PO and XLIFF files. It also serves as a GUI frontend to more GNU gettext utilities and catalogs editor/source code parser. It helps with translating applications into another language.</Description>
-		<Archive sha1sum="00dfd7a03cd177d391e5884f739642a3ebfb73f1" type="targz">
-			https://github.com/vslavik/poedit/releases/download/v2.3-oss/poedit-2.3.tar.gz
+		<Archive sha1sum="2718cf26b78886fc7448f1773040dcccb7949f9f" type="targz">
+			https://github.com/vslavik/poedit/releases/download/v2.3.1-oss/poedit-2.3.1.tar.gz
 		</Archive>
 		<BuildDependencies>
-			<Dependency>gtk2-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
 			<Dependency>boost-devel</Dependency>
-			<Dependency>wxGTK-devel</Dependency>
-			<Dependency>gtkspell-devel</Dependency>
+			<Dependency>wxGTK3-devel</Dependency>
+			<Dependency>gtkspell3-devel</Dependency>
 			<Dependency>luceneplusplus-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
@@ -33,13 +33,13 @@
 	<Package>
 		<Name>poedit</Name>
 		<RuntimeDependencies>
-			<Dependency>gtk2</Dependency>
+			<Dependency>gtk3</Dependency>
 			<Dependency>boost</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>icu4c</Dependency>
-			<Dependency>wxGTK</Dependency>
+			<Dependency>wxGTK3</Dependency>
 			<Dependency>libgcc</Dependency>
-			<Dependency>gtkspell</Dependency>
+			<Dependency>gtkspell3</Dependency>
 			<Dependency>luceneplusplus</Dependency>
 		</RuntimeDependencies>
 		<Files>
@@ -52,9 +52,9 @@
 	</Package>
 
 	<History>
-		<Update release="4">
-			<Date>2020-04-13</Date>
-			<Version>2.3</Version>
+		<Update release="5">
+			<Date>2020-04-30</Date>
+			<Version>2.3.1</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
