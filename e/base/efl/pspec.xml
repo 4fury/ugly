@@ -48,6 +48,7 @@
 			<Dependency>libXext-devel</Dependency>
 			<Dependency>librsvg-devel</Dependency>
 			<Dependency>libXtst-devel</Dependency>
+			<Dependency>wayland-devel</Dependency>
 			<Dependency>xine-lib-devel</Dependency>
 			<Dependency>libglade-devel</Dependency>
 			<Dependency>libXdmcp-devel</Dependency>
@@ -158,6 +159,7 @@
 			<Dependency>openssl-devel</Dependency>
 			<Dependency>libsdl2-devel</Dependency>
 			<Dependency>libXtst-devel</Dependency>
+			<Dependency>wayland-devel</Dependency>
 			<Dependency>harfbuzz-devel</Dependency>
 			<Dependency>wayland-client</Dependency>
 			<Dependency>wayland-server</Dependency>

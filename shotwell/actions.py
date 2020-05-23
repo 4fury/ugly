@@ -10,16 +10,15 @@ from pisi.actionsapi import get
 
 def setup():
 	# disable webkit requirement
-	shelltools.system("sed -i '6d;19,20d' plugins/meson.build")
-	shelltools.system("sed -i 's/webkit, //' plugins/meson.build")
-	shelltools.system("sed -i 's/webkit, //' plugins/shotwell-publishing/meson.build")
-	shelltools.system("sed -i 's/gdata, //' plugins/shotwell-publishing/meson.build")
-	shelltools.system("sed -i 's/webkit, //' plugins/shotwell-transitions/meson.build")
-	shelltools.system("sed -i 's/, webkit//' plugins/authenticator/shotwell/meson.build")
-	shelltools.system("sed -i '44d;98d' meson.build")
+#	shelltools.system("sed -i '6d;19,20d' plugins/meson.build")
+#	shelltools.system("sed -i 's/webkit, //' plugins/meson.build")
+#	shelltools.system("sed -i 's/webkit, //' plugins/shotwell-publishing/meson.build")
+#	shelltools.system("sed -i 's/gdata, //' plugins/shotwell-publishing/meson.build")
+#	shelltools.system("sed -i 's/webkit, //' plugins/shotwell-transitions/meson.build")
+#	shelltools.system("sed -i 's/, webkit//' plugins/authenticator/shotwell/meson.build")
+#	shelltools.system("sed -i '44d;98d' meson.build")
 
-	shelltools.system("meson \
-	--prefix=/usr \
+	shelltools.system("meson --prefix=/usr \
 	\
 	-Dface-detection-helper=false \
 	-Dinstall-apport-hook=false \
@@ -36,5 +35,5 @@ def build():
 def install():
 	shelltools.system("DESTDIR=%s ninja -C build install" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "COPYING", "INSTALL", "NEWS", "README.md", "THANKS")
+	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README.md", "THANKS")
 

@@ -8,20 +8,8 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-z = "-Dwl=true \
-     -Dsdl=true \
-     -Deeze=true \
-     -Dbuffer=true \
-     -Dpixman=true \
-     -Dxpresent=true \
-     -Dopengl=full \
-     -Dsystemd=false \
-     -Dbuild-tests=false \
-     -Dbuild-examples=false \
-    "
-
 def setup():
-	shelltools.system("meson --prefix=/usr --libdir=lib %s . build" % z)
+	shelltools.system("meson --prefix=/usr . build")
 
 def build():
 	shelltools.system("ninja -C build")
@@ -29,5 +17,5 @@ def build():
 def install():
 	shelltools.system("DESTDIR=%s ninja -C build install" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "COPYING*", "NEWS", "README")
+	pisitools.dodoc("AUTHORS", "ChangeLog*", "COPYING", "NEWS", "README.md")
 

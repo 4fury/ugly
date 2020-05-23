@@ -6,21 +6,20 @@
 		<Homepage>https://wiki.gnome.org/Apps/Shotwell</Homepage>
 		<Packager>
 			<Name>fury</Name>
-			<Email>lilian2water@gmail.com</Email>
+			<Email>wascheme@tuta.io</Email>
 		</Packager>
 		<License>LGPLv2.1</License>
 		<IsA>app:gui</IsA>
 		<PartOf>multimedia.graphics</PartOf>
-		<Summary>Digital photo organizer</Summary>
-		<Description>
-			Shotwell is a personal photo manager.
-		</Description>
-		<Archive sha1sum="f2631d380e64b6d8ff9a81c3b545cd26452c0f6f" type="tarxz">
-			https://download.gnome.org/sources/shotwell/0.30/shotwell-0.30.8.tar.xz
+		<Summary>Digital photo organizer.</Summary>
+		<Description>Shotwell is a personal photo manager.</Description>
+		<Archive sha1sum="141fa6ae7a7915b93f81971f438d6e9b95b3fad8" type="tarxz">
+			https://download.gnome.org/sources/shotwell/0.30/shotwell-0.30.10.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>gsettings-desktop-schemas-devel</Dependency>
 			<Dependency>meson</Dependency>
+			<Dependency>cmake</Dependency>
 			<Dependency>itstool</Dependency>
 			<Dependency>gcr-devel</Dependency>
 			<Dependency>vala-devel</Dependency>
@@ -31,10 +30,12 @@
 			<Dependency>libraw-devel</Dependency>
 			<Dependency>libsoup-devel</Dependency>
 			<Dependency>libgudev-devel</Dependency>
+			<Dependency>libgdata-devel</Dependency>
 			<Dependency>libgexiv2-devel</Dependency>
 			<Dependency>gstreamer-devel</Dependency>
 			<Dependency>json-glib-devel</Dependency>
 			<Dependency>libgphoto2-devel</Dependency>
+			<Dependency>webkit2gtk-devel</Dependency>
 			<Dependency>gst-plugins-base-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
@@ -76,25 +77,11 @@
 	</Package>
 
 	<History>
-		<Update release="3">
-			<Date>2020-02-28</Date>
-			<Version>0.30.8</Version>
-			<Comment>Ver. bump</Comment>
-			<Email>lilian2water@gmail.com</Email>
-			<Name>fury</Name>
-		</Update>
-		<Update release="2">
-			<Date>2019-09-11</Date>
-			<Version>0.30.7</Version>
-			<Comment>Ver. bump</Comment>
-			<Email>lilian2water@gmail.com</Email>
-			<Name>fury</Name>
-		</Update>
 		<Update release="1">
-			<Date>2019-08-01</Date>
-			<Version>0.30.4</Version>
+			<Date>2020-04-30</Date>
+			<Version>0.30.10</Version>
 			<Comment>First build.</Comment>
-			<Email>lilian2water@gmail.com</Email>
+			<Email>wascheme@tuta.io</Email>
 			<Name>fury</Name>
 		</Update>
 	</History>
