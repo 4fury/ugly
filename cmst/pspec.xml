@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>cmst</Name>
+		<Homepage>https://github.com/andrew-bibb/cmst</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>MIT</License>
+		<IsA>app:gui</IsA>
+		<PartOf>network.connection</PartOf>
+		<Summary>QT GUI for Connman.</Summary>
+		<Description>
+			The program provides graphical user interface to control the connman daemon. The connman daemon must be started as you normally would, this program just interfaces with that daemon. You can see what technologies and services connman has found, and for wifi services an agent is registered to assist in obtaining the information from you necessary to logon the wifi service.
+		</Description>
+		<Archive sha1sum="ea51c9e5d31e50fef94b7d646cd267a6e1a077b7" type="targz">
+			https://github.com/andrew-bibb/cmst/archive/2020.05.09.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>connman-devel</Dependency>
+			<Dependency>qt5-base-devel</Dependency>
+			<Dependency>libxkbcommon-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>cmst</Name>
+		<RuntimeDependencies>
+			<Dependency>libgcc</Dependency>
+			<Dependency>connman</Dependency>
+			<Dependency>qt5-base</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib/cmst</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-06-01</Date>
+			<Version>2020.05.09</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

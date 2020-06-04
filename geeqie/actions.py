@@ -17,6 +17,8 @@ e = "--enable-lirc \
     "
 
 def setup():
+	pisitools.cflags.add("-Wno-deprecated-declarations")
+	pisitools.cxxflags.add("-Wno-deprecated-declarations")
 	autotools.configure(e)
 
 def build():

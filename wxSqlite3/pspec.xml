@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>wxSqlite3</Name>
+		<Homepage>https://utelle.github.io/wxsqlite3/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>custom</License>
+		<IsA>library</IsA>
+		<PartOf>programming.library</PartOf>
+		<Summary>A lightweight wrapper for SQLite.</Summary>
+		<Description>
+			wxSQLite3 is a C++ wrapper around the public domain SQLite 3.x database and is specifically designed for use in programs based on the wxWidgets library.
+		</Description>
+		<Archive sha1sum="04b07149f994efd09daf2f182e350dafcd761fa2" type="targz">
+			https://github.com/utelle/wxsqlite3/archive/v4.5.1.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>wxGTK3</Dependency>
+			<Dependency>wxGTK-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>wxSqlite3</Name>
+		<RuntimeDependencies>
+			<Dependency>libgcc</Dependency>
+			<Dependency>wxGTK</Dependency>
+			<Dependency>wxGTK3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>wxSqlite3-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">wxSqlite3</Dependency>
+			<Dependency>wxGTK-devel</Dependency>
+			<Dependency>wxGTK3</Dependency>
+			<Dependency>sqlite-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-06-01</Date>
+			<Version>4.5.1</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

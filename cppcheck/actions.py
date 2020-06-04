@@ -5,42 +5,26 @@
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
 from pisi.actionsapi import shelltools
-from pisi.actionsapi import autotools
+from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
-from pisi.actionsapi import qt5
 
-t = 'FILESDIR=/usr/share/cppcheck CFGDIR=/usr/share/cppcheck/cfg'
+shelltools.export("PYTHON", "/usr/bin/python3")
 
-z = "-DNDEBUG \
-     -Wall \
-     -Wno-missing-field-initializers \
-     -Wno-multichar \
-     -Wno-sign-compare \
-     -Wno-unused-function \
-     -Wno-implicit-fallthrough \
-     -Wno-maybe-uninitialized \
-     -Wno-deprecated-declarations \
-    "
+i = 'FILESDIR=/usr/share/cppcheck CFGDIR=cfg'
+
+f = '-Wno-multichar -Wno-sign-compare -Wno-unused-function -Wno-maybe-uninitialized \
+-Wno-implicit-fallthrough -Wno-deprecated-declarations'
+
+def setup():
+	pisitools.cxxflags.add("-DNDEBUG -DNEW_Z3=1 %s" % f)
+	cmaketools.configure("-DCLANG_TIDY_ENABLED=OFF -DWITH_GUI=ON -L")
 
 def build():
-	pisitools.cxxflags.add(z)
-	autotools.make("MATCHCOMPILER=yes %s HAVE_RULES=yes HAVE_QCHARTS=yes USE_Z3=no" % t)
-
-	shelltools.cd("gui")
-	qt5.configure()
-	qt5.make()
-
-def check():
-	autotools.make("check %s" % t)
+	cmaketools.make()
 
 def install():
-	pisitools.dobin("gui/cppcheck-gui")
-	pisitools.insinto("/usr/share/applications", "gui/cppcheck-gui.desktop", "cppcheck-gui.desktop")
-	pisitools.insinto("/usr/share/pixmaps", "gui/cppcheck-gui.svg", "cppcheck-gui.svg")
-	pisitools.insinto("/usr/share/pixmaps", "gui/cppcheck-gui.png", "cppcheck-gui.png")
+	cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	autotools.rawInstall("DESTDIR=%s %s" % (get.installDIR(), t))
-
-	pisitools.dodoc("AUTHORS", "COPYING", "readme*")
+	pisitools.dodoc("")
 

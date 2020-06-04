@@ -1,0 +1,21 @@
+--- a/src/plugins/styles/gtk2/qgtkstyle.cpp	2020-05-27 08:16:59.921286603 +0300
++++ b/src/plugins/styles/gtk2/qgtkstyle.cpp	2020-05-27 08:19:25.584989235 +0300
+@@ -336,7 +336,7 @@
+     if (d->isThemeAvailable()) {
+         GtkStyle *style = d->gtkStyle();
+         GtkWidget *gtkButton = d->gtkWidget("GtkButton");
+-        GtkWidget *gtkEntry = d->getTextColorWidget();
++        GtkWidget *gtkEntry = d->gtkWidget("GtkTreeView");
+         GdkColor gdkBg, gdkBase, gdkText, gdkForeground, gdkSbg, gdkSfg, gdkaSbg, gdkaSfg;
+         QColor bg, base, text, fg, highlight, highlightText, inactiveHighlight, inactiveHighlightedTExt;
+         gdkBg = style->bg[GTK_STATE_NORMAL];
+@@ -411,6 +411,9 @@
+             text = QColor(gdkText.red>>8, gdkText.green>>8, gdkText.blue>>8);
+             palette.setColor(QPalette::ToolTipText, text);
+         }
++
++        palette.setColor(QPalette::Link, QColor(128, 128, 255));
++        palette.setColor(QPalette::LinkVisited, QColor(192, 128, 255));
+     }
+     return palette;
+ }

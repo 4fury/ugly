@@ -16,23 +16,23 @@
 		<Description>
 			Glade is a RAD tool to enable quick and easy development of user interfaces for the GTK+ toolkit and the GNOME desktop environment. The user interfaces designed in Glade are saved as XML, and by using the GtkBuilder GTK+ object these can be loaded by applications dynamically as needed.
 		</Description>
-		<Archive sha1sum="66f34413fc7796cb2c205a943af2d766fc47b2e4" type="tarxz">
-			https://download.gnome.org/sources/glade/3.22/glade-3.22.2.tar.xz
+		<Archive sha1sum="2137c0945c602a865a2910736f3ff5cd442bc8ef" type="tarxz">
+			https://download.gnome.org/sources/glade/3.36/glade-3.36.0.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>gtk-doc</Dependency>
 			<Dependency>itstool</Dependency>
 			<Dependency>intltool</Dependency>
-			<Dependency>yelp-tools</Dependency>
+			<!-- <Dependency>yelp-tools</Dependency> -->
 			<Dependency>gtk3-devel</Dependency>
-			<Dependency>python-six</Dependency>
+			<Dependency>python3-six</Dependency>
 			<Dependency>docbook-xsl</Dependency>
-			<Dependency>gnome-common</Dependency>
+			<!-- <Dependency>gnome-common</Dependency> -->
 			<Dependency>python3-devel</Dependency>
 			<Dependency>libxml2-devel</Dependency>
 			<Dependency>libxslt-devel</Dependency>
 			<Dependency>gettext-devel</Dependency>
-			<Dependency>devhelp-devel</Dependency>
+			<!-- <Dependency>devhelp-devel</Dependency> -->
 			<Dependency>webkit2gtk-devel</Dependency>
 			<!-- <Dependency>xorg-server-xvfb</Dependency> -->
 			<Dependency>python-pygobject3-devel</Dependency>
@@ -81,8 +81,8 @@
 
 	<History>
 		<Update release="6">
-			<Date>2020-04-30</Date>
-			<Version>3.22.2</Version>
+			<Date>2020-06-01</Date>
+			<Version>3.36.0</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

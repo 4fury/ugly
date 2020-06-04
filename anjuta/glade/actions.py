@@ -11,22 +11,24 @@ from pisi.actionsapi import get
 
 shelltools.export("PYTHON", "/usr/bin/python3")
 
-w = "-Wno-deprecated-declarations \
+f = "-Wno-deprecated-declarations \
+     -Wno-cpp \
+     -Wno-implicit-function-declaration \
      -Wno-pointer-compare \
      -Wno-unused-variable \
      -Wno-unused-function \
     "
 
 def setup():
-	pisitools.cflags.add(w)
+	pisitools.cflags.add(f)
 #	autotools.autoreconf("-fi")
 #	shelltools.system("sed -i 's|AX_CHECK|#AX_CHECK|' configure")
 	autotools.configure("--enable-python --enable-gladeui")
 
-	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+#	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
-	autotools.make()
+	autotools.make("-j1")
 
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())

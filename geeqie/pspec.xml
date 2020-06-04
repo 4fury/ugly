@@ -20,9 +20,11 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
+			<Dependency>lua-devel</Dependency>
 			<Dependency>gtk2-devel</Dependency>
 			<Dependency>tiff-devel</Dependency>
 			<Dependency>webp-devel</Dependency>
+			<Dependency>lirc-devel</Dependency>
 			<Dependency>lcms2-devel</Dependency>
 			<Dependency>lua51-devel</Dependency>
 			<Dependency>exiv2-devel</Dependency>
@@ -35,9 +37,11 @@
 	<Package>
 		<Name>geeqie</Name>
 		<RuntimeDependencies>
+			<Dependency>lua</Dependency>
 			<Dependency>gtk2</Dependency>
 			<Dependency>tiff</Dependency>
 			<Dependency>webp</Dependency>
+			<Dependency>lirc</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>lcms2</Dependency>

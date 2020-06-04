@@ -38,7 +38,7 @@
         </BuildDependencies>
         <Patches>
             <Patch level="1">pkcs7-fix.patch</Patch>
-            <Patch level="1">shared-libs2.patch</Patch>
+            <!-- <Patch level="1">shared-libs2.patch</Patch> -->
             <!--
             <Patch>mupdf-1.12.0-security-roundup.patch</Patch>
             <Patch>mupdf-CVE-2017-17858.patch</Patch>
@@ -85,7 +85,7 @@
     </Package>
 
     <History>
-        <Update release="9">
+        <Update release="8">
             <Date>2020-04-30</Date>
             <Version>1.17.0</Version>
             <Comment>Version bump.</Comment>

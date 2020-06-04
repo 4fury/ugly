@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>lxtask</Name>
+		<Homepage>https://lxde.github.io/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app:gui</IsA>
+		<PartOf>hardware.misc</PartOf>
+		<Summary>A lightweight system monitor.</Summary>
+		<Description>
+			LXTask - lightweight and desktop-independent task manager derived from xfce4-taskmanager with all dependencies on xfce removed, new features, and some improvement of the user interface.
+		</Description>
+		<Archive sha1sum="a146138e04952cd560cfb787b0bb9fa7dd57b0eb" type="tarxz">
+			https://sourceforge.net/projects/lxde/files/LXTask%20%28task%20manager%29/LXTask%200.1.x/lxtask-0.1.9.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>intltool</Dependency>
+			<Dependency>gtk2-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>lxtask</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk2</Dependency>
+			<Dependency>glib2</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-06-01</Date>
+			<Version>0.1.9</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

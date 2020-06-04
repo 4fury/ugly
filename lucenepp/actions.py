@@ -9,7 +9,7 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-w = "-DCMAKE_INSTALL_PREFIX=/usr \
+i = "-DCMAKE_INSTALL_PREFIX=/usr \
      -DLIB_DESTINATION=/usr/lib \
      -DCMAKE_BUILD_TYPE=Release \
      -DBUILD_SHARED_LIBS=ON \
@@ -22,7 +22,7 @@ def setup():
 	shelltools.export("CFLAGS", "-lpthread")
 	shelltools.makedirs("build")
 	shelltools.cd("build")
-	cmaketools.configure("%s" % w, sourceDir="..")
+	cmaketools.configure("%s" % i, sourceDir="..")
 
 def build():
 	shelltools.cd("build")

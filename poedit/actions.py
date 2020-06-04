@@ -8,8 +8,19 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+i = "-Wno-deprecated-copy \
+     -Wno-missing-field-initializers \
+     -Wno-cast-function-type \
+     -Wno-ignored-qualifiers \
+    "
+j = "--with-wx-config=wx-config-gtk3 \
+     --without-cld2 \
+     --without-cpprest \
+    "
+
 def setup():
-	autotools.configure("--without-cld2 --without-cpprest")
+	pisitools.cxxflags.add(i)
+	autotools.configure(j)
 
 def build():
 	autotools.make()

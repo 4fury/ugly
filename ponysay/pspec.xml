@@ -17,6 +17,7 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>python3</Dependency>
+			<Dependency>python3-devel</Dependency>
 			<Dependency>python3-setuptools</Dependency>
 		</BuildDependencies>
 	</Source>

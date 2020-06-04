@@ -11,6 +11,7 @@
 		<License>LGPLv3</License>
 		<License>Apache-2.0</License>
 		<IsA>library</IsA>
+		<PartOf>programming.misc</PartOf>
 		<Summary>An up to date C++ port of the popular Java Lucene library, a high-performance, full-featured text search engine.</Summary>
 		<Description>Lucene++ is an up to date C++ port of the popular Java Lucene library, a high-performance, full-featured text search engine.</Description>
 		<Archive sha1sum="b2c38e7ca5056934a5bdb1a69ea251110e3c0377" type="targz">

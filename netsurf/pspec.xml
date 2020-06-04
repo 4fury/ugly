@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>netsurf</Name>
+		<Homepage>https://www.netsurf-browser.org/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app:gui</IsA>
+		<PartOf>network.web</PartOf>
+		<Summary>A lightweight, multi-platform web browser.</Summary>
+		<Description>
+			NetSurf is a multi-platform web browser for RISC OS, UNIX-like platforms (including Linux), Mac OS X, and more.
+		</Description>
+		<Archive sha1sum="d1404abcc8ba526dc425d8fda81a5a495082de19" type="targz">
+			http://download.netsurf-browser.org/netsurf/releases/source-full/netsurf-all-3.10.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>vim</Dependency>
+			<Dependency>gperf</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>curl-devel</Dependency>
+			<Dependency>webp-devel</Dependency>
+			<Dependency>check-devel</Dependency>
+			<Dependency>openssl-devel</Dependency>
+			<Dependency>librsvg-devel</Dependency>
+			<Dependency>gstreamer-devel</Dependency>
+			<Dependency>perl-HTML-Parser</Dependency>
+			<Dependency>libjpeg-turbo-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>netsurf</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk3</Dependency>
+			<Dependency>curl</Dependency>
+			<Dependency>webp</Dependency>
+			<Dependency>zlib</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>expat</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libpng</Dependency>
+			<Dependency>librsvg</Dependency>
+			<Dependency>openssl</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libjpeg-turbo</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-04-30</Date>
+			<Version>3.10</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

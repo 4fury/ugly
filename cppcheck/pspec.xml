@@ -19,16 +19,24 @@
 			https://github.com/danmar/cppcheck/archive/2.0.tar.gz
 		</Archive>
 		<BuildDependencies>
+			<Dependency>cmake</Dependency>
 			<Dependency>python3</Dependency>
+			<Dependency>z3-devel</Dependency>
+			<Dependency>zlib-devel</Dependency>
 			<Dependency>docbook-xsl</Dependency>
+			<Dependency>qt5-linguist</Dependency>
+			<Dependency>python3-devel</Dependency>
 			<Dependency>libpcre-devel</Dependency>
 			<Dependency>libxslt-devel</Dependency>
 			<Dependency>qt5-base-devel</Dependency>
-			<Dependency>qt5-linguist</Dependency>
+			<Dependency>tinyxml2-devel</Dependency>
 			<Dependency>qt5-charts-devel</Dependency>
+			<Dependency>python3-setuptools</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<Patch level="1">qmake_not_build_with_z3.patch</Patch>
+			<Patch level="1">qm_install_path.patch</Patch>
+			<Patch level="1">htmlreport_python3.patch</Patch>
+			<!-- <Patch level="1">system_tinyxml.patch</Patch> -->
 		</Patches>
 	</Source>
 
@@ -36,22 +44,26 @@
 		<Name>cppcheck</Name>
 		<RuntimeDependencies>
 			<Dependency>libgcc</Dependency>
+			<Dependency>python3</Dependency>
 			<Dependency>python3-Pygments</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="data">/usr/share/cppcheck</Path>
+			<Path fileType="man">/usr/share/man</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
 
 	<Package>
+		<IsA>app:gui</IsA>
 		<Name>cppcheck-gui</Name>
 		<RuntimeDependencies>
+			<Dependency>z3</Dependency>
 			<Dependency>libgcc</Dependency>
 			<Dependency release="current">cppcheck</Dependency>
 			<Dependency>qt5-base</Dependency>
-			<Dependency>python3-Pygments</Dependency>
+			<Dependency>qt5-charts</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin/cppcheck-gui</Path>
@@ -62,7 +74,7 @@
 
 	<History>
 		<Update release="3">
-			<Date>2020-04-30</Date>
+			<Date>2020-06-01</Date>
 			<Version>2.0</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>

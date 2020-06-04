@@ -44,8 +44,7 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
-			<Path fileType="man">/usr/share/man/man1</Path>
-			<Path fileType="man">/usr/share/man/man5</Path>
+			<Path fileType="man">/usr/share/man</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
@@ -60,3 +59,4 @@
 		</Update>
 	</History>
 </PISI>
+

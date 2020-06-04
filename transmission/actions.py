@@ -10,11 +10,13 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 from pisi.actionsapi import qt5
 
-z = "--prefix=/usr \
+z = "--without-systemd \
      --enable-cli \
+     --enable-utp \
      --enable-lightweight \
      --enable-daemon \
      --disable-static \
+     --disable-mac \
      --with-crypto=openssl \
     "
 
@@ -29,6 +31,7 @@ def build():
 
 	shelltools.cd("qt")
 	qt5.make()
+	qt5.make("translations")
 
 def install():
 	# qt
@@ -47,5 +50,5 @@ def install():
 	# For daemon config files.
 	pisitools.dodir("/etc/transmission-daemon")
 
-	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README")
+	pisitools.dodoc("AUTHORS", "COPYING", "NEWS.md", "README.md")
 

@@ -43,6 +43,8 @@
 		</BuildDependencies>
 		<Patches>
 			<Patch level="1">ru_translation.patch</Patch>
+			<Patch level="1">basque_translation.patch</Patch>
+			<Patch level="1">slovenian_translation.patch</Patch>
 		</Patches>
 	</Source>
 

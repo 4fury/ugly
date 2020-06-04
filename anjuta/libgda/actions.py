@@ -26,14 +26,14 @@ f = "-Wno-deprecated-declarations \
      -Wno-unused-function \
     "
 
-w = "--enable-system-sqlite \
+j = "--enable-system-sqlite \
      --with-java=yes \
      --with-ldap=no \
     "
 
 def setup():
 	pisitools.cflags.add(f)
-	autotools.configure(w)
+	autotools.configure(j)
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,-O1--as-needed -shared ")
 
