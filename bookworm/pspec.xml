@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>bookworm</Name>
+		<Homepage>https://babluboy.github.io/bookworm/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>desktop.misc</PartOf>
+		<Summary>A simple, focused eBook reader.</Summary>
+		<Description>
+			Read the books you love without having to worry about different format complexities like fb2, epub, pdf, mobi, cbr, etc.
+		</Description>
+		<Archive sha1sum="616ffd2387383241532a63cea752e9f5772db5cf" type="targz">
+			https://github.com/babluboy/bookworm/archive/1.1.2.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>vala</Dependency>
+			<Dependency>meson</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>webkit2gtk-devel</Dependency>
+			<Dependency>sqlite-devel</Dependency>
+			<Dependency>poppler-glib-devel</Dependency>
+			<Dependency>curl-devel</Dependency>
+			<Dependency>poppler-utils</Dependency>
+			<Dependency>granite-devel</Dependency>
+			<Dependency>html2text</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>bookworm</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="all">/</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-06-22</Date>
+			<Version>1.1.2</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

@@ -15,8 +15,8 @@
 		<Description>
 			Ymuse is an easy, functional, and snappy GTK front-end (client) for Music Player Daemon written in Go.
 		</Description>
-		<Archive sha1sum="5ff90652d0ef08885b2a9edcd474e0d00dddfc0b" type="targz">
-			https://github.com/yktoo/ymuse/archive/v0.7.tar.gz
+		<Archive sha1sum="73e571b93c7bc58f7c0691f0b70a0e717d79a232" type="targz">
+			https://github.com/yktoo/ymuse/archive/v0.10.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>golang</Dependency>
@@ -47,8 +47,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-04-30</Date>
-			<Version>0.7</Version>
+			<Date>2020-06-21</Date>
+			<Version>0.10</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gl2ps</Name>
+        <Summary xml:lang="tr">Bir OpenGL'den PostScripte yazdırma/bastırma kitaplığı.</Summary>
+        <Description xml:lang="tr">gl2ps, bir OpenGL'den PostScripte yazdırma/bastırma kitaplığı sunar.</Description>
+    </Source>
+
+    <Package>
+        <Name>gl2ps-devel</Name>
+        <Summary xml:lang="tr">gl2ps için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">gl2ps-devel, gl2ps için geliştirme dosyalarını içerir.</Description>
+    </Package>
+</PISI>

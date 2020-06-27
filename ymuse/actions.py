@@ -10,15 +10,17 @@ from pisi.actionsapi import get
 
 def setup():
 #	shelltools.system("find . -type f -regex '.*\(go\|glade\)' -exec sed -i 's/ymuse-//g' {} \;")
-	shelltools.system("go generate")
+	shelltools.system("go generate -v")
 
 def build():
-	shelltools.system("go build")
+	shelltools.system("go build -v")
 
 def install():
 	pisitools.dobin("ymuse")
 	pisitools.insinto("/usr/share/applications", "resources/ymuse.desktop", "ymuse.desktop")
 	shelltools.copy("resources/icons", "%s/%s/icons" % (get.installDIR(), get.dataDIR()))
+	for i in shelltools.ls("resources/i18n/generated/*/LC_MESSAGES/ymuse.mo"):
+		pisitools.domo(i)
 
 	pisitools.dodoc("COPYING", "README.md")
 

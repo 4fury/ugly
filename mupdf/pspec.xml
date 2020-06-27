@@ -1,145 +1,140 @@
 <?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
-    <Source>
-        <Name>mupdf</Name>
-        <Homepage>https://mupdf.com/</Homepage>
-        <Packager>
-            <Name>Kamil Atlı</Name>
-            <Email>suvari@pisilinux.org</Email>
-        </Packager>
-        <License>AGPL3</License>
-        <IsA>app:gui</IsA>
-        <Summary>Lightweight PDF and XPS viewer</Summary>
-        <Description>
-            MuPDF is a lightweight open source software framework for viewing and converting PDF, XPS, and E-book documents.
-        </Description>
-        <Archive sha1sum="16a2de72b899b35c02dfce5aae7d11cd40767116" type="tarxz">
-            https://mupdf.com/downloads/archive/mupdf-1.17.0-source.tar.xz
-        </Archive>
-        <BuildDependencies>
-            <Dependency>python3</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>curl-devel</Dependency>
-            <Dependency>libXi-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>freetype-devel</Dependency>
-            <Dependency>freeglut-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>mesa-glu-devel</Dependency>
-            <Dependency>openjpeg2-devel</Dependency>
-            <Dependency>libXrandr-devel</Dependency>
-            <Dependency>libXcursor-devel</Dependency>
-            <Dependency>libXinerama-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-        </BuildDependencies>
-        <Patches>
-            <Patch level="1">pkcs7-fix.patch</Patch>
-            <!-- <Patch level="1">shared-libs2.patch</Patch> -->
-            <!--
-            <Patch>mupdf-1.12.0-security-roundup.patch</Patch>
-            <Patch>mupdf-CVE-2017-17858.patch</Patch>
-            <Patch>mupdf-1.12.0-security_fix-1.patch</Patch>
-            -->
-        </Patches>
-    </Source>
+	<Source>
+		<Name>mupdf</Name>
+		<Homepage>https://mupdf.com/</Homepage>
+		<Packager>
+			<Name>Kamil Atlı</Name>
+			<Email>suvari@pisilinux.org</Email>
+		</Packager>
+		<License>AGPL3</License>
+		<IsA>app:gui</IsA>
+		<Summary>Lightweight PDF and XPS viewer</Summary>
+		<Description>
+			MuPDF is a lightweight open source software framework for viewing and converting PDF, XPS, and E-book documents.
+		</Description>
+		<Archive sha1sum="16a2de72b899b35c02dfce5aae7d11cd40767116" type="tarxz">
+			https://mupdf.com/downloads/archive/mupdf-1.17.0-source.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>python3</Dependency>
+			<Dependency>zlib-devel</Dependency>
+			<Dependency>curl-devel</Dependency>
+			<Dependency>libXi-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>libXext-devel</Dependency>
+			<Dependency>openssl-devel</Dependency>
+			<Dependency>readline-devel</Dependency>
+			<!-- <Dependency>freetype-devel</Dependency>
+			<Dependency>freeglut-devel</Dependency>
+			<Dependency>harfbuzz-devel</Dependency>
+			<Dependency>mesa-glu-devel</Dependency>
+			<Dependency>openjpeg2-devel</Dependency> -->
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>libXcursor-devel</Dependency>
+			<Dependency>libXinerama-devel</Dependency>
+			<!-- <Dependency>libjpeg-turbo-devel</Dependency> -->
+		</BuildDependencies>
+		<Patches>
+			<Patch level="1">pkcs7-fix.patch</Patch>
+			<Patch level="1">shared-libs.patch</Patch>
+		</Patches>
+	</Source>
 
-    <Package>
-        <Name>mupdf</Name>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>curl</Dependency>
-            <Dependency>mesa</Dependency>
-            <Dependency>libX11</Dependency>
-            <Dependency>libXext</Dependency>
-            <Dependency>openssl</Dependency>
-            <Dependency>freetype</Dependency>
-            <Dependency>freeglut</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>openjpeg2</Dependency>
-            <Dependency>libXrandr</Dependency>
-            <Dependency>libjpeg-turbo</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="man">/usr/share/man/man1</Path>
-        </Files>
-    </Package>
+	<Package>
+		<Name>mupdf</Name>
+		<RuntimeDependencies>
+			<Dependency>zlib</Dependency>
+			<Dependency>curl</Dependency>
+			<Dependency>mesa</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libXext</Dependency>
+			<Dependency>openssl</Dependency>
+			<Dependency>freetype</Dependency>
+			<Dependency>freeglut</Dependency>
+			<Dependency>harfbuzz</Dependency>
+			<Dependency>openjpeg2</Dependency>
+			<Dependency>libXrandr</Dependency>
+			<Dependency>libjpeg-turbo</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+			<Path fileType="man">/usr/share/man/man1</Path>
+		</Files>
+	</Package>
 
-    <Package>
-        <Name>mupdf-devel</Name>
-        <Summary>Development files for mupdf</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">mupdf</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include/mupdf</Path>
-            <Path fileType="header">/usr/include/mupdf/fitz</Path>
-            <Path fileType="header">/usr/include/mupdf/pdf</Path>
-        </Files>
-    </Package>
+	<Package>
+		<Name>mupdf-devel</Name>
+		<Summary>Development files for mupdf</Summary>
+		<RuntimeDependencies>
+			<Dependency release="current">mupdf</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include/mupdf</Path>
+			<Path fileType="header">/usr/include/mupdf/fitz</Path>
+			<Path fileType="header">/usr/include/mupdf/pdf</Path>
+		</Files>
+	</Package>
 
-    <History>
-        <Update release="8">
-            <Date>2020-04-30</Date>
-            <Version>1.17.0</Version>
-            <Comment>Version bump.</Comment>
-            <Name>fury</Name>
-            <Email>wascheme@tuta.io</Email>
-        </Update>
-        <Update release="7">
-            <Date>2020-02-22</Date>
-            <Version>1.16.1</Version>
-            <Comment>Rebuild.</Comment>
-            <Name>İdris Kalp</Name>
-            <Email>idriskalp@gmail.com</Email>
-        </Update>
-        <Update release="6">
-            <Date>2019-09-28</Date>
-            <Version>1.16.1</Version>
-            <Comment>Version bump.</Comment>
-            <Name>fury</Name>
-            <Email>wascheme@tuta.io</Email>
-        </Update>
-        <Update release="5">
-            <Date>2019-06-04</Date>
-            <Version>1.15.0</Version>
-            <Comment>Version bump.</Comment>
-            <Name>fury</Name>
-            <Email>wascheme@tuta.io</Email>
-        </Update>
-        <Update release="4">
-            <Date>2019-04-25</Date>
-            <Version>1.14.0</Version>
-            <Comment>Version bump.</Comment>
-            <Name>fury</Name>
-            <Email>wascheme@tuta.io</Email>
-        </Update>
-        <Update release="3">
-            <Date>2018-08-09</Date>
-            <Version>1.12.0</Version>
-            <Comment>Rebuild.</Comment>
-            <Name>Pisi Linux Community</Name>
-            <Email>admin@pisilinux.org</Email>
-        </Update>
-        <Update release="2">
-            <Date>2018-02-11</Date>
-            <Version>1.12.0</Version>
-            <Comment>Version Bump.</Comment>
-            <Name>Pisi Linux Community</Name>
-            <Email>admin@pisilinux.org</Email>
-        </Update>
-        <Update release="1">
-            <Date>2017-07-13</Date>
-            <Version>1.11</Version>
-            <Comment>First Release</Comment>
-            <Name>Kamil Atlı</Name>
-            <Email>suvari@pisilinux.org</Email>
-        </Update>
-    </History>
+	<History>
+		<Update release="8">
+			<Date>2020-06-10</Date>
+			<Version>1.17.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="7">
+			<Date>2020-02-22</Date>
+			<Version>1.16.1</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>İdris Kalp</Name>
+			<Email>idriskalp@gmail.com</Email>
+		</Update>
+		<Update release="6">
+			<Date>2019-09-28</Date>
+			<Version>1.16.1</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="5">
+			<Date>2019-06-04</Date>
+			<Version>1.15.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="4">
+			<Date>2019-04-25</Date>
+			<Version>1.14.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="3">
+			<Date>2018-08-09</Date>
+			<Version>1.12.0</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>Pisi Linux Community</Name>
+			<Email>admin@pisilinux.org</Email>
+		</Update>
+		<Update release="2">
+			<Date>2018-02-11</Date>
+			<Version>1.12.0</Version>
+			<Comment>Version Bump.</Comment>
+			<Name>Pisi Linux Community</Name>
+			<Email>admin@pisilinux.org</Email>
+		</Update>
+		<Update release="1">
+			<Date>2017-07-13</Date>
+			<Version>1.11</Version>
+			<Comment>First Release</Comment>
+			<Name>Kamil Atlı</Name>
+			<Email>suvari@pisilinux.org</Email>
+		</Update>
+	</History>
 </PISI>

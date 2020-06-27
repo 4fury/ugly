@@ -16,7 +16,7 @@
 			 Cppcheck is a static analysis tool for C/C++ code. It provides unique code analysis to detect bugs and focuses on detecting undefined behaviour and dangerous coding constructs. The goal is to detect only real errors in the code (i.e. have very few false positives).
 		</Description>
 		<Archive sha1sum="a6e5bdba6a453d5931a9e8ff2e2122255402dcb3" type="targz">
-			https://github.com/danmar/cppcheck/archive/2.0.tar.gz
+			https://github.com/danmar/cppcheck/archive/2.1.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -74,8 +74,8 @@
 
 	<History>
 		<Update release="3">
-			<Date>2020-06-01</Date>
-			<Version>2.0</Version>
+			<Date>2020-06-21</Date>
+			<Version>2.1</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

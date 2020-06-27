@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>mac</Name>
+		<Homepage>https://www.monkeysaudio.com/index.html</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>custom</License>
+		<IsA>library</IsA>
+		<PartOf>multimedia.sound</PartOf>
+		<Summary>A fast and powerful lossless audio compressor.</Summary>
+		<Description>Monkey’s Audio is a fast and easy way to compress digital music.</Description>
+		<Archive sha1sum="3ba62b94f0d8559eb1e6a803bf319425e25a5f3c" type="zip">
+			https://www.monkeysaudio.com/files/MAC_SDK_544.zip
+		</Archive>
+		<BuildDependencies>
+			<Dependency>curl-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>mac</Name>
+		<RuntimeDependencies>
+			<Dependency>libgcc</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="all">/</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-06-21</Date>
+			<Version>5.44</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>gjs</Name>
+		<Homepage>https://wiki.gnome.org/Projects/Gjs</Homepage>
+		<Packager>
+			<Name>Osman Erkan</Name>
+			<Email>osman.erkan@pisilinux.org</Email>
+		</Packager>
+		<License>MIT</License>
+		<License>LGPLv2</License>
+		<IsA>library</IsA>
+		<PartOf>programming.library</PartOf>
+		<Summary>JavaScript bindings based on gobject-introspection and Mozilla.</Summary>
+		<Description>
+			Gjs contains JavaScript bindings based on gobject-introspection and the Mozilla SpiderMonkey JavaScript engine.
+		</Description>
+		<Archive sha1sum="a133292bdc6e922b30679f7de9364ec847599b03" type="tarxz">
+			mirrors://gnome/gjs/1.52/gjs-1.52.5.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gobject-introspection-devel</Dependency>
+			<Dependency>gtk-doc</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>gnome-common</Dependency>
+			<Dependency>readline-devel</Dependency>
+			<Dependency>spidermonkey-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>gjs</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libffi</Dependency>
+			<Dependency>libgcc</Dependency>
+			<Dependency>readline</Dependency>
+			<Dependency>spidermonkey</Dependency>
+			<Dependency>gobject-introspection</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>gjs-devel</Name>
+		<Summary>Development files for gjs</Summary>
+		<RuntimeDependencies>
+			<Dependency release="current">gjs</Dependency>
+			<Dependency>spidermonkey-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="5">
+			<Date>2020-06-21</Date>
+			<Version>1.52.5</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="4">
+			<Date>2014-06-15</Date>
+			<Version>1.38.1</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Osman Erkan</Name>
+			<Email>osman.erkan@pisilinux.org</Email>
+		</Update>
+		<Update release="3">
+			<Date>2014-06-14</Date>
+			<Version>1.40.1</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Yusuf Aydemir</Name>
+			<Email>yusuf.aydemir@pisilinux.org</Email>
+		</Update>
+		<Update release="2">
+			<Date>2013-10-11</Date>
+			<Version>1.38.1</Version>
+			<Comment>V.bump</Comment>
+			<Name>Osman Erkan</Name>
+			<Email>osman.erkan@pisilinux.org</Email>
+		</Update>
+		<Update release="1">
+			<Date>2013-08-30</Date>
+			<Version>1.36.1</Version>
+			<Comment>First release</Comment>
+			<Name>Osman Erkan</Name>
+			<Email>osman.erkan@pisilinux.org</Email>
+		</Update>
+	</History>
+</PISI>
+

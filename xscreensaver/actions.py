@@ -9,31 +9,38 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-options = " --disable-root-passwd --with-motif --with-pam --with-xshm-ext \
---with-xdbe-ext --with-dpms-ext --without-gtk --without-systemd"
+j = "--with-gl \
+     --with-gtk \
+     --with-xft \
+     --with-pam \
+     --with-shadow \
+     --with-dpms-ext \
+     --with-xshm-ext \
+     --with-xdbe-ext \
+     --without-systemd \
+    "
+
+shelltools.export("GTK_DATADIR", "%s/usr/share" % get.installDIR())
 
 def setup():
-#	shelltools.system("sed -i '502,513d' driver/Makefile.in")
-#	shelltools.system("sed -i '/LINGUAS/s/sv\ vi/sv tr vi/' configure.in")
-#	autotools.autoreconf("-fi")
+#	autotools.configure(j)
 	autotools.configure("--mandir=%s" % get.installDIR()
 	+ "/usr/man --infodir=%s" % get.installDIR() + "/usr/share/info --sysconfdir=%s" % get.installDIR()
 	+ "/etc --datadir=%s" % get.installDIR() + "/usr/share --libexecdir=%s" % get.installDIR()
 	+ "/usr/libexec --with-x-app-defaults=%s" % get.installDIR() + "/usr/share/X11/app-defaults --datarootdir=%s"
-	% get.installDIR() + "/usr --bindir=%s" % get.installDIR() + "/usr/bin" + options)
+	% get.installDIR() + "/usr --bindir=%s" % get.installDIR() + "/usr/bin")
 
 def build():
 	autotools.make()
 
 def install():
-#	shelltools.makedirs("%s/usr/share/applications" % get.installDIR())
-#	autotools.make("install")
+	shelltools.export("GTK_DATADIR", "%s/usr/share" % get.installDIR())
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.insinto("/usr/share/applications", "driver/screensaver-properties.desktop", "screensaver-properties.desktop")
+#Working around unbudging shortcut directory issue, please disable sandboxing
 #	shelltools.system("mkdir " + get.installDIR() + "/usr/share/applications")
-#	shelltools.system("cp %s" % get.workDIR() + "/xscreensaver-5.43/driver/screensaver-properties.desktop " + get.installDIR() + "/usr/share/applications/xscreensaver-properties.desktop")
+#	shelltools.system("cp %s" % get.workDIR() + "/xscreensaver-5.44/driver/screensaver-properties.desktop " + get.installDIR() + "/usr/share/applications/xscreensaver-properties.desktop")
 #	shelltools.system("rm /usr/share/applications/xscreensaver-properties.desktop")
 
-	pisitools.dodoc("README*")
+	pisitools.dodoc("INSTALL", "README", "README.hacking", "README.VMS")
 

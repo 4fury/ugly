@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>html2text</Name>
+		<Homepage>https://github.com/grobian/html2text</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>library</IsA>
+		<PartOf>programming.library</PartOf>
+		<Summary>HTML to text rendering aimed for E-mail.</Summary>
+		<Description>
+			This is a continuation of html2text from http://www.mbayer.de/html2text. This repository includes some of the patches, no longer available at the original sources, and improvements in functionality and building. Starting from version 2.0, the official home of html2text is at https://github.com/grobian/html2text.
+		</Description>
+		<Archive sha1sum="ed7edd2617399cbb8f641887bd4a5cbdc861d8d2" type="targz">
+			https://github.com/grobian/html2text/archive/v2.0.0.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<!-- <Dependency></Dependency> -->
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>html2text</Name>
+		<RuntimeDependencies>
+			<!-- <Dependency></Dependency> -->
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="all">/</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-06-22</Date>
+			<Version>2.0.0</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

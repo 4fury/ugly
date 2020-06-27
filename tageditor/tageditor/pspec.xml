@@ -9,6 +9,7 @@
 			<Email>wascheme@tuta.io</Email>
 		</Packager>
 		<License>GPLv2</License>
+		<IsA>app:console</IsA>
 		<IsA>app:gui</IsA>
 		<PartOf>multimedia.editor</PartOf>
 		<Summary>A tag editor with Qt GUI and command-line interface.</Summary>
@@ -28,6 +29,9 @@
 			<Dependency>qt5-webengine-devel</Dependency>
 			<Dependency>qt5-multimedia-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level="1">input_fields_improves.patch</Patch>
+		</Patches>
 	</Source>
 
 	<Package>

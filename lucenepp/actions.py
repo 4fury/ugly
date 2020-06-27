@@ -10,6 +10,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 i = "-DCMAKE_INSTALL_PREFIX=/usr \
+     -DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT \
      -DLIB_DESTINATION=/usr/lib \
      -DCMAKE_BUILD_TYPE=Release \
      -DBUILD_SHARED_LIBS=ON \
@@ -18,11 +19,7 @@ i = "-DCMAKE_INSTALL_PREFIX=/usr \
     "
 
 def setup():
-	shelltools.export("CXXFLAGS", "-DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT")
-	shelltools.export("CFLAGS", "-lpthread")
-	shelltools.makedirs("build")
-	shelltools.cd("build")
-	cmaketools.configure("%s" % i, sourceDir="..")
+	cmaketools.configure("%s -B build" % i, sourceDir="..")
 
 def build():
 	shelltools.cd("build")

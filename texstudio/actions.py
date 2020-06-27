@@ -6,7 +6,6 @@
 
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import qt5
-from pisi.actionsapi import get
 
 def setup():
 	pisitools.cxxflags.add("-Wno-deprecated-declarations")

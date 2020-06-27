@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>granite</Name>
+		<Homepage>https://github.com/elementary/granite</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>LGPLv3</License>
+		<IsA>library</IsA>
+		<PartOf>programming.library</PartOf>
+		<Summary>Library that extends GTK with common widgets and utilities.</Summary>
+		<Description>
+			Granite is a companion library for GTK+ and GLib. Among other things, it provides complex widgets and convenience functions designed for use in apps built for elementary OS.
+		</Description>
+		<Archive sha1sum="a5822c633729b59eb82448b2523d6cf89eeeb5ea" type="targz">
+			https://github.com/elementary/granite/archive/5.4.0.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>vala</Dependency>
+			<Dependency>meson</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>libgee-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>granite</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="all">/</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-06-22</Date>
+			<Version>5.4.0</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+
