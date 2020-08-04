@@ -10,6 +10,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 j = "-DCMAKE_BUILD_TYPE=Release \
+     -DCMAKE_CXX_STANDARD="11" \
      -DENABLE_LIBINDICATE=OFF \
      -DwxWidgets_CONFIG_EXECUTABLE=/usr/bin/wx-config-gtk3 \
      -DwxWidgets_wxrc_EXECUTABLE=/usr/bin/wxrc-3.0 \

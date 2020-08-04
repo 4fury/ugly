@@ -4,9 +4,18 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
-from pisi.actionsapi import shelltools
+#from pisi.actionsapi import shelltools
+from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
+
+j = "-Dface-detection-helper=false \
+     -Dinstall-apport-hook=false \
+     -Dface-detection=false \
+     -Dextra-plugins=false \
+     -Dunity-support=false \
+     -Dpublishers='' 
+    "
 
 def setup():
 	# disable webkit requirement
@@ -17,23 +26,13 @@ def setup():
 #	shelltools.system("sed -i 's/webkit, //' plugins/shotwell-transitions/meson.build")
 #	shelltools.system("sed -i 's/, webkit//' plugins/authenticator/shotwell/meson.build")
 #	shelltools.system("sed -i '44d;98d' meson.build")
-
-	shelltools.system("meson --prefix=/usr \
-	\
-	-Dface-detection-helper=false \
-	-Dinstall-apport-hook=false \
-	-Dface-detection=false \
-	-Dextra-plugins=false \
-	-Dunity-support=false \
-	-Dpublishers='' \
-	\
-	 . build")
+	mesontools.configure(j)
 
 def build():
-	shelltools.system("ninja -C build")
+	mesontools.build()
 
 def install():
-	shelltools.system("DESTDIR=%s ninja -C build install" % get.installDIR())
+	mesontools.install()
 
 	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README.md", "THANKS")
 
