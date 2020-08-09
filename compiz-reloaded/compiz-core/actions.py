@@ -12,7 +12,7 @@ j = "--enable-gtk \
      --enable-menu-entries \
      --disable-silent-rules \
      --disable-static \
-     --with-gtk3
+     --with-gtk3 \
     "
 
 def setup():
