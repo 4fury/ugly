@@ -18,20 +18,20 @@
 			https://github.com/pragha-music-player/pragha/releases/download/v1.3.99.1/pragha-1.3.99.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
-			<Dependency>libpeas-devel</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>gtk3-devel</Dependency>
-			<Dependency>libsoup-devel</Dependency>
-			<Dependency>libnotify-devel</Dependency>
-			<Dependency>keybinder-devel</Dependency>
-			<Dependency>xfce4-dev-tools</Dependency>
 			<Dependency>sqlite-devel</Dependency>
 			<Dependency>taglib-devel</Dependency>
-			<Dependency>libxfce4ui-devel</Dependency>
-			<Dependency>gstreamer-devel</Dependency>
-			<Dependency>json-glib-devel</Dependency>
-			<Dependency>libgudev-devel</Dependency>
 			<Dependency>libmtp-devel</Dependency>
+			<Dependency>libsoup-devel</Dependency>
+			<Dependency>libpeas-devel</Dependency>
+			<Dependency>libgudev-devel</Dependency>
+			<Dependency>gstreamer-devel</Dependency>
+			<!-- <Dependency>xfce4-dev-tools</Dependency> -->
+			<Dependency>json-glib-devel</Dependency>
+			<Dependency>libnotify-devel</Dependency>
+			<Dependency>keybinder-devel</Dependency>
+			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>gst-plugins-base-devel</Dependency>
 		</BuildDependencies>
 	</Source>

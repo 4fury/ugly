@@ -34,7 +34,6 @@
 			<Dependency>qt5-base-devel</Dependency>
 			<Dependency>qt5-sql-sqlite</Dependency>
 			<Dependency>gstreamer-devel</Dependency>
-			<Dependency>gstreamer-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>gst-plugins-ugly</Dependency>
 			<Dependency>gst-plugins-good</Dependency>
@@ -65,7 +64,6 @@
 			<Dependency>gst-plugins-base</Dependency>
 			<Dependency>gst-plugins-good</Dependency>
 			<Dependency>gst-plugins-ugly</Dependency>
-			<Dependency>gst-plugins-base</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
