@@ -10,7 +10,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	shelltools.export("CFLAGS", "%s -Wno-deprecated-declarations" % get.CFLAGS())
+	pisitools.cflags.add("-Wno-deprecated-declarations")
 	shelltools.system("./autogen.sh --prefix=/usr")
 
 def build():
@@ -19,5 +19,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "COPYING", "README.md")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "HACKING.md", "README.md", "TODO.md")
 

@@ -26,7 +26,7 @@ def build():
 	autotools.make()
 
 def install():
-	autotools.rawInstall("nstall_prefix=%s" % get.installDIR())
+	autotools.rawInstall("install_prefix=%s" % get.installDIR())
 
 	pisitools.dodoc("INSTALL", "README", "README.hacking", "README.VMS")
 

@@ -38,11 +38,11 @@
 			<Dependency>vala-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			 <Patch level="1">vte-0.28.2-limit-arguments.patch</Patch>
-			 <Patch level="1">vte-alt-meta-confusion.patch</Patch>
-			 <Patch level="1">vte-python-bugfixes.patch</Patch>
-<!--			 <Patch level="1">vte-0.28.0-link.patch</Patch> -->
-			 <Patch level="1">vte-0.28.2-scale.patch</Patch>
+			<Patch level="1">vte-0.28.2-limit-arguments.patch</Patch>
+			<Patch level="1">vte-alt-meta-confusion.patch</Patch>
+			<Patch level="1">vte-python-bugfixes.patch</Patch>
+			<!-- <Patch level="1">vte-0.28.0-link.patch</Patch> -->
+			<Patch level="1">vte-0.28.2-scale.patch</Patch>
 		</Patches>
 	</Source>
 

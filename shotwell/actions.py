@@ -14,7 +14,7 @@ j = "-Dface-detection-helper=false \
      -Dface-detection=false \
      -Dextra-plugins=false \
      -Dunity-support=false \
-     -Dpublishers='' 
+     -Dpublishers='' \
     "
 
 def setup():

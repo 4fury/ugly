@@ -8,18 +8,19 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+j = "--enable-introspection \
+     --enable-python \
+     --disable-gtk-doc \
+     --disable-static \
+     --without-glX \
+     --libexecdir=/usr/lib/vte \
+     --localstatedir=/var \
+    "
+
 def setup():
-	autotools.configure("--libexecdir=/usr/lib/vte --localstatedir=/var \
-	\
-	--enable-introspection \
-	--enable-python \
-	\
-	--disable-gtk-doc \
-	--disable-static \
-	\
-	--without-glX")
+	autotools.configure(j)
 	
-	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")	
+	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
 	autotools.make()
