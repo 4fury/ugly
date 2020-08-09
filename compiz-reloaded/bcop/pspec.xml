@@ -12,8 +12,8 @@
 		<IsA>library</IsA>
 		<Summary>compiz-bcop 0.8.x project.</Summary>
 		<Description>Futher development of Compiz 0.8.x series (compiz-reloaded).</Description>
-		<Archive sha1sum="a82b60d1fed42b01efef81b37bb06c80408f51b8" type="tarxz">
-			https://gitlab.com/compiz/compiz-bcop/uploads/f304a07726d865d3b7b3a6fec3be1ba7/compiz-bcop-0.8.16.tar.xz
+		<Archive sha1sum="190d2c2cc6e5b85ae4f5e4d0b6aeba81d28e1754" type="tarxz">
+			https://gitlab.com/compiz/compiz-bcop/uploads/5b37c3edbf45fcac9412c34e00383715/compiz-bcop-0.8.18.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>libxslt-devel</Dependency>
@@ -23,9 +23,7 @@
 	<Package>
 		<Name>bcop</Name>
 		<RuntimeDependencies>
-			<!--
-			<Dependency></Dependency>
-			-->
+			<!-- <Dependency></Dependency> -->
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin/bcop</Path>
@@ -37,8 +35,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2019-12-26</Date>
-			<Version>0.8.16</Version>
+			<Date>2020-08-09</Date>
+			<Version>0.8.18</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

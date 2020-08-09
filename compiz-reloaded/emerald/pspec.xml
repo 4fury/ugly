@@ -14,8 +14,8 @@
 		<Description>
 			Emerald is a window decorator for Compiz. It comes with a decorator, and themes editor called emerald-theme-manager. One needs Compiz to use Emerald.
 		</Description>
-		<Archive sha1sum="eeb06d1316a19d2ef2d20e2a3ec45a78209c732c" type="tarxz">
-			https://gitlab.com/compiz/emerald/uploads/9d10945a7a32a110e652dba5a73cb6ad/emerald-0.8.16.tar.xz
+		<Archive sha1sum="f73eeeb293cb0f695dd4ffa1aacd06b692a51fc4" type="tarxz">
+			https://gitlab.com/compiz/emerald/uploads/64c02befbf3a2fee2e1a7ab266938f9a/emerald-0.8.18.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -62,8 +62,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2019-12-26</Date>
-			<Version>0.8.16</Version>
+			<Date>2020-08-09</Date>
+			<Version>0.8.18</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

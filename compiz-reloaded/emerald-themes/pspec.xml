@@ -13,22 +13,18 @@
 		<IsA>data</IsA>
 		<Summary>Themes for Emerald Compiz decorator.</Summary>
 		<Description>Themes for Emerald Compiz decorator.</Description>
-		<Archive sha1sum="853d20006af23b33a701a0a00600f3b45cb4ae6e" type="tarxz">
-			https://gitlab.com/compiz/emerald-themes/uploads/59fb196746698e41ed0f16988600b216/emerald-themes-0.8.16.tar.xz
+		<Archive sha1sum="0485d7bf383d5fb765d8fda2580f4f19d9ec21d1" type="tarxz">
+			https://gitlab.com/compiz/emerald-themes/uploads/dbbeef582f467ff839b5bc62b36e6f05/emerald-themes-0.8.18.tar.xz
 		</Archive>
 		<BuildDependencies>
-			<!--
-			<Dependency></Dependency>
-			-->
+			<!-- <Dependency></Dependency> -->
 		</BuildDependencies>
 	</Source>
 
 	<Package>
 		<Name>emerald-themes</Name>
 		<RuntimeDependencies>
-			<!--
-			<Dependency></Dependency>
-			-->
+			<!-- <Dependency></Dependency> -->
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="data">/usr/share</Path>
@@ -38,8 +34,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2019-12-26</Date>
-			<Version>0.8.16</Version>
+			<Date>2020-08-09</Date>
+			<Version>0.8.18</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

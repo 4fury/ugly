@@ -12,25 +12,25 @@
 		<IsA>app:gui</IsA>
 		<Summary>Graphical manager for CompizConfig settings.</Summary>
 		<Description>Futher development of CCSM (compiz-reloaded).</Description>
-		<Archive sha1sum="4b85ae9532143e0c630d63172fab56967f02a2fa" type="tarxz">
-			https://gitlab.com/compiz/ccsm/uploads/d6f32b38bf0433aff49ca59f0bb3f921/ccsm-0.8.16.tar.xz
+		<Archive sha1sum="a665802c07732cb4c247cadf3dc05dad7ae40952" type="tarxz">
+			https://gitlab.com/compiz/ccsm/uploads/1c1b988479082609fb5ca1103a7120ac/ccsm-0.8.18.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
-			<Dependency>python-setuptools</Dependency>
+			<Dependency>python3-setuptools</Dependency>
 		</BuildDependencies>
 	</Source>
 
 	<Package>
 		<Name>ccsm</Name>
 		<RuntimeDependencies>
-			<Dependency>python-pygobject</Dependency>			
-			<Dependency>python-pygobject3</Dependency>
+			<!-- <Dependency>python-pygobject</Dependency> -->
+			<Dependency>python3-pygobject3</Dependency>
 			<Dependency>compizconfig-python</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
-			<Path fileType="library">/usr/lib/python2.7</Path>
+			<Path fileType="library">/usr/lib</Path>
 			<Path fileType="data">/usr/share</Path>
 			<Path fileType="localedata">/usr/share/locale</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
@@ -39,8 +39,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2019-12-26</Date>
-			<Version>0.8.16</Version>
+			<Date>2020-08-09</Date>
+			<Version>0.8.18</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

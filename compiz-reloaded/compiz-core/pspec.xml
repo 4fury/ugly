@@ -17,21 +17,21 @@
 		<Description>
 			Compiz is an OpenGL compositing manager that uses GLX_EXT_texture_from_pixmap for binding redirected top-level windows to texture objects. It has a flexible plug-in system and it is designed to run well on most graphics hardware.
 		</Description>
-		<Archive sha1sum="93d486bb8a1a19b67bf22bb313ec075753765ad6" type="tarxz">
-			https://gitlab.com/compiz/compiz-core/uploads/96d2abf9f25c4900a3bdc191e2c6033d/compiz-0.8.16.1.tar.xz
+		<Archive sha1sum="402bcea9cf525a1aef0c0e7c73798071d9080870" type="tarxz">
+			https://gitlab.com/compiz/compiz-core/uploads/198c6cfb64ddfc07eecaf5b1aa183c55/compiz-0.8.18.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>dbus-devel</Dependency>
 			<Dependency>fuse-devel</Dependency>
-			<Dependency>gtk2-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
 			<Dependency>libSM-devel</Dependency>
 			<Dependency>libXi-devel</Dependency>
 			<Dependency>libpng-devel</Dependency>
 			<Dependency>librsvg-devel</Dependency>
 			<Dependency>libxml2-devel</Dependency>
 			<Dependency>libxslt-devel</Dependency>
-			<Dependency>libwnck2-devel</Dependency>
+			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>mesa-glu-devel</Dependency>
 			<Dependency>libXrandr-devel</Dependency>
 			<Dependency>libXcursor-devel</Dependency>
@@ -49,7 +49,7 @@
 			<Dependency>atk</Dependency>
 			<Dependency>dbus</Dependency>
 			<Dependency>fuse</Dependency>
-			<Dependency>gtk2</Dependency>
+			<Dependency>gtk3</Dependency>
 			<Dependency>mesa</Dependency>
 			<Dependency>zlib</Dependency>
 			<Dependency>cairo</Dependency>
@@ -62,7 +62,7 @@
 			<Dependency>libXext</Dependency>
 			<Dependency>librsvg</Dependency>
 			<Dependency>libxml2</Dependency>
-			<Dependency>libwnck2</Dependency>
+			<Dependency>libwnck3</Dependency>
 			<Dependency>mesa-glu</Dependency>
 			<Dependency>libXfixes</Dependency>
 			<Dependency>libXrandr</Dependency>
@@ -106,9 +106,9 @@
 	</Package>
 
 	<History>
-		<Update release="2">
-			<Date>2019-12-26</Date>
-			<Version>0.8.16.1</Version>
+		<Update release="1">
+			<Date>2020-08-09</Date>
+			<Version>0.8.18</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

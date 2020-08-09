@@ -14,8 +14,8 @@
 		<Description>
 			Experimental Compiz compositing manager plugins. Futher development of Compiz 0.8.x series (compiz-reloaded).
 		</Description>
-		<Archive sha1sum="b7ac1f367ed26878f2e3e295f1d0ee554e59682b" type="tarxz">
-			http://northfield.ws/projects/compiz/releases/0.8.16/compiz-plugins-experimental-0.8.16.tar.xz
+		<Archive sha1sum="9d0fe92f8f5281edd4f315b8534adbb0875e54a6" type="tarxz">
+			http://northfield.ws/projects/compiz/releases/0.8.18/compiz-plugins-experimental-0.8.18.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -65,8 +65,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2019-12-27</Date>
-			<Version>0.8.16</Version>
+			<Date>2020-08-09</Date>
+			<Version>0.8.18</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

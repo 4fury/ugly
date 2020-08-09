@@ -14,12 +14,12 @@
 		<Description>
 			Python bindings for libraries/plugins for compizconfig-settings. Futher development of Compiz 0.8.x series (compiz-reloaded).
 		</Description>
-		<Archive sha1sum="7dec3569289d8e69a7fa50d91459289be36659a3" type="tarxz">
-			https://gitlab.com/compiz/compizconfig-python/uploads/fd7870f01f72f594bc6f284ae5719d38/compizconfig-python-0.8.16.tar.xz
+		<Archive sha1sum="c8194b9723628e7d056e280f5217afb3b7563c23" type="tarxz">
+			https://gitlab.com/compiz/compizconfig-python/uploads/11bb53f9054e95f715e631a261968e2c/compizconfig-python-0.8.18.tar.xz
 		</Archive>
 		<BuildDependencies>
-			<Dependency>cython</Dependency>
-			<Dependency>python-devel</Dependency>
+			<Dependency>cython3</Dependency>
+			<Dependency>python3-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>libcompizconfig-devel</Dependency>
 		</BuildDependencies>
@@ -46,15 +46,15 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib/pkgconfig</Path>
-			<Path fileType="library">/usr/lib/python2.7</Path>
+			<Path fileType="library">/usr/lib</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
 
 	<History>
 		<Update release="1">
-			<Date>2019-12-26</Date>
-			<Version>0.8.16</Version>
+			<Date>2020-08-09</Date>
+			<Version>0.8.18</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

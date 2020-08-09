@@ -8,10 +8,10 @@ from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import pisitools
 
 def build():
-	pythonmodules.compile(parameters = "--prefix=/usr")
+	pythonmodules.compile(pyVer = "3", parameters = "--prefix=/usr")
 
 def install():
-	pythonmodules.install(parameters = "--prefix=/usr")
+	pythonmodules.install(pyVer = "3", parameters = "--prefix=/usr")
 
 	pisitools.dodoc("AUTHORS", "COPYING", "NEWS")
 

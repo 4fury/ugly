@@ -8,9 +8,15 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+j = "--enable-gtk \
+     --enable-menu-entries \
+     --disable-silent-rules \
+     --disable-static \
+     --with-gtk3
+    "
+
 def setup():
-#	pisitools.dosed("configure", "gtk-update-icon-cache", "gtk3-update-icon-cache")
-	autotools.configure("--disable-silent-rules --disable-static")
+	autotools.configure(j)
 
 def build():
 	autotools.make()
