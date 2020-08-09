@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>qtstyleplugins-rjvb</Name>
+		<Homepage>https://github.com/RJVB/qtstyleplugins</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>custom</License>
+		<IsA>library</IsA>
+		<PartOf>desktop.lookandfeel</PartOf>
+		<Summary>Additional style plugins for Qt.</Summary>
+		<Description>A fork of qtstyleplugins with experimental gtk3 support.</Description>
+		<Archive sha1sum="a782364b8343d315f24224f6601b421c9fc8ccd1" type="zip">
+			https://github.com/RJVB/qtstyleplugins/archive/4f9c8e30646d7da762c1ddae05fc58b149c1e157.zip
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cmake</Dependency>
+			<Dependency>gtk2-devel</Dependency>
+			<!-- <Dependency>gtk3-devel</Dependency> -->
+			<Dependency>qt5-base-devel</Dependency>
+			<Dependency>extra-cmake-modules</Dependency>
+		</BuildDependencies>
+		<Patches>
+			<!-- <Patch level="1">fix_style.patch</Patch> -->
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>qtstyleplugins-rjvb</Name>
+		<RuntimeDependencies>
+			<Dependency>qt5-base</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/qt5</Path>
+			<Path fileType="library">/usr/lib/cmake/Qt5Gui</Path>
+			<Path fileType="library">/usr/lib/cmake/Qt5Widgets</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-08-09</Date>
+			<Version>5.62</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+
