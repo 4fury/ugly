@@ -14,8 +14,8 @@
 		<Description>
 			xstarter is an application launcher for Linux. It lives in terminal and works well with tiling window managers (e.g. xmonad, i3 etc).
 		</Description>
-		<Archive sha1sum="077400dce5964e00fd4b79d284f3807731e4a5f0" type="targz">
-			https://github.com/lchsk/xstarter/archive/v0.8.0.tar.gz
+		<Archive sha1sum="ed869aec7a09b1c0eac23d695dbe5c13dbee4285" type="targz">
+			https://github.com/lchsk/xstarter/archive/v0.8.1.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -39,8 +39,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2019-08-09</Date>
-			<Version>0.8.0</Version>
+			<Date>2020-08-12</Date>
+			<Version>0.8.1</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

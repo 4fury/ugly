@@ -31,7 +31,7 @@
 -            translationFile = appPath + "/" + mTranslations[index].mFilename + ".qm";
 +//        else
 +//           translationFile = appPath + "/" + mTranslations[index].mFilename + ".qm";
-+          QString translationFile("/usr/share/cppcheck/lang/" + mTranslations[index].mFilename + ".qm");
++          QString translationFile("/usr/share/Cppcheck/lang/" + mTranslations[index].mFilename + ".qm");
  
          if (!mTranslator->load(translationFile) && !failure) {
              //If it failed, lets check if the default file exists

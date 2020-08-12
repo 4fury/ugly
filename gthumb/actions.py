@@ -5,11 +5,11 @@
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
 from pisi.actionsapi import shelltools
-#from pisi.actionsapi import mesontools
+from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-shelltools.system("unset LC_ALL")
+shelltools.export("LC_ALL", "en_US.UTF-8")
 
 z = "-Dwarn-deprecated=false \
      -Dclutter=false \
@@ -17,16 +17,13 @@ z = "-Dwarn-deprecated=false \
     "
 
 def setup():
-#	mesontools.configure(z)
-	shelltools.system("meson --prefix=/usr %s . build" % z)
+	mesontools.configure(z)
 
 def build():
-#	mesontools.build()
-	shelltools.system("ninja -C build")
+	mesontools.build()
 
 def install():
-#	mesontools.install()
-	shelltools.system("DESTDIR=%s ninja -C build install" % get.installDIR())
+	mesontools.install()
 
 	pisitools.dodoc("AUTHORS", "COPYING", "MAINTAINERS", "NEWS", "README.md")
 

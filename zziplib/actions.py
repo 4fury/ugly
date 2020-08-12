@@ -6,26 +6,26 @@
 
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import cmaketools
-from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-shelltools.export("PYTHON", "/usr/bin/python3")
+shelltools.export("JOBS", get.makeJOBS().replace("-j5", "-j1"))
 
 def setup():
-	pisitools.ldflags.add("-lz")
-	pisitools.cxxflags.add("-lz")
-	cmaketools.configure("-DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=lib")
-#	autotools.configure("--disable-static --enable-sdl --with-zlib")
+	shelltools.makedirs("build")
+	shelltools.cd("build")
+	cmaketools.configure("-DCMAKE_INSTALL_LIBDIR=lib -L", sourceDir = '..')
 
 def build():
-	cmaketools.make("-j1")
-#	autotools.make()
+	shelltools.cd("build")
+	cmaketools.make()
+	cmaketools.make("docs")
 
 def install():
+	shelltools.cd("build")
 	cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
-#	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-#	pisitools.dohtml("docs/*.htm*")
+	pisitools.dohtml("docs/*.htm*")
+	shelltools.cd("..")
 	pisitools.dodoc("ChangeLog", "COPYING.LIB", "README", "TODO", "docs/COPYING*", "docs/README.SDL")
 

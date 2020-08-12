@@ -10,7 +10,7 @@
 		</Packager>
 		<License>BSD</License>
 		<IsA>app:gui</IsA>
-		<PartOf>desktop.enlightenment.apps</PartOf>
+		<PartOf>desktop.enlightenment.base</PartOf>
 		<Summary>A terminal emulator for Enlightenment.</Summary>
 		<Description>A EFL terminal emulator with some extra bells and whistles for Enlightenment.</Description>
 		<Archive sha1sum="5b49478f689373a46b7902b6be66eda6a5034c38" type="tarxz">
@@ -20,7 +20,7 @@
 			<Dependency>meson</Dependency>
 			<Dependency>cmake</Dependency>
 			<Dependency>efl-devel</Dependency>
-			<Dependency>enlightenment-devel</Dependency>
+			<!-- <Dependency>enlightenment-devel</Dependency> -->
 		</BuildDependencies>
 	</Source>
 

@@ -9,22 +9,27 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-shelltools.export("PYTHON", "/usr/bin/python3")
-
-i = 'FILESDIR=/usr/share/cppcheck CFGDIR=cfg'
-
-f = '-Wno-multichar -Wno-sign-compare -Wno-unused-function -Wno-maybe-uninitialized \
--Wno-implicit-fallthrough -Wno-deprecated-declarations'
+j = "-DHAVE_RULES=ON \
+     -DBUILD_GUI=ON \
+     -DWITH_QCHART=ON \
+     -DENABLE_CHECK_INTERNAL=ON -L \
+    "
 
 def setup():
-	pisitools.cxxflags.add("-DNDEBUG -DNEW_Z3=1 %s" % f)
-	cmaketools.configure("-DCLANG_TIDY_ENABLED=OFF -DWITH_GUI=ON -L")
+	shelltools.makedirs("build")
+	shelltools.cd("build")
+	cmaketools.configure("-DUSE_Z3=OFF -DBUILD_TESTS=OFF %s" % j, sourceDir = '..')
 
 def build():
+	shelltools.cd("build")
 	cmaketools.make()
 
+#def check():
+#	cmaketools.make("test")
+
 def install():
+	shelltools.cd("build")
 	cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("")
+	pisitools.dodoc("../AUTHORS", "../COPYING", "../readme*")
 

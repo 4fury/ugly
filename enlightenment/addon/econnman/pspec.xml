@@ -10,7 +10,7 @@
 		</Packager>
 		<License>LGPLv3</License>
 		<IsA>app</IsA>
-		<PartOf>desktop.enlightenment.apps</PartOf>
+		<PartOf>desktop.enlightenment.addon</PartOf>
 		<Summary>EFL user interface for connman.</Summary>
 		<Description>EFL user interface for connman (Connection Manager).</Description>
 		<Archive sha1sum="7a59e7a2d9b2592ceaaf16f9acbfca96573ac351" type="tarxz">
@@ -18,7 +18,8 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>efl-devel</Dependency>
-			<!-- <Dependency>python-efl</Dependency> -->
+			<Dependency>python-efl</Dependency>
+			<Dependency>python3-devel</Dependency>
 			<Dependency>connman-devel</Dependency>
 			
 		</BuildDependencies>
@@ -28,7 +29,7 @@
 		<Name>econnman</Name>
 		<RuntimeDependencies>
 			<Dependency>connman</Dependency>
-			<!-- <Dependency>python-efl</Dependency> -->
+			<Dependency>python-efl</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin/econnman-bin</Path>
