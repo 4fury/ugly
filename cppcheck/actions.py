@@ -18,7 +18,7 @@ j = "-DHAVE_RULES=ON \
 def setup():
 	shelltools.makedirs("build")
 	shelltools.cd("build")
-	cmaketools.configure("-DUSE_Z3=OFF -DBUILD_TESTS=OFF %s" % j, sourceDir = '..')
+	cmaketools.configure("-DUSE_Z3=ON -DBUILD_TESTS=OFF %s" % j, sourceDir = '..')
 
 def build():
 	shelltools.cd("build")

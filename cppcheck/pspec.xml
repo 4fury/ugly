@@ -22,13 +22,17 @@
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
 			<Dependency>python3</Dependency>
-			<!-- <Dependency>z3-devel</Dependency> -->
+			<Dependency>z3-devel</Dependency>
 			<Dependency>zlib-devel</Dependency>
+			<Dependency>docbook-xsl</Dependency>
 			<Dependency>qt5-linguist</Dependency>
+			<Dependency>libxslt-devel</Dependency>
 			<Dependency>libpcre-devel</Dependency>
+			<Dependency>python3-devel</Dependency>
 			<Dependency>qt5-base-devel</Dependency>
 			<Dependency>tinyxml2-devel</Dependency>
 			<Dependency>qt5-charts-devel</Dependency>
+			<Dependency>python3-setuptools</Dependency>
 		</BuildDependencies>
 		<Patches>
 			<Patch level="1">qm_install_path.patch</Patch>
@@ -38,7 +42,7 @@
 	<Package>
 		<Name>cppcheck</Name>
 		<RuntimeDependencies>
-			<!-- <Dependency>z3</Dependency> -->
+			<Dependency>z3</Dependency>
 			<Dependency>libgcc</Dependency>
 			<Dependency>libpcre</Dependency>
 			<Dependency>python3</Dependency>
@@ -51,7 +55,7 @@
 			<Path fileType="data">/usr/share</Path>
 			<Path fileType="data">/usr/share/Cppcheck</Path>
 			<Path fileType="localedata">/usr/share/Cppcheck/lang</Path>
-			<!-- <Path fileType="man">/usr/share/man</Path> -->
+			<Path fileType="man">/usr/share/man</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
