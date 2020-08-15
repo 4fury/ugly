@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>gnome-builder</Name>
-		<Homepage>https://gitlab.gnome.org/GNOME/gnome-builder</Homepage>
+		<Homepage>https://wiki.gnome.org/Apps/Builder</Homepage>
 		<Packager>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
@@ -14,25 +14,24 @@
 		<Description>
 			A tool to help you write and contribute to great GNOME-based applications.
 		</Description>
-		<Archive sha1sum="a5e10680d9cbab64b76509ce7110a5bde402a2d7" type="tarxz">
-			https://download.gnome.org/sources/gnome-builder/3.34/gnome-builder-3.34.1.tar.xz
+		<Archive sha1sum="d6fae1269c011339d34c28600ae3f5c07427f52c" type="tarxz">
+			https://download.gnome.org/sources/gnome-builder/3.36/gnome-builder-3.36.1.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>meson</Dependency>
-			<!-- <Dependency>cmake</Dependency> -->
+			<Dependency>cmake</Dependency>
+			<Dependency>vte-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
+			<Dependency>vala-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>pango-devel</Dependency>
 			<Dependency>libpeas-devel</Dependency>
 			<Dependency>libxml2-devel</Dependency>
-			<Dependency>pango-devel</Dependency>
-			<Dependency>vte-devel</Dependency>
-			<Dependency>glib2-devel</Dependency>
 			<Dependency>libdazzle-devel</Dependency>
 			<Dependency>json-glib-devel</Dependency>
-			<Dependency>vala-devel</Dependency>
-			<Dependency>appstream-glib-devel</Dependency>
 			<Dependency>desktop-file-utils</Dependency>
+			<Dependency>appstream-glib-devel</Dependency>
 			<Dependency>gtksourceview3-devel</Dependency>
-			<!-- <Dependency>llvm-clang-devel</Dependency> -->
 		</BuildDependencies>
 	</Source>
 
@@ -48,8 +47,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-01-30</Date>
-			<Version>3.34.1</Version>
+			<Date>2020-08-12</Date>
+			<Version>3.36.1</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

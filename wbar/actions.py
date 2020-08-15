@@ -8,23 +8,12 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-j = "--enable-debug \
-     --disable-static \
-     --disable-canberra \
-     --disable-schemas-compile \
-     --disable-startup-notification \
-    "
-
 def setup():
-#	pisitools.cflags.remove("-O2")
-	autotools.configure(j)
+	autotools.configure()
 
 def build():
 	autotools.make()
 
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
-	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README")
-	pisitools.removeDir("/usr/share/gnome-control-center")
 

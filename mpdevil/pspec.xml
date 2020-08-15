@@ -15,8 +15,8 @@
 		<Description>
 			Mpdevil is focused on playing your local music directly instead of managing playlists or playing network streams. So it neither supports saving playlists nor restoring them. Therefore mpdevil is mainly a music browser which aims to be easy to use. mpdevil dosen't store any client side database of your music library. Instead all tags and covers get presented to you in real time. So you'll never see any outdated information in your browser. mpdevil strongly relies on tags.
 		</Description>
-		<Archive sha1sum="f9ad8bb2c5071543fbf05bcbb738fe7aa6c5c1bf" type="targz">
-			https://github.com/SoongNoonien/mpdevil/archive/v0.8.1.tar.gz
+		<Archive sha1sum="0c645d2316e81c846c3350ea291341a81248509d" type="targz">
+			https://github.com/SoongNoonien/mpdevil/archive/v0.8.4.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>python3</Dependency>
@@ -53,8 +53,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-06-01</Date>
-			<Version>0.8.1</Version>
+			<Date>2020-08-13</Date>
+			<Version>0.8.4</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

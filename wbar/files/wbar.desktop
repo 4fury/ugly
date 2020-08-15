@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Wbar
+GenericName=Quick-Lauchn bar
+Comment=A Quick-Launch bar like MacOS ones
+Icon=wbar
+Exec=/usr/bin/wbar -pos top --above-desk
+Categories=KDE;Application;Utility
+Type=Application
+Terminal=false

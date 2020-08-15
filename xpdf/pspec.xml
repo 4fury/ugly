@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xpdf</Name>
-		<Homepage>http://www.xpdfreader.com/</Homepage>
+		<Homepage>https://www.xpdfreader.com/</Homepage>
 		<Packager>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

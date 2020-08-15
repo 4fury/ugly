@@ -14,6 +14,9 @@
 		<Description>
 			JWM is a light-weight window manager for the X11 Window System. JWM is written in C and uses only Xlib at a minimum. Because of its small footprint, JWM makes a good window manager for older computers and less powerful systems, such as the Raspberry Pi, though it is perfectly capable of running on modern systems. JWM is included in small Linux distributions such as Puppy Linux and Damn Small Linux, and it is available as a separate package in many other distributions.
 		</Description>
+		<Archive sha1sum="ef86a0b232b4307d51ca46a668a16d85f3f588ba" type="tarxz">
+			https://joewing.net/projects/jwm/releases/jwm-2.3.7.tar.xz
+		</Archive>
 		<BuildDependencies>
 			<Dependency>pkgconfig</Dependency>
 			<Dependency>cairo-devel</Dependency>
@@ -30,9 +33,6 @@
 			<Dependency>libXinerama-devel</Dependency>
 			<Dependency>libjpeg-turbo-devel</Dependency>
 		</BuildDependencies>
-		<Archive sha1sum="ef86a0b232b4307d51ca46a668a16d85f3f588ba" type="tarxz">
-			https://joewing.net/projects/jwm/releases/jwm-2.3.7.tar.xz
-		</Archive>
 		<Patches>
 			<!-- <Patch level="1">jwmrc.patch</Patch> -->
 		</Patches>
@@ -40,6 +40,29 @@
 
 	<Package>
 		<Name>jwm</Name>
+		<Summary>Joe's Window Manager.</Summary>
+		<RuntimeDependencies>
+			<Dependency>xterm</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>libpng</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libXft</Dependency>
+			<Dependency>libXmu</Dependency>
+			<Dependency>libXpm</Dependency>
+			<!-- <Dependency>pnmixer</Dependency> -->
+			<Dependency>fribidi</Dependency>
+			<Dependency>librsvg</Dependency>
+			<Dependency>libXext</Dependency>
+			<!-- <Dependency>numlockx</Dependency> -->
+			<Dependency>libXrender</Dependency>
+			<Dependency>libXinerama</Dependency>
+			<Dependency>xscreensaver</Dependency>
+			<!-- <Dependency>dsblogoutmgr</Dependency> -->
+			<Dependency>libjpeg-turbo</Dependency>
+			<Dependency>icon-theme-hicolor</Dependency>
+			<Dependency>pisilinux-theme-maia</Dependency>
+			<Dependency>network-manager-applet</Dependency>
+		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc</Path>
 			<Path fileType="executable">/usr/bin</Path>
@@ -51,29 +74,6 @@
 		<AdditionalFiles>
 			<AdditionalFile permission="0644" target="/usr/share/xsessions/jwm.desktop" group="root" owner="root">jwm.desktop</AdditionalFile>
 		</AdditionalFiles>
-		<Summary>Joe's Window Manager.</Summary>
-		<RuntimeDependencies>
-			<Dependency>xterm</Dependency>
-			<Dependency>cairo</Dependency>
-			<Dependency>libpng</Dependency>
-			<Dependency>libX11</Dependency>
-			<Dependency>libXft</Dependency>
-			<Dependency>libXmu</Dependency>
-			<Dependency>libXpm</Dependency>
-			<!-- <Dependency>dsblogoutmgr</Dependency> -->
-			<Dependency>fribidi</Dependency>
-			<Dependency>librsvg</Dependency>
-			<Dependency>libXext</Dependency>
-			<Dependency>libXrender</Dependency>
-			<Dependency>libXinerama</Dependency>
-			<Dependency>xscreensaver</Dependency>
-			<Dependency>libjpeg-turbo</Dependency>
-			<Dependency>icon-theme-hicolor</Dependency>
-			<Dependency>pisilinux-theme-maia</Dependency>
-			<Dependency>network-manager-applet</Dependency>
-			<!-- <Dependency>numlockx</Dependency> -->
-			<!-- <Dependency>pnmixer</Dependency> -->
-		</RuntimeDependencies>
 	</Package>
 
 	<History>

@@ -4,20 +4,18 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-j = "--enable-debug \
-     --disable-static \
-     --disable-canberra \
-     --disable-schemas-compile \
-     --disable-startup-notification \
-    "
+shelltools.export("PYTHON", "/usr/bin/python3")
+shelltools.export("PYTHON_LIBS", "usr/lib/python%s" % get.curPYTHON())
 
 def setup():
-#	pisitools.cflags.remove("-O2")
-	autotools.configure(j)
+	autotools.configure("--disable-dependency-tracking")
+
+	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 
 def build():
 	autotools.make()
@@ -25,6 +23,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README")
-	pisitools.removeDir("/usr/share/gnome-control-center")
+	pisitools.dodoc("AUTHORS", "ChangeLog*", "NEWS", "README")
 
