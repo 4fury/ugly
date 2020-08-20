@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>gmusicbrowser</Name>
+		<Homepage>https://gmusicbrowser.org</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>multimedia.sound</PartOf>
+		<Summary>A customizable open-source jukebox for large collections.</Summary>
+		<Description>An open-source jukebox for large collections of mp3, ogg, flac, etc.., files, written in perl.</Description>
+		<Archive sha1sum="f6b60a559a566091e85385a2ffa8e75c6dd57978" type="zip">
+			https://github.com/squentin/gmusicbrowser/archive/7d0819c1b9be666b4f51148f00c8fc9bd1e455a0.zip
+		</Archive>
+		<BuildDependencies>
+			<Dependency>git</Dependency>
+			<Dependency>discount</Dependency>
+			<Dependency>perl-Gtk3</Dependency>
+			<Dependency>perl-Glib-Object-Introspection</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>gmusicbrowser</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="all">/</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-08-17</Date>
+			<Version>1.1.16</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

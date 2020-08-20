@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>musepack</Name>
+		<Homepage>https://www.musepack.net/</Homepage>
+		<Packager>
+			<Name>PisiLinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>BSD</License>
+		<License>GPL</License>
+		<License>LGPL</License>
+		<IsA>library</IsA>
+		<Summary>Portable Musepack decoder library</Summary>
+		<Description>Musepack is an audio compression format with a strong emphasis on high quality. It's not lossless, but it is designed for transparency, so that you won't be able to hear differences between the original wave file and the much smaller MPC file. It is based on the MPEG-1 Layer-2 / MP2 algorithms, but has rapidly developed and vastly improved and is now at an advanced stage in which it contains heavily optimized and patentless code.</Description>
+		<Archive sha1sum="bdd4042773eb5c885df70d7a19914fa6e2306391" type="targz">https://files.musepack.net/source/musepack_src_r475.tar.gz</Archive>
+	</Source>
+
+	<Package>
+		<Name>musepack</Name>
+		<RuntimeDependencies>
+			<Dependency>libmpcdec</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>libmpcdec</Name>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>libmpcdec-devel</Name>
+		<Summary>Development files for libmpcdec</Summary>
+		<RuntimeDependencies>
+			<Dependency release="current">libmpcdec</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-08-20</Date>
+			<Version>8</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+
