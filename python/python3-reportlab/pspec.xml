@@ -10,7 +10,7 @@
 		</Packager>
 		<License>BSD</License>
 		<IsA>library</IsA>
-		<PartOf>programming.language.python</PartOf>
+		<PartOf>programming.language.python3</PartOf>
 		<Summary>
 			ReportLab PDF Toolkit. It allows rapid creation of rich PDF documents, and also creation of charts in a variety of bitmap and vector formats.
 		</Summary>
@@ -36,7 +36,7 @@
 			<Dependency>python3-pillow</Dependency>
 		</RuntimeDependencies>
 		<Files>
-			<Path fileType="library">/usr/lib/python2.7/site-packages</Path>
+			<Path fileType="library">/usr/lib</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>

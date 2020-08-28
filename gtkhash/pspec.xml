@@ -9,14 +9,17 @@
 			<Email>wascheme@tuta.io</Email>
 		</Packager>
 		<License>GPLv2</License>
-		<IsA>library</IsA>
-		<Summary>gspell - a spell-checking library for GTK applications.</Summary>
-		<Description>gspell provides a flexible API to add spell-checking to a GTK application.</Description>
+		<IsA>app:gui</IsA>
+		<PartOf>desktop.misc</PartOf>
+		<Summary>A cross-platform desktop utility for computing message digests or checksums.</Summary>
+		<Description>
+			GtkHash is a desktop utility for computing message digests or checksums. Most well-known hash functions are supported, including MD5, SHA1, SHA2 (SHA256/SHA512), SHA3 and BLAKE2.
+		</Description>
 		<Archive sha1sum="68bd5c71af3a1fcd63e0f57e0819cc7ab591b39c" type="tarxz">
 			https://github.com/tristanheaven/gtkhash/releases/download/v1.4/gtkhash-1.4.tar.xz
 		</Archive>
 		<BuildDependencies>
-			<Dependency>zlib-codes</Dependency>
+			<Dependency>zlib-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>caja-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
