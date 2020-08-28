@@ -10,11 +10,11 @@
 		</Packager>
 		<License>MIT</License>
 		<IsA>app:comsole</IsA>
-		<PartOf>misc</PartOf>
+		<PartOf>util.misc</PartOf>
 		<Summary>Terminal file manager</Summary>
 		<Description>lf is a terminal file manager.</Description>
-		<Archive sha1sum="4d495f663afc3b0138926ade2a28713715aa6940" type="targz">
-			https://github.com/gokcehan/lf/archive/r14.tar.gz
+		<Archive sha1sum="0d434351ff91bc87ee07f09e59718dfed946a8d4" type="targz">
+			https://github.com/gokcehan/lf/archive/r15.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>golang</Dependency>
@@ -36,8 +36,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-04-14</Date>
-			<Version>14</Version>
+			<Date>2020-08-21</Date>
+			<Version>15</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

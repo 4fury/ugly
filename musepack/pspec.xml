@@ -12,9 +12,11 @@
 		<License>GPL</License>
 		<License>LGPL</License>
 		<IsA>library</IsA>
-		<Summary>Portable Musepack decoder library</Summary>
+		<Summary>Portable Musepack decoder library.</Summary>
 		<Description>Musepack is an audio compression format with a strong emphasis on high quality. It's not lossless, but it is designed for transparency, so that you won't be able to hear differences between the original wave file and the much smaller MPC file. It is based on the MPEG-1 Layer-2 / MP2 algorithms, but has rapidly developed and vastly improved and is now at an advanced stage in which it contains heavily optimized and patentless code.</Description>
-		<Archive sha1sum="bdd4042773eb5c885df70d7a19914fa6e2306391" type="targz">https://files.musepack.net/source/musepack_src_r475.tar.gz</Archive>
+		<Archive sha1sum="bdd4042773eb5c885df70d7a19914fa6e2306391" type="targz">
+			https://files.musepack.net/source/musepack_src_r475.tar.gz
+		</Archive>
 	</Source>
 
 	<Package>

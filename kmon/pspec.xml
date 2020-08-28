@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>kmon</Name>
+		<Homepage>https://kmon.cli.rs/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:console</IsA>
+		<Summary>Linux Kernel Manager and Activity Monitor.</Summary>
+		<Description>
+			kmon provides a text-based user interface for managing the Linux kernel modules and monitoring the kernel activities.
+		</Description>
+		<Archive sha1sum="08bb387f103bc19d47058ef1ca880ff69495b2fe" type="targz">
+			https://github.com/orhun/kmon/archive/v1.5.0.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cargo</Dependency>
+			<Dependency>python3</Dependency>
+			<Dependency>libxcb-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>kmon</Name>
+		<RuntimeDependencies>
+			<Dependency>rust</Dependency>
+			<Dependency>libxcb</Dependency>
+			<Dependency>python3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-08-28</Date>
+			<Version>1.5.0</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

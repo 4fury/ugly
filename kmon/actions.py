@@ -4,19 +4,18 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import mesontools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import pisitools
 
-def setup():
-	shelltools.system("sed -i '12s/gtk/gtk3/' data/meson_post_install.py")
-	mesontools.configure()
-
 def build():
-	mesontools.build()
+	shelltools.system("cargo build --release --locked --all-features")
+
+def check():
+	shelltools.system("cargo test --release --locked")
 
 def install():
-	mesontools.install()
+	pisitools.dobin("kmon")
+	pisitools.doman("kmon.8")
 
-	pisitools.dodoc("COPYING", "NEWS", "README")
+	pisitools.dodoc("CHANGELOG.md", "CONTRIBUTING.md", "LICENSE")
 

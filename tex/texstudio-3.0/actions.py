@@ -8,7 +8,6 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import qt5
 
 def setup():
-#	pisitools.cxxflags.add("-Wno-deprecated-declarations")
 #	qt5.configure("texstudio.pro", parameters='USE_SYSTEM_QUAZIP=1 USE_SYSTEM_HUNSPELL=1')
 	qt5.configure("texstudio.pro")
 

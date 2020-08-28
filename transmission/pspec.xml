@@ -69,7 +69,7 @@
 			<Dependency>openssl</Dependency>
 			<Dependency>libevent</Dependency>
 			<Dependency>miniupnpc</Dependency>
-			<Dependency>libnotify</Dependency>	   
+			<Dependency>libnotify</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 		</RuntimeDependencies>
 		<Files>
@@ -141,3 +141,4 @@
 		</Update>
 	</History>
 </PISI>
+
