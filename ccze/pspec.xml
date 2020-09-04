@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>ccze</Name>
+		<Homepage>https://github.com/software-revive/ccze-rv</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app:console</IsA>
+		<PartOf>programming.misc</PartOf>
+		<Summary>CCZE is a fast log colorizer written in C.</Summary>
+		<Description>
+			CCZE rises from the ashes 17 years after the last release. No new features introduced in this release, but we've achieved significant performance improvements.
+		</Description>
+		<Archive sha1sum="ea9c3b16f3a1beb50d4c9714348f512e4b7fcd8f" type="targz">
+			https://github.com/software-revive/ccze-rv/releases/download/0.3.0/ccze-0.3.0.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>ncurses-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>ccze</Name>
+		<RuntimeDependencies>
+			<Dependency>ncurses</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-09-03</Date>
+			<Version>0.3.0</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

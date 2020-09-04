@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>ly</Name>
+		<Homepage>https://github.com/nullgemm/ly</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>WTFPL</License>
+		<IsA>service</IsA>
+		<Summary>Display manager with console UI.</Summary>
+		<Description>
+			Ly is a lightweight TUI (ncurses-like) display manager for Linux and BSD.
+		</Description>
+		<Archive sha1sum="e5f8d3402c633f85fbb6ff832c1c207ada9276dc" type="targz">
+			https://github.com/nullgemm/ly/archive/v0.5.0.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>xorg-app</Dependency>
+			<Dependency>pam-devel</Dependency>
+			<Dependency>libxcb-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>libxkbcommon-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>ly</Name>
+		<RuntimeDependencies>
+			<Dependency>pam</Dependency>
+			<Dependency>libxcb</Dependency>
+			<Dependency>libX11</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-09-01</Date>
+			<Version>0.5.0</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

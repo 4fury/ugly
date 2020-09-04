@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>qt5ct</Name>
 		<Homepage>https://sourceforge.net/projects/qt5ct</Homepage>
 		<Packager>
 			<Name>fury</Name>
-			<Email>lilian2water@gmail.com</Email>
+			<Email>wascheme@tuta.io</Email>
 		</Packager>
 		<License>GPLv3</License>
 		<IsA>app:gui</IsA>
@@ -46,26 +46,13 @@
 	</Package>
 
 	<History>
-		<Update release="3">
-			<Date>2020-08-10</Date>
-			<Version>1.1</Version>
-			<Comment>Ver. bump</Comment>
-			<Name>fury</Name>
-			<Email>lilian2water@gmail.com</Email>
-		</Update>
-		<Update release="2">
-			<Date>2019-09-10</Date>
-			<Version>0.41</Version>
-			<Comment>Ver. bump</Comment>
-			<Name>fury</Name>
-			<Email>lilian2water@gmail.com</Email>
-		</Update>
 		<Update release="1">
-			<Date>2019-07-31</Date>
-			<Version>0.39</Version>
+			<Date>2020-09-02</Date>
+			<Version>1.1</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
-			<Email>lilian2water@gmail.com</Email>
+			<Email>wascheme@tuta.io</Email>
 		</Update>
 	</History>
 </PISI>
+
