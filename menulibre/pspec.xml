@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>menulibre</Name>
@@ -16,12 +16,12 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
-			<Dependency>python</Dependency>
+			<Dependency>python3</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>python3-six</Dependency>
 			<Dependency>python3-psutil</Dependency>
 			<Dependency>python3-setuptools</Dependency>
-			<Dependency>python-distutils-extra</Dependency>
+			<Dependency>python3-distutils-extra</Dependency>
 			<Dependency>python3-pygobject3-devel</Dependency>
 		</BuildDependencies>
 	</Source>
@@ -35,7 +35,7 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
-			<Path fileType="library">/usr/lib/python3.6/site-packages</Path>
+			<Path fileType="library">/usr/lib</Path>
 			<Path fileType="data">/usr/share</Path>
 			<Path fileType="localedata">/usr/share/locale</Path>
 			<Path fileType="man">/usr/share/man</Path>
