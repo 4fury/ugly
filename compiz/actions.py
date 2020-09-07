@@ -9,6 +9,8 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+p = "%s" % get.curPYTHON()
+
 def setup():
 	shelltools.system("sed -i '18,23s/^/#/' cmake/recompile_gsettings_schemas_in_dir_user_env.cmake")
 	shelltools.makedirs("build")
@@ -101,8 +103,8 @@ def setup():
 	-DBUILD_METACITY=ON \
 	-DCYTHON_BIN=/usr/bin/cython \
 	-DPYTHON_EXECUTABLE=/usr/bin/python3 \
-	-DPYTHON_LIBRARY=/usr/lib/libpython3.6m.so \
-	-DPYTHON_INCLUDE_DIR=/usr/include/python3.6m -L", sourceDir = '..')
+	-DPYTHON_LIBRARY=/usr/lib/libpython%sm.so \
+	-DPYTHON_INCLUDE_DIR=/usr/include/python%sm -L" % (p, p), sourceDir = '..')
 
 def build():
 	shelltools.cd("build")

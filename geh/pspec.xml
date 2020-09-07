@@ -1,27 +1,27 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>geh</Name>
-		<Homepage>https://github.com/4fury/save_them</Homepage>
+		<Homepage>https://github.com/software-revive/geh-rv</Homepage>
 		<Packager>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Packager>
-		<License>GPLv2</License>
+		<License>MIT</License>
 		<IsA>app:gui</IsA>
-		<Summary>A simple commandline image viewer</Summary>
+		<Summary>A simple commandline image viewer.</Summary>
 		<Description>
 			Geh is a simple commandline image viewer written in C/Gtk+ with various nice features.
 		</Description>
-		<Archive sha1sum="96b8912a36778a3f883b927da7dabfb927ffb1cf" type="tarxz">
-			https://github.com/4fury/save_them/raw/master/geh.tar.xz
+		<Archive sha1sum="f3a45c3a02a22cf0a5560fa0414399edae84db97" type="targz">
+			https://github.com/software-revive/geh-rv/releases/download/0.4.0/geh-0.4.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>gtk2-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<Patch level="1">man.patch</Patch>
+			<!-- <Patch level="1">man.patch</Patch> -->
 		</Patches>
 	</Source>
 
@@ -41,11 +41,12 @@
 
 	<History>
 		<Update release="1">
-			<Date>2019-12-10</Date>
-			<Version>0.2.0</Version>
+			<Date>2020-09-07</Date>
+			<Version>0.4.0</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Update>
 	</History>
 </PISI>
+

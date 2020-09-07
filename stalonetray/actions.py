@@ -9,8 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-#	autotools.autoreconf("-vif")
-	autotools.configure("--enable-gtk2")
+	autotools.configure("--with-x --disable-native-kde")
 
 def build():
 	autotools.make()
@@ -18,5 +17,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "LICENSE", "NEWS", "README")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "TODO")
 
