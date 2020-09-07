@@ -9,7 +9,6 @@
 			<Email>admins@pisilinux.org</Email>
 		</Packager>
 		<License>GPLv2</License>
-		<Icon>ario</Icon>
 		<IsA>app:gui</IsA>
 		<PartOf>multimedia.sound</PartOf>
 		<Summary>Ario is a GTK+ client for MPD.</Summary>

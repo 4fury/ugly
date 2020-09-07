@@ -15,8 +15,8 @@
 		<Description>
 			The aim of the Handy library is to help with developing UI for mobile devices using GTK/GNOME.
 		</Description>
-		<Archive sha1sum="a1d92138bd41b782a9f401405f130305b2e4e95c" type="tarbz2">
-			https://gitlab.gnome.org/GNOME/libhandy/-/archive/0.82.0/libhandy-0.82.0.tar.bz2
+		<Archive sha1sum="8c4bb638289fab71a056c1eb3eb24c983c723372" type="tarbz2">
+			https://gitlab.gnome.org/GNOME/libhandy/-/archive/0.90.0/libhandy-0.90.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -60,8 +60,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-06-26</Date>
-			<Version>0.82</Version>
+			<Date>2020-09-06</Date>
+			<Version>0.90</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

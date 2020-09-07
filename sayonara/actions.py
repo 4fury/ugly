@@ -15,7 +15,7 @@ def build():
 	cmaketools.make()
 
 def install():
-	cmaketools.install()
+	cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
 
 #	pisitools.remove("usr/share/icons/sayonara.png")
 	pisitools.dodoc("CHANGES", "COPYING", "MANUAL", "README.md")

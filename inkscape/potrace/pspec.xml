@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>potrace</Name>
 		<Homepage>http://potrace.sourceforge.net/</Homepage>
 		<Packager>
 			<Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
+			<Email>admins@pisilinux.org</Email>
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>app:utility</IsA>

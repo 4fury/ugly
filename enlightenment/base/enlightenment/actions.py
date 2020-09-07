@@ -7,7 +7,7 @@
 from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
 
-z = "-Dwl=true \
+j = "-Dwl=true \
      -Ddrm=true \
      -Dmount-eeze=true \
      -Dwl-drm=false \
@@ -16,7 +16,7 @@ z = "-Dwl=true \
     "
 
 def setup():
-	mesontools.configure(z)
+	mesontools.configure(j)
 
 def build():
 	mesontools.build()

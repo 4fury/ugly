@@ -4,28 +4,18 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-j = "--disable-selinux \
-     --enable-pptp \
-     --enable-openconnect \
-     --enable-polkit \
-     --enable-client \
-     --enable-nmcompat \
-     --with-systemdunitdir='' \
-     --with-tmpfilesdir='' \
-    "
-
-def setup():
-	autotools.configure(j)
-
 def build():
+	shelltools.export("LC_ALL", "en_US.UTF-8")
+	shelltools.system("sed -i 's|term.feed_child(cmd, -1);|term.feed_child(cmd.to_utf8());|g' src/Gtk/TermBox.vala")
 	autotools.make()
 
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "README", "TODO")
+	pisitools.dodoc("AUTHORS", "LICENSE*", "COPYING", "README*")
 

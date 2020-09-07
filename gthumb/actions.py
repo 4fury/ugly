@@ -11,13 +11,13 @@ from pisi.actionsapi import get
 
 shelltools.export("LC_ALL", "en_US.UTF-8")
 
-z = "-Dwarn-deprecated=false \
+j = "-Dwarn-deprecated=false \
      -Dclutter=false \
      -Dlibbrasero=false \
     "
 
 def setup():
-	mesontools.configure(z)
+	mesontools.configure(j)
 
 def build():
 	mesontools.build()

@@ -17,8 +17,8 @@
 		<Description>
 			Although Sayonara is considered as a lightweight player, it holds a lot of features to organize even big music collections.
 		</Description>
-		<Archive sha1sum="34cf3a8366c6516fd006675a0fdeb08e4042264b" type="tarbz2">
-			https://gitlab.com/luciocarreras/sayonara-player/-/archive/1fc8d8c1cb7f013c185d75c688e4333a44fe18ae/sayonara-player-1fc8d8c1cb7f013c185d75c688e4333a44fe18ae.tar.bz2
+		<Archive sha1sum="12596fed4e99eb6b448dcea1aeeb25c6a2658d1b" type="tarbz2">
+			https://gitlab.com/luciocarreras/sayonara-player/-/archive/1.6.0-beta6/sayonara-player-1.6.0-beta6.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -82,9 +82,9 @@
 
 	<History>
 		<Update release="10">
-			<Date>2020-04-18</Date>
+			<Date>2020-09-07</Date>
 			<Version>1.6.0</Version>
-			<Comment>Git shapshot rebuild.</Comment>
+			<Comment>Beta 6.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Update>
