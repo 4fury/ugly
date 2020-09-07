@@ -15,8 +15,8 @@
 		<Description>
 			Granite is a companion library for GTK+ and GLib. Among other things, it provides complex widgets and convenience functions designed for use in apps built for elementary OS.
 		</Description>
-		<Archive sha1sum="a5822c633729b59eb82448b2523d6cf89eeeb5ea" type="targz">
-			https://github.com/elementary/granite/archive/5.4.0.tar.gz
+		<Archive sha1sum="6ba9ba300a9df8095653a10d70365c739de92815" type="targz">
+			https://github.com/elementary/granite/archive/5.5.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>vala</Dependency>
@@ -40,8 +40,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-06-22</Date>
-			<Version>5.4.0</Version>
+			<Date>2020-09-08</Date>
+			<Version>5.5.0</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

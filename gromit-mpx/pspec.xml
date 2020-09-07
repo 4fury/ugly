@@ -15,8 +15,8 @@
 		<Description>
 			It enables graphical annotations with several pointers at once and is A LOT faster than its predecessor since it uses the XCOMPOSITE extension where available.
 		</Description>
-		<Archive sha1sum="97ac2add602cf4a6e86f03fcfb8ccb70dec79729" type="targz">
-			https://github.com/bk138/gromit-mpx/archive/1.3.tar.gz
+		<Archive sha1sum="cafa1ce55c4929cd0777146a09358a1f9c67ff50" type="targz">
+			https://github.com/bk138/gromit-mpx/archive/1.3.1.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>gtk3-devel</Dependency>
@@ -37,8 +37,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-06-01</Date>
-			<Version>1.3</Version>
+			<Date>2020-09-08</Date>
+			<Version>1.3.1</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
