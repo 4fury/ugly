@@ -15,8 +15,8 @@
 		<Description>
 			The program provides graphical user interface to control the connman daemon. The connman daemon must be started as you normally would, this program just interfaces with that daemon. You can see what technologies and services connman has found, and for wifi services an agent is registered to assist in obtaining the information from you necessary to logon the wifi service.
 		</Description>
-		<Archive sha1sum="ea51c9e5d31e50fef94b7d646cd267a6e1a077b7" type="targz">
-			https://github.com/andrew-bibb/cmst/archive/2020.05.09.tar.gz
+		<Archive sha1sum="c7662915040ed3d0e33bf8b77bb5d06a0c09655d" type="tarxz">
+			https://github.com/andrew-bibb/cmst/releases/download/2020.05.09/cmst-2020.05.09.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>connman-devel</Dependency>
@@ -43,7 +43,7 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-06-01</Date>
+			<Date>2020-09-08</Date>
 			<Version>2020.05.09</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>

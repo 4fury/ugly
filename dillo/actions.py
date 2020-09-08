@@ -8,25 +8,14 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-j = "--enable-cplusplus \
-     --enaible-curl-client \
-     --disable-cgi-server \
-     --disable-libwww-client \
-     --disable-wininet-client \
-     --disable-libxml2-backend \
-    "
-
 def setup():
-	autotools.configure(j)
+	autotools.configure()
 
 def build():
 	autotools.make()
 
-#def check():
-#	autotools.make("check")
-
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+	autotools.rawInstall("DESTDIR=%s %s" % (get.installDIR(), i))
 
-	pisitools.dodoc("README")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "README")
 

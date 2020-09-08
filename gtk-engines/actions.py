@@ -15,14 +15,14 @@ j = "--enable-lua \
      --with-system-lua \
     "
 
-z = "-Wno-int-conversion \
+i = "-Wno-int-conversion \
      -Wno-pointer-to-int-cast \
      -Wno-int-to-pointer-cast \
      -Wno-implicit-function-declaration \
     "
 
 def setup():
-	pisitools.cflags.add(z)
+	pisitools.cflags.add(i)
 	autotools.configure(j)
 
 def build():
