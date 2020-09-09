@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>python3-Ropper</Name>
+		<Homepage>https://scoding.de/ropper/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>BSD-3-Clause</License>
+		<IsA>library</IsA>
+		<Summary>Ropper - rop gadget finder and binary information tool.</Summary>
+		<Description>
+			Display information about files in different file formats and find gadgets to build rop chains for different architectures (x86/x86_64, ARM/ARM64, MIPS, PowerPC, SPARC64). For disassembly ropper uses the awesome Capstone Framework.
+		</Description>
+		<Archive sha1sum="1ba3ba22a40d8e1e6bbc93698095252127b814a3" type="targz">
+			https://github.com/sashs/Ropper/archive/v1.13.5.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>python3</Dependency>
+			<Dependency>python3-capstone</Dependency>
+			<Dependency>python3-filebytes</Dependency>
+			<Dependency>python3-setuptools</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>python3-Ropper</Name>
+		<RuntimeDependencies>
+			<Dependency>python3</Dependency>
+			<Dependency>python3-capstone</Dependency>
+			<Dependency>python3-filebytes</Dependency>
+			<!-- optional runtime dependency
+			<Dependency>z3</Dependency>
+			<Dependency>python3-vex</Dependency>
+			<Dependency>python3-keystone</Dependency>
+			-->
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-09-09</Date>
+			<Version>1.13.5</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+
