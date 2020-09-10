@@ -9,10 +9,10 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.make("github")
-	autotools.configure()
+	pisitools.dosed("makefile", "systemd", deleteLine = 'True')
 
 def build():
+#	autotools.make("github")
 	autotools.make()
 
 def install():

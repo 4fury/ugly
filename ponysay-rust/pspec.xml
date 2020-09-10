@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>ponysay-rust</Name>
+		<Homepage>https://github.com/evant/ponysay-rust</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>FDL</License>
+		<License>GPLv3</License>
+		<IsA>app:console</IsA>
+		<PartOf>desktop.misc</PartOf>
+		<Summary>A barebones port of ponysay to rust.</Summary>
+		<Description>
+			Ponysay is written in python, I found it frustratingly slow to run. As I only use a fraction of it's features, I re-wrote the parts I use in rust.
+		</Description>
+		<Archive sha1sum="18cc6b40d93111709cf2970cb028022e35b198c1" type="targz">
+			https://github.com/evant/ponysay-rust/archive/v0.1.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>rust</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>ponysay-rust</Name>
+		<RuntimeDependencies>
+			<Dependency>rust</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-09-10</Date>
+			<Version>0.1</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

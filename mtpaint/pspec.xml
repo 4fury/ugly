@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>mtpaint</Name>
+		<Homepage>http://mtpaint.sourceforge.net/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>multimedia.graphics</PartOf>
+		<Summary>Mark Tyler's Painting Program.</Summary>
+		<Description>
+			mtPaint is a painting program which Mark Tyler developed from scratch so he could easily create pixel art and manipulate digital photos.
+		</Description>
+		<Archive sha1sum="1b34dbbb31bafec97083524858bc43157b781010" type="targz">
+			https://github.com/wjaguar/mtPaint/archive/ff0a801413e612f74fe4c5d251e4bf36c6628013.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>zlib-devel</Dependency>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>tiff-devel</Dependency>
+			<Dependency>webp-devel</Dependency>
+			<Dependency>lcms2-devel</Dependency>
+			<Dependency>giflib-devel</Dependency>
+			<Dependency>openjpeg2-devel</Dependency>
+			<Dependency>imagemagick-devel</Dependency>
+			<Dependency>libjpeg-turbo-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>mtpaint</Name>
+		<RuntimeDependencies>
+			<Dependency>webp</Dependency>
+			<Dependency>gtk2</Dependency>
+			<Dependency>tiff</Dependency>
+			<Dependency>lcms2</Dependency>
+			<Dependency>giflib</Dependency>
+			<Dependency>openjpsg2</Dependency>
+			<Dependency>imagemagick</Dependency>
+			<Dependency>libjpeg-turbo</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-09-10</Date>
+			<Version>3.49.29</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

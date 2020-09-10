@@ -8,8 +8,8 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-#flg = "-Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-unused-result"
-j = "-DENABLE_KDE=ON \
+#f = "-Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-unused-result"
+j = "-DENABLE_KDE=OFF \
      -DENABLE_KFUSION=ON \
      -DENABLE_CLEANLOOKS=ON \
      -DENABLE_PLASTIQUE=ON \
@@ -18,7 +18,7 @@ j = "-DENABLE_KDE=ON \
     "
 
 def setup():
-#	qt5.configure(parameters = "QMAKE_CXXFLAGS+='%s'" % flg)
+#	qt5.configure(parameters = "QMAKE_CXXFLAGS+='%s'" % f)
 	cmaketools.configure("%s -L" % j)
 
 def build():

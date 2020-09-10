@@ -11,6 +11,8 @@ from pisi.actionsapi import get
 ## bug: text output with double underline
 
 i = "--freedom=partial \
+     --everything \
+     --with-bash \
      --without-info \
      --dest-dir=%s \
     " % get.installDIR()

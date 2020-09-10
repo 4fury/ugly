@@ -4,17 +4,18 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import qt5
+from pisi.actionsapi import autotools
+from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-f = "-Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-unused-result"
-
-def setup():
-	qt5.configure(parameters = "QMAKE_CXXFLAGS+='%s'" % f)
+#def setup():
+#	
 
 def build():
-	qt5.make()
+	autotools.make("PREFIX=/usr")
 
 def install():
-	qt5.install()
+	autotools.rawInstall("DESTDIR=%s PREFIX=/usr" % get.installDIR())
+
+#	pisitools.dodoc("README.md")
 
