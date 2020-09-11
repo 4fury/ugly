@@ -34,7 +34,7 @@
 			<Dependency>python3-filebytes</Dependency>
 			<!-- optional runtime dependency
 			<Dependency>z3</Dependency>
-			<Dependency>python3-vex</Dependency>
+			<Dependency>python3-pyvex</Dependency>
 			<Dependency>python3-keystone</Dependency>
 			-->
 		</RuntimeDependencies>
