@@ -10,6 +10,7 @@
 		</Packager>
 		<License>Apache-2</License>
 		<IsA>library</IsA>
+		<PartOf>programming.language.python3</PartOf>
 		<Summary>Scour - An SVG Optimizer / Cleaner.</Summary>
 		<Description>
 			Scour is an SVG optimizer/cleaner that reduces the size of scalable vector graphics by optimizing structure and removing unnecessary data written in Python.

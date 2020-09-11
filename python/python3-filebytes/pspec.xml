@@ -10,6 +10,7 @@
 		</Packager>
 		<License>BSD-3-Clause</License>
 		<IsA>library</IsA>
+		<PartOf>programming.language.python3</PartOf>
 		<Summary>filebytes is s python library to read and edit files.</Summary>
 		<Description>
 			Library to read and edit files in the following formats: Executable and Linking Format (ELF), Portable Executable (PE), MachO and OAT (Android Runtime).

@@ -19,7 +19,7 @@ j = "-DCMAKE_INSTALL_PREFIX=/usr \
     "
 
 shelltools.export("PYTHON", "/usr/bin/python3")
-shelltools.system("find share/extensions -iname '*.py' -exec sed -i 's|env\ python$|env python3' {} \;")
+shelltools.system("find share/extensions -iname '*.py' -exec sed -i 's|env\ python$|env python3|g' {} \;")
 
 def setup():
 	shelltools.makedirs("build")
