@@ -13,13 +13,13 @@ j = "-DCMAKE_INSTALL_PREFIX=/usr \
      -DCMAKE_INSTALL_LIBDIR=lib \
      -DCMAKE_BUILD_TYPE=Release \
      -DWITH_IMAGE_MAGICK=OFF \
-     -DBUILD_SHARED_LIBS=ON \
      -DBUILD_STATIC_LIBS=OFF \
+     -DBUILD_SHARED_LIBS=ON \
      -DBUILD_TESTING=OFF -L \
     "
 
-#shelltools.export("JOBS", get.makeJOBS().replace("-j5", "-j1"))
 shelltools.export("PYTHON", "/usr/bin/python3")
+shelltools.system("find share/extensions -iname '*.py' -exec sed -i 's|env\ python$|env python3' {} \;")
 
 def setup():
 	shelltools.makedirs("build")
