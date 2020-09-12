@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>glfw</Name>
@@ -8,22 +8,22 @@
 			<Name>PisiLinux Community</Name>
 			<Email>admins@pisilinux.org</Email>
 		</Packager>
-		<License>as-is</License>
+		<License>ZLIB</License>
 		<IsA>library</IsA>
 		<Summary>The Portable OpenGL FrameWork</Summary>
 		<Description>
 			GLFW is a free, Open Source, portable framework for OpenGL application development. In short, it is a single library providing a powerful, portable API for otherwise operating system specific tasks such as opening an OpenGL window, and reading keyboard, mouse and joystick input.
 		</Description>
-		<Archive sha1sum="c5b400ebbf5d436469d7c72fb5f3db6e53478e62" type="tarbz2">
-			mirrors://sourceforge/glfw/glfw-3.3.1.tar.bz2
+		<Archive sha1sum="18b3c9ac0f48466916a8ae8c8f63a5bf6b89c76c" type="tarbz2">
+			mirrors://sourceforge/glfw/glfw-3.3.2.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
 			<Dependency>doxygen</Dependency>
-			<Dependency>xorg-app-devel</Dependency>
-			<Dependency>mesa-glu-devel</Dependency>
 			<Dependency>mesa-devel</Dependency>
 			<Dependency>libXi-devel</Dependency>
+			<Dependency>xorg-app-devel</Dependency>
+			<Dependency>mesa-glu-devel</Dependency>
 			<Dependency>libXrandr-devel</Dependency>
 			<Dependency>libXcursor-devel</Dependency>
 			<Dependency>libXxf86vm-devel</Dependency>
@@ -55,9 +55,9 @@
 			<Dependency>mesa-devel</Dependency>
 			<Dependency>libXi-devel</Dependency>
 			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>libXcursor-devel</Dependency>
 			<Dependency>libXxf86vm-devel</Dependency>
 			<Dependency>libXinerama-devel</Dependency>
-			<Dependency>libXcursor-devel</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="header">/usr/include</Path>
@@ -67,8 +67,8 @@
 
 	<History>
 		<Update release="9">
-			<Date>2020-01-05</Date>
-			<Version>3.3.1</Version>
+			<Date>2020-09-12</Date>
+			<Version>3.3.2</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

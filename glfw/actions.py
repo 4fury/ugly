@@ -8,8 +8,13 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+j = "-DCMAKE_INSTALL_LIBDIR=lib \
+     -DBUILD_SHARED_LIBS=ON \
+     -DGLFW_USE_OSMESA=ON \
+    "
+
 def build():
-	cmaketools.configure("-DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_LIBDIR=lib -DGLFW_USE_OSMESA=ON")
+	cmaketools.configure(j)
 
 def install():
 	cmaketools.make()

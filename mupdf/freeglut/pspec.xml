@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>freeglut</Name>
@@ -14,14 +14,14 @@
         <Description>Freeglut is the OpenGL Utility Toolkit, a window system independent toolkit for writing OpenGL programs. It implements a simple windowing application programming interface (API) for OpenGL. Freeglut makes it considerably easier to learn about and explore OpenGL Programming.</Description>
         <Archive sha1sum="7a62e0d2caad92ff745bc5037592b2753f0b2f20" type="targz">mirrors://sourceforge/freeglut/freeglut-3.2.1.tar.gz</Archive>
         <BuildDependencies>
-            <!-- <Dependency>libglvnd-devel</Dependency> -->
-            <Dependency>mesa-glu-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>libXi-devel</Dependency>
-            <Dependency>libXxf86vm-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libXrandr-devel</Dependency>
             <Dependency>cmake</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>mesa-glu-devel</Dependency>
+            <!-- <Dependency>libglvnd-devel</Dependency> -->
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXxf86vm-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -49,7 +49,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
-	    <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -60,7 +60,7 @@
         <BuildType>emul32</BuildType>
         <BuildDependencies>
             <!-- <Dependency>libglvnd-32bit</Dependency> -->
-	        <Dependency>mesa-glu-32bit</Dependency>
+            <Dependency>mesa-glu-32bit</Dependency>
             <Dependency>libXi-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>
             <Dependency>libXxf86vm-32bit</Dependency>
@@ -81,7 +81,7 @@
     </Package>
 
     <History>
-		<Update release="7">
+        <Update release="7">
             <Date>2020-01-10</Date>
             <Version>3.2.1</Version>
             <Comment>Version bump</Comment>
