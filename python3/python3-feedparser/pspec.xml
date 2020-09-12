@@ -10,6 +10,7 @@
 		</Packager>
 		<License>Custom</License>
 		<IsA>library</IsA>
+		<PartOf>programming.language.python3</PartOf>
 		<Summary>Parse feeds in Python.</Summary>
 		<Description>feedparser - Parse Atom and RSS feeds in Python.</Description>
 		<Archive sha1sum="2787705bedc2c760d96bf47d8aed30e30269ed64" type="tarbz2">

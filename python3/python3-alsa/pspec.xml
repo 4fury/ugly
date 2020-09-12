@@ -10,6 +10,7 @@
 		</Packager>
 		<License>LGPLv2</License>
 		<IsA>library</IsA>
+		<PartOf>programming.language.python3</PartOf>
 		<Summary>Python binding for ALSA lybrary.</Summary>
 		<Description>Python binding for ALSA lybrary.</Description>
 		<Archive sha1sum="b57d329c837016ba62006cbd6cf4820269a07252" type="tarbz2">

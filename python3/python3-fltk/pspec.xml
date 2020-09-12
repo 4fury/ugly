@@ -10,6 +10,7 @@
 		</Packager>
 		<License>LGPL2</License>
 		<IsA>library</IsA>
+		<PartOf>programming.language.python3</PartOf>
 		<Summary>pyFLTK: Python Wrapper for the FLTK library.</Summary>
 		<Description>
 			Python wrapper for the Fast Light Tool Kit cross-platform graphical user-interface library.

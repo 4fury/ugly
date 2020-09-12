@@ -14,12 +14,6 @@
 		<Summary>Browse your photos.</Summary>
 		<Description>
 			Pwall is modern style photo viewer and organizer. 
-It shows the folders of your photos main directory in the left pane and 
-a photowall in the right. The photowall is a scrolling panel of square 
-thumbnails giving a preview of each photo. Loading and unloading of this 
-scrolling panel is made dynamicaly, viewing page by viewing page like smartphones do. 
-It also allows you to have basics management of photos (change dates, copy a group 
-of photos to another directory, delete, share, get GPS data...).
 		</Description>
 		<Archive sha1sum="f6bc78957da2fab09fea8a053917be6a5a28f4f7" type="targz">
 			https://codeload.github.com/ltiber/pwall/tar.gz/1.0-3

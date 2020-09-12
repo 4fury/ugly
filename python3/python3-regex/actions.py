@@ -6,10 +6,13 @@
 
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import pisitools
-#from pisi.actionsapi import get
 
-#def setup():
-#	pythonmodules.configure()
+i = "-Wno-maybe-initialized \
+     -Wno-unused-but-set-variable \
+    "
+
+def setup():
+	pisitools.cflags.add(i)
 
 def build():
 	pythonmodules.compile(pyVer = "3")
@@ -17,5 +20,5 @@ def build():
 def install():
 	pythonmodules.install(pyVer = "3")
 
-	pisitools.dodoc("AUTHORS.rst", "CHANGES.rst", "CONTRIBUTING.rst", "LICENSE", "README.rst")
+	pisitools.dodoc("PKG-INFO", "README.rst")
 

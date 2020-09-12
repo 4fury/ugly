@@ -7,7 +7,7 @@
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import pisitools
 
-j = "-Wno-unused-but-set-variable \
+i = "-Wno-unused-but-set-variable \
      -Wno-unused-function \
      -Wno-misleading-indentation \
      -Wno-maybe-uninitialized \
@@ -19,7 +19,7 @@ j = "-Wno-unused-but-set-variable \
     "
 
 def build():
-	pisitools.cflags.add(j)
+	pisitools.cflags.add(i)
 	pythonmodules.compile(pyVer = '3')
 
 def install():

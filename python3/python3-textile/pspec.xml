@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>python3-textile</Name>
@@ -10,6 +10,7 @@
 		</Packager>
 		<License>asis</License>
 		<IsA>library</IsA>
+		<PartOf>programming.language.python3</PartOf>
 		<Summary>A Python port of Textile, A humane web text generator.</Summary>
 		<Description>
 			Python-textile is a Python port of Textile, Dean Allen’s humane web text generator.
