@@ -48,7 +48,7 @@
 			<Dependency>gtkspell3-devel</Dependency>
 			<Dependency>dbus-glib-devel</Dependency>
 			<Dependency>librevenge-devel</Dependency>
-			<!-- <Dependency>imagemagick-devel</Dependency> -->
+			<!-- <Dependency>imagemagick6-devel</Dependency> -->
 			<Dependency>poppler-glib-devel</Dependency>
 			<Dependency>desktop-file-utils</Dependency>
 			<Dependency>libjpeg-turbo-devel</Dependency>
@@ -57,6 +57,10 @@
 			<Dependency>double-conversion-devel</Dependency>
 			<Dependency>python3-pygobject3-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<!-- <Patch level="1">im7.patch</Patch> -->
+			<!-- <Patch>im67bsd.patch</Patch> -->
+		</Patches>
 	</Source>
 
 	<Package>
@@ -100,6 +104,7 @@
 			<Dependency>fontconfig</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>librevenge</Dependency>
+			<!-- <Dependency>imagemagick6</Dependency> -->
 			<Dependency>poppler-glib</Dependency>
 			<Dependency>python3-lxml</Dependency>
 			<Dependency>python3-numpy</Dependency>

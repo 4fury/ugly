@@ -19,14 +19,17 @@
 			https://sourceforge.net/projects/stalonetray/files/stalonetray/stalonetray-0.8.3/stalonetray-0.8.3.tar.bz2
 		</Archive>
 		<BuildDependencies>
+			<Dependency>libSM</Dependency>
+			<Dependency>libICE</Dependency>
 			<Dependency>libX11-devel</Dependency>
+			<Dependency>libXpm-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
 	<Package>
 		<Name>stalonetray</Name>
 		<RuntimeDependencies>
-			<!-- <Dependency></Dependency> -->
+			<Dependency>libX11</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>

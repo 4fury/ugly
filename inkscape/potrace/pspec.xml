@@ -9,7 +9,8 @@
 			<Email>admins@pisilinux.org</Email>
 		</Packager>
 		<License>GPLv2</License>
-		<IsA>app:utility</IsA>
+		<IsA>app</IsA>
+		<PartOf>multimedia.graphics</PartOf>
 		<Summary>Transforming bitmaps into vector graphics.</Summary>
 		<Description>
 			Potrace is a tool for tracing a bitmap, which means, transforming a bitmap into a smooth, scalable image.
@@ -31,7 +32,7 @@
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="library">/usr/lib</Path>
 			<Path fileType="header">/usr/include</Path>
-			<Path fileType="man">/usr/share/man/man1</Path>
+			<Path fileType="man">/usr/share/man</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>

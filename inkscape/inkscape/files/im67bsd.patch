@@ -1,0 +1,149 @@
+Index: graphics/inkscape/Makefile
+===================================================================
+--- graphics/inkscape/Makefile	(revision 516845)
++++ graphics/inkscape/Makefile	(working copy)
+@@ -27,8 +27,7 @@
+ 		libfontconfig.so:x11-fonts/fontconfig \
+ 		libfreetype.so:print/freetype2 \
+ 		libpotrace.so:graphics/libpotrace \
+-		libpng.so:graphics/png \
+-		libMagick++-6.so:graphics/ImageMagick6
++		libpng.so:graphics/png
+ RUN_DEPENDS=	${PYNUMPY} \
+ 		${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
+ 		${PYTHON_PKGNAMEPREFIX}scour>0:textproc/py-scour@${PY_FLAVOR}
+@@ -47,6 +46,8 @@
+ 
+ OPTIONS_DEFINE=	POPPLER VISIO CDR DBUS WPG
+ OPTIONS_DEFAULT=POPPLER VISIO CDR WPG
++OPTIONS_RADIO=	IMAGEMAGICK
++OPTIONS_RADIO_IMAGEMAGICK=	IMAGEMAGICK6 IMAGEMAGICK7
+ OPTIONS_SUB=	yes
+ 
+ CDR_DESC=		Support for CorelDRAW diagrams
+@@ -58,6 +59,14 @@
+ DBUS_LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
+ 			libdbus-1.so:devel/dbus
+ 
++IMAGEMAGICK6_DESC=	with ImageMagick6 (recommended)
++IMAGEMAGICK6_LIB_DEPENDS=	libMagick++-6.so:graphics/ImageMagick6
++IMAGEMAGICK6_CMAKE_ON=	-DWITH_IMAGE_MAGICK:BOOL=ON
++IMAGEMAGICK7_DESC=	with ImageMagick7 (experimental)
++IMAGEMAGICK7_LIB_DEPENDS=	libMagick++-7.so:graphics/ImageMagick7
++IMAGEMAGICK7_CMAKE_ON=	-DWITH_IMAGE_MAGICK:BOOL=ON
++CMAKE_ARGS+=		-DWITH_IMAGE_MAGICK:BOOL=NO
++
+ #OPENMP_USES=		compiler:openmp
+ #OPENMP_USES_OFF=	compiler:c++11-lib
+ #OPENMP_CMAKE_BOOL=	WITH_OPENMP
+Index: graphics/inkscape/files/patch-src_extension_internal_bitmap_channel.cpp
+===================================================================
+--- graphics/inkscape/files/patch-src_extension_internal_bitmap_channel.cpp	(nonexistent)
++++ graphics/inkscape/files/patch-src_extension_internal_bitmap_channel.cpp	(working copy)
+@@ -0,0 +1,13 @@
++--- src/extension/internal/bitmap/channel.cpp.orig	2019-01-15 04:29:27 UTC
+++++ src/extension/internal/bitmap/channel.cpp
++@@ -12,6 +12,10 @@
++ #include "channel.h"
++ #include <Magick++.h>
++ 
+++#if MagickLibVersion >= 0x700
+++#define MatteChannel	AlphaChannel
+++#endif
+++
++ namespace Inkscape {
++ namespace Extension {
++ namespace Internal {
+Index: graphics/inkscape/files/patch-src_extension_internal_bitmap_crop.cpp
+===================================================================
+--- graphics/inkscape/files/patch-src_extension_internal_bitmap_crop.cpp	(nonexistent)
++++ graphics/inkscape/files/patch-src_extension_internal_bitmap_crop.cpp	(working copy)
+@@ -0,0 +1,14 @@
++--- src/extension/internal/bitmap/crop.cpp.orig	2019-01-15 04:29:27 UTC
+++++ src/extension/internal/bitmap/crop.cpp
++@@ -24,7 +24,11 @@ Crop::applyEffect(Magick::Image *image) {
++     int width = image->baseColumns() - (_left + _right);
++     int height = image->baseRows() - (_top + _bottom);
++     if (width > 0 and height > 0) {
+++#if MagickLibVersion >= 0x700
+++        image->crop(Magick::Geometry(width, height, _left, _top));
+++#else
++         image->crop(Magick::Geometry(width, height, _left, _top, false, false));
+++#endif
++         image->page("+0+0");
++     }
++ }
+Index: graphics/inkscape/files/patch-src_extension_internal_bitmap_level.cpp
+===================================================================
+--- graphics/inkscape/files/patch-src_extension_internal_bitmap_level.cpp	(nonexistent)
++++ graphics/inkscape/files/patch-src_extension_internal_bitmap_level.cpp	(working copy)
+@@ -0,0 +1,16 @@
++--- src/extension/internal/bitmap/level.cpp.orig	2019-01-15 04:29:27 UTC
+++++ src/extension/internal/bitmap/level.cpp
++@@ -19,8 +19,13 @@ namespace Bitmap {
++ 	
++ void
++ Level::applyEffect(Magick::Image* image) {
+++#if MagickLibVersion >= 0x700 && MagickLibVersion < 0x709
+++	Magick::Quantum black_point = static_cast<Magick::Quantum>((_black_point / 100.0) * QuantumRange);
+++	Magick::Quantum white_point = static_cast<Magick::Quantum>((_white_point / 100.0) * QuantumRange);
+++#else
++ 	Magick::Quantum black_point = Magick::Color::scaleDoubleToQuantum(_black_point / 100.0);
++ 	Magick::Quantum white_point = Magick::Color::scaleDoubleToQuantum(_white_point / 100.0);
+++#endif
++ 	image->level(black_point, white_point, _mid_point);
++ }
++ 
+Index: graphics/inkscape/files/patch-src_extension_internal_bitmap_levelChannel.cpp
+===================================================================
+--- graphics/inkscape/files/patch-src_extension_internal_bitmap_levelChannel.cpp	(nonexistent)
++++ graphics/inkscape/files/patch-src_extension_internal_bitmap_levelChannel.cpp	(working copy)
+@@ -0,0 +1,27 @@
++--- src/extension/internal/bitmap/levelChannel.cpp.orig	2019-01-15 04:29:27 UTC
+++++ src/extension/internal/bitmap/levelChannel.cpp
++@@ -12,6 +12,10 @@
++ #include "levelChannel.h"
++ #include <Magick++.h>
++ 
+++#if MagickLibVersion >= 0x700
+++#define MatteChannel	AlphaChannel
+++#endif
+++
++ namespace Inkscape {
++ namespace Extension {
++ namespace Internal {
++@@ -29,8 +33,13 @@ LevelChannel::applyEffect(Magick::Image* image) {
++ 	else if (!strcmp(_channelName, "Black Channel"))	channel = Magick::BlackChannel;
++ 	else if (!strcmp(_channelName, "Opacity Channel"))	channel = Magick::OpacityChannel;
++ 	else if (!strcmp(_channelName, "Matte Channel"))	channel = Magick::MatteChannel;
+++#if MagickLibVersion >= 0x700 && MagickLibVersion < 0x709
+++	Magick::Quantum black_point = static_cast<Magick::Quantum>((_black_point / 100.0) * QuantumRange);
+++	Magick::Quantum white_point = static_cast<Magick::Quantum>((_white_point / 100.0) * QuantumRange);
+++#else
++ 	Magick::Quantum black_point = Magick::Color::scaleDoubleToQuantum(_black_point / 100.0);
++ 	Magick::Quantum white_point = Magick::Color::scaleDoubleToQuantum(_white_point / 100.0);
+++#endif
++ 	image->levelChannel(channel, black_point, white_point, _mid_point);
++ }
++ 
+Index: graphics/inkscape/files/patch-src_extension_internal_bitmap_opacity.cpp
+===================================================================
+--- graphics/inkscape/files/patch-src_extension_internal_bitmap_opacity.cpp	(nonexistent)
++++ graphics/inkscape/files/patch-src_extension_internal_bitmap_opacity.cpp	(working copy)
+@@ -0,0 +1,16 @@
++--- src/extension/internal/bitmap/opacity.cpp.orig	2019-01-15 04:29:27 UTC
+++++ src/extension/internal/bitmap/opacity.cpp
++@@ -19,8 +19,13 @@ namespace Bitmap {
++ 	
++ void
++ Opacity::applyEffect(Magick::Image* image) {
+++#if MagickLibVersion >= 0x700 && MagickLibVersion < 0x709
+++	Magick::Quantum opacity = static_cast<Magick::Quantum>(((100 - _opacity) / 100.0) * QuantumRange);
+++	/* error: no member named 'opacity' in 'Magick::Image' */
+++#else
++ 	Magick::Quantum opacity = Magick::Color::scaleDoubleToQuantum((100 - _opacity) / 100.0);
++ 	image->opacity(opacity);
+++#endif
++ }
++ 
++ void
