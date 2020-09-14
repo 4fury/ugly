@@ -19,10 +19,11 @@
 			https://github.com/kassoulet/soundconverter/archive/3.1.0.tar.gz
 		</Archive>
 		<BuildDependencies>
-			<Dependency>python3</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>gtk3-devel</Dependency>
+			<Dependency>python3-devel</Dependency>
 			<Dependency>gstreamer-devel</Dependency>
+			<Dependency>desktop-file-utils</Dependency>
 			<Dependency>python3-setuptools</Dependency>
 			<Dependency>python3-pygobject3-devel</Dependency>
 		</BuildDependencies>

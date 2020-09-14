@@ -39,7 +39,7 @@
 			<Dependency>gst-plugin-ugly</Dependency>
 			<Dependency>gst-plugin-base</Dependency>
 			<Dependency>gst-plugin-good</Dependency>
-			<!-- <Dependency>perl-XML-Parser</Dependency> -->
+			<Dependency>perl-XML-Parser</Dependency>
 			<!-- <Dependency>perl-Gtk3-Notify</Dependency> -->
 			<!-- <Dependency>perl-Locale-gettext</Dependency> -->
 			<Dependency>perl-Glib-Object-Introspection</Dependency>
