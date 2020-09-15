@@ -7,6 +7,8 @@
 from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
 
+t = "%s/usr/bin" % get.installDIR()
+
 def setup():
 	pisitools.dosed("build-aux/meson/postinstall.py", "gtk", "gtk3")
 	mesontools.configure("--prefix=/usr")
@@ -16,6 +18,7 @@ def build():
 
 def install():
 	mesontools.install()
+	pisitools.dosym("%s/com.github.johnfactotum.Foliate" % t, "%s/foliate" % t)
 
 	pisitools.dodoc("COPYING", "README.md")
 

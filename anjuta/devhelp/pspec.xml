@@ -6,7 +6,7 @@
 		<Homepage>https://wiki.gnome.org/Apps/Devhelp</Homepage>
 		<Packager>
 			<Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
+			<Email>admins@pisilinux.org</Email>
 		</Packager>
 		<License>GPLv3</License>
 		<IsA>app:gui</IsA>

@@ -5,33 +5,27 @@
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
 from pisi.actionsapi import shelltools
-from pisi.actionsapi import autotools
+from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 shelltools.export("PYTHON", "/usr/bin/python3")
 
-f = "-Wno-deprecated-declarations \
-     -Wno-cpp \
-     -Wno-implicit-function-declaration \
-     -Wno-pointer-compare \
-     -Wno-unused-variable \
-     -Wno-unused-function \
+j = "-Dgladeui=true \
+     -Dpython=true \
+     -Dwebkit2gtk=false \
+     -Dgjs=false \
     "
 
 def setup():
-	pisitools.cflags.add(f)
-#	autotools.autoreconf("-fi")
 #	shelltools.system("sed -i 's|AX_CHECK|#AX_CHECK|' configure")
-	autotools.configure("--enable-python --enable-gladeui")
-
-#	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+	mesontools.configure(j)
 
 def build():
-	autotools.make("-j1")
+	mesontools.build()
 
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+	mesontools.install()
 
-	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING*", "NEWS", "README")
+	pisitools.dodoc("AUTHORS", "COPYING*", "NEWS", "README.md", "TODO")
 

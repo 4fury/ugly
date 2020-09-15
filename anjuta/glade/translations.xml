@@ -10,9 +10,4 @@
 		<Name>glade-devel</Name>
 		<Summary xml:lang="tr">Glade geliştirme dosyaları</Summary>
 	</Package>
-
-	<Package>
-		<Name>glade-docs</Name>
-		<Summary xml:lang="tr">Glade başvuru belgeleri</Summary>
-	</Package>
 </PISI>

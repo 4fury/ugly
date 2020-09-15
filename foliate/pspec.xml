@@ -20,11 +20,11 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>meson</Dependency>
-			<Dependency>python3</Dependency>
 			<Dependency>iso-codes</Dependency>
 			<Dependency>gjs-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
-			<!-- <Dependency>gspell-devel</Dependency> -->
+			<Dependency>gspell-devel</Dependency>
+			<Dependency>python3-devel</Dependency>
 			<Dependency>libhandy-devel</Dependency>
 			<Dependency>webkit2gtk-devel</Dependency>
 			<Dependency>desktop-file-utils</Dependency>
@@ -38,6 +38,9 @@
 			<Dependency>gjs</Dependency>
 			<Dependency>gtk3</Dependency>
 			<Dependency>espeak</Dependency>
+			<Dependency>gspell</Dependency>
+			<Dependency>hyphen</Dependency>
+			<Dependency>python3</Dependency>
 			<Dependency>libsoup</Dependency>
 			<Dependency>libhandy</Dependency>
 			<Dependency>iso-codes</Dependency>

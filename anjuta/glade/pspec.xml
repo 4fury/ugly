@@ -5,7 +5,7 @@
 		<Name>glade</Name>
 		<Homepage>https://glade.gnome.org/</Homepage>
 		<Packager>
-			<Name>PisiLinux Community</Name>
+			<Name>Pisilinux Community</Name>
 			<Email>admins@pisilinux.org</Email>
 		</Packager>
 		<License>GPL2</License>
@@ -16,14 +16,14 @@
 		<Description>
 			Glade is a RAD tool to enable quick and easy development of user interfaces for the GTK+ toolkit and the GNOME desktop environment. The user interfaces designed in Glade are saved as XML, and by using the GtkBuilder GTK+ object these can be loaded by applications dynamically as needed.
 		</Description>
-		<Archive sha1sum="2137c0945c602a865a2910736f3ff5cd442bc8ef" type="tarxz">
-			https://download.gnome.org/sources/glade/3.36/glade-3.36.0.tar.xz
+		<Archive sha1sum="0e77c0f53c08423bcc770edf8e62d450e21b0cc8" type="tarxz">
+			https://download.gnome.org/sources/glade/3.38/glade-3.38.0.tar.xz
 		</Archive>
 		<BuildDependencies>
-			<Dependency>gtk-doc</Dependency>
+			<Dependency>meson</Dependency>
+			<Dependency>cmake</Dependency>
 			<Dependency>itstool</Dependency>
 			<Dependency>intltool</Dependency>
-			<!-- <Dependency>yelp-tools</Dependency> -->
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>python3-six</Dependency>
 			<Dependency>docbook-xsl</Dependency>
@@ -32,8 +32,6 @@
 			<Dependency>libxml2-devel</Dependency>
 			<Dependency>libxslt-devel</Dependency>
 			<Dependency>gettext-devel</Dependency>
-			<!-- <Dependency>devhelp-devel</Dependency> -->
-			<Dependency>webkit2gtk-devel</Dependency>
 			<!-- <Dependency>xorg-server-xvfb</Dependency> -->
 			<Dependency>python-pygobject3-devel</Dependency>
 			<Dependency>python3-pygobject3-devel</Dependency>
@@ -53,7 +51,6 @@
 			<Dependency>python3</Dependency>
 			<Dependency>libsoup</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
-			<Dependency>webkit2gtk</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
@@ -75,14 +72,13 @@
 		<Files>
 			<Path fileType="header">/usr/include</Path>
 			<Path fileType="library">/usr/lib/pkgconfig</Path>
-			<Path fileType="doc">/usr/share/gtk-doc</Path>
 		</Files>
 	</Package>
 
 	<History>
 		<Update release="6">
-			<Date>2020-06-01</Date>
-			<Version>3.36.0</Version>
+			<Date>2020-09-14</Date>
+			<Version>3.38.0</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
