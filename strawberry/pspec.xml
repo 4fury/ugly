@@ -20,6 +20,7 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
+			<Dependency>ccache</Dependency>
 			<Dependency>gst-libav</Dependency>
 			<Dependency>glew-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
@@ -29,10 +30,13 @@
 			<Dependency>ffmpeg-devel</Dependency>
 			<Dependency>taglib-devel</Dependency>
 			<Dependency>gnutls-devel</Dependency>
+			<Dependency>libusb-devel</Dependency>
 			<Dependency>sqlite-devel</Dependency>
 			<Dependency>qt5-linguist</Dependency>
 			<Dependency>qt5-sql-odbc</Dependency>
 			<Dependency>qt5-sql-mysql</Dependency>
+			<Dependency>libcdio-devel</Dependency>
+			<Dependency>udisks2-devel</Dependency>
 			<Dependency>libgpod-devel</Dependency>
 			<Dependency>qt5-svg-devel</Dependency>
 			<Dependency>qt5-base-devel</Dependency>
@@ -45,8 +49,10 @@
 			<Dependency>crypto++-devel</Dependency>
 			<Dependency>alsa-lib-devel</Dependency>
 			<Dependency>qt5-qdbusviewer</Dependency>
+			<Dependency>libnotify-devel</Dependency>
 			<Dependency>liblastfm-devel</Dependency>
 			<Dependency>gstreamer-devel</Dependency>
+			<Dependency>qt5-phonon-devel</Dependency>
 			<Dependency>qt5-webkit-devel</Dependency>
 			<Dependency>gst-plugins-ugly</Dependency>
 			<Dependency>gst-plugins-good</Dependency>
@@ -57,9 +63,11 @@
 			<Dependency>qt5-designer-devel</Dependency>
 			<Dependency>icon-theme-hicolor</Dependency>
 			<Dependency>desktop-file-utils</Dependency>
+			<Dependency>extra-cmake-modules</Dependency>
 			<Dependency>libkvkontakte-devel</Dependency>
 			<Dependency>qt5-x11extras-devel</Dependency>
 			<Dependency>qt5-assistant-devel</Dependency>
+			<Dependency>appstream-glib-devel</Dependency>
 			<Dependency>libchromaprint-devel</Dependency>
 			<Dependency>gst-plugins-bad-devel</Dependency>
 			<Dependency>pulseaudio-libs-devel</Dependency>
@@ -83,31 +91,40 @@
 			<Dependency>libX11</Dependency>
 			<Dependency>libgcc</Dependency>
 			<Dependency>libmtp</Dependency>
+			<Dependency>libusb</Dependency>
 			<Dependency>sqlite</Dependency>
 			<Dependency>taglib</Dependency>
 			<Dependency>libcdio</Dependency>
+			<Dependency>udisks2</Dependency>
 			<Dependency>libgpod</Dependency>
 			<Dependency>protobuf</Dependency>
 			<Dependency>crypto++</Dependency>
 			<Dependency>alsa-lib</Dependency>
 			<Dependency>qt5-base</Dependency>
 			<Dependency>gstreamer</Dependency>
+			<Dependency>libnotify</Dependency>
 			<Dependency>liblastfm</Dependency>
+			<Dependency>qt5-phonon</Dependency>
 			<Dependency>libmygpo-qt</Dependency>
 			<Dependency>qt5-x11extras</Dependency>
 			<Dependency>libchromaprint</Dependency>
 			<Dependency>pulseaudio-libs</Dependency>
+			<Dependency>gst-plugins-bad</Dependency>
 			<Dependency>gst-plugins-base</Dependency>
+			<Dependency>gst-plugins-ugly</Dependency>
+			<Dependency>gst-plugins-good</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="data">/usr/share</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
 
 	<History>
 		<Update release="1">
-			<Date>2020-09-05</Date>
+			<Date>2020-09-19</Date>
 			<Version>0.7.2</Version>
 			<Comment>First build.</Comment>
 			<Name>Pisilinux Community</Name>

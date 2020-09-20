@@ -11,7 +11,7 @@
 		<License>GPLv3</License>
 		<IsA>app:gui</IsA>
 		<PartOf>multimedia.converter</PartOf>
-		<Summary>GNOME sound converter application.</Summary>
+		<Summary>A GTK+ and python sound converter application.</Summary>
 		<Description>
 			A simple sound converter application for the GNOME environment. It reads anything the GStreamer library can read, and writes WAV, FLAC, MP3, and Ogg Vorbis files.
 		</Description>
@@ -25,6 +25,7 @@
 			<Dependency>gstreamer-devel</Dependency>
 			<Dependency>desktop-file-utils</Dependency>
 			<Dependency>python3-setuptools</Dependency>
+			<Dependency>python3-distutils-extra</Dependency>
 			<Dependency>python3-pygobject3-devel</Dependency>
 		</BuildDependencies>
 	</Source>

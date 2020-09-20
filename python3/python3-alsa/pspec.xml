@@ -17,9 +17,13 @@
 			ftp://ftp.alsa-project.org/pub/pyalsa/pyalsa-1.1.6.tar.bz2
 		</Archive>
 		<BuildDependencies>
+			<Dependency>python3-devel</Dependency>
 			<Dependency>alsa-lib-devel</Dependency>
 			<Dependency>python3-setuptools</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<!-- <Patch level="1">no-build-symlinks.patch</Patch> -->
+		</Patches>
 	</Source>
 
 	<Package>
