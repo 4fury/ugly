@@ -8,7 +8,9 @@
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
         </Packager>
+        <License>Zlib</License>
         <License>GPLv2</License>
+        <License>LGPLv2.1</License>
         <IsA>app:gui</IsA>
         <PartOf>multimedia.sound</PartOf>
         <Summary>Audio player for GNU/Linux systems with X11.</Summary>
@@ -28,6 +30,7 @@
             <Dependency>yasm-devel</Dependency>
             <Dependency>dbus-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
+            <Dependency>llvm-clang</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>faad2-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
@@ -51,6 +54,7 @@
             <Dependency>libsndfile-devel</Dependency>
             <Dependency>cdparanoia-devel</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libdispatch-devel</Dependency>
             <Dependency>libsamplerate-devel</Dependency>
             <Dependency>pulseaudio-libs-devel</Dependency>
         </BuildDependencies>
@@ -91,6 +95,7 @@
             <Dependency>cdparanoia</Dependency>
             <Dependency>libsndfile</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libdispatch</Dependency>
             <Dependency>libsamplerate</Dependency>
             <Dependency>pulseaudio-libs</Dependency>
         </RuntimeDependencies>

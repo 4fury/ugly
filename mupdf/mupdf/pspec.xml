@@ -26,15 +26,15 @@
 			<Dependency>libXext-devel</Dependency>
 			<Dependency>openssl-devel</Dependency>
 			<Dependency>readline-devel</Dependency>
-			<!-- <Dependency>freetype-devel</Dependency>
+			<Dependency>freetype-devel</Dependency>
 			<Dependency>freeglut-devel</Dependency>
 			<Dependency>harfbuzz-devel</Dependency>
 			<Dependency>mesa-glu-devel</Dependency>
-			<Dependency>openjpeg2-devel</Dependency> -->
+			<Dependency>openjpeg2-devel</Dependency>
 			<Dependency>libXrandr-devel</Dependency>
 			<Dependency>libXcursor-devel</Dependency>
 			<Dependency>libXinerama-devel</Dependency>
-			<!-- <Dependency>libjpeg-turbo-devel</Dependency> -->
+			<Dependency>libjpeg-turbo-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
 			<Patch level="1">pkcs7-fix.patch</Patch>
@@ -81,7 +81,7 @@
 
 	<History>
 		<Update release="8">
-			<Date>2020-06-10</Date>
+			<Date>2020-09-20</Date>
 			<Version>1.17.0</Version>
 			<Comment>Version bump.</Comment>
 			<Name>fury</Name>
@@ -138,3 +138,4 @@
 		</Update>
 	</History>
 </PISI>
+

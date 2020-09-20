@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>libdispatch</Name>
+		<Homepage>https://apple.github.io/swift-corelibs-libdispatch/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>Apache-2</License>
+		<IsA>library</IsA>
+		<PartOf>programming.library</PartOf>
+		<Summary>Grand Central Dispatch.</Summary>
+		<Description>Grand Central Dispatch (GCD or libdispatch) provides comprehensive support for concurrent code execution on multicore hardware.</Description>
+		<Archive sha1sum="f30ff8bacd35114200d910f877de299d9b887d30" type="targz">
+			https://github.com/apple/swift-corelibs-libdispatch/archive/swift-5.2.5-RELEASE.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cmake</Dependency>
+			<Dependency>llvm-clang</Dependency>
+			<Dependency>compiler-rt</Dependency>
+		</BuildDependencies>
+		<Patches>
+			<Patch level="0">avoid-libkqueue.patch</Patch>
+			<Patch level="0">remove-werror.patch</Patch>
+			<Patch level="0">system-blocksruntime.patch</Patch>
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>libdispatch</Name>
+		<RuntimeDependencies>
+			<Dependency>compiler-rt</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="all">/usr</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-09-20</Date>
+			<Version>5.2.5</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

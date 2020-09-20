@@ -4,6 +4,7 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
@@ -22,13 +23,15 @@ j = "-Wno-deprecated-declarations \
     "
 
 def setup():
-    pisitools.cflags.add(j)
-    pisitools.cxxflags.add("-Wno-deprecated-declarations -Wno-vla")
+    shelltools.export("CC", "clang")
+    shelltools.export("CXX", "clang++")
+#    pisitools.cflags.add(j)
+#    pisitools.cxxflags.add("-Wno-deprecated-declarations -Wno-vla")
 
 #    autotools.autoreconf("-fiv")
     autotools.configure("--disable-oss")
 
-    pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+#    pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
     autotools.make()

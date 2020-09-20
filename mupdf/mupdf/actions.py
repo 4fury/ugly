@@ -14,14 +14,27 @@ i = "-Wno-maybe-uninitialized \
      -Wno-unused-result \
     "
 
+j = "USE_SYSTEM_LIBS=yes prefix=/usr"
+
+t = "freetype, \
+     harfbuzz, \
+     jbig2dec, \
+     libjpeg, \
+     openjpeg, \
+     zlib, \
+     glut, \
+     curl, \
+    "
+
 def build():
 	pisitools.cflags.add(i)
+	shelltools.system("rm -rf thirdparty/{%s}" % t)
 	shelltools.system("sed '/TOFU_CJK /c #define TOFU_CJK 1/' -i include/mupdf/fitz/config.h")
 	shelltools.system("sed -i '/ttc/s/^/#/' Makefile")
-	autotools.make("USE_SYSTEM_LIBS=no prefix=/usr")
+	autotools.make(j)
 
 def install():
-	autotools.rawInstall("DESTDIR=%s USE_SYSTEM_LIBS=no prefix=/usr" % get.installDIR())
+	autotools.rawInstall("DESTDIR=%s %s" % (get.installDIR(), j))
 
 	pisitools.dodoc("CHANGES", "README", "COPYING")
 
