@@ -10,8 +10,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 j = "-DCMAKE_INSTALL_PREFIX=/usr \
-     -DBlocksRuntime_INCLUDE_DIR=/usr/include \
-     -DBlocksRuntime_LIBRARIES=/usr/lib/clang/10.0.0/lib/linux/libBlocksRuntime.so \
+     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
      -DBUILD_TESTING=OFF \
     "
 

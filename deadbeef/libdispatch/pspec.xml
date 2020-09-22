@@ -19,12 +19,12 @@
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
 			<Dependency>llvm-clang</Dependency>
-			<Dependency>compiler-rt</Dependency>
+			<!-- <Dependency>compiler-rt</Dependency> -->
 		</BuildDependencies>
 		<Patches>
 			<Patch level="0">avoid-libkqueue.patch</Patch>
 			<Patch level="0">remove-werror.patch</Patch>
-			<Patch level="0">system-blocksruntime.patch</Patch>
+			<!-- <Patch level="0">system-blocksruntime.patch</Patch> -->
 		</Patches>
 	</Source>
 
@@ -34,7 +34,7 @@
 			<Dependency>compiler-rt</Dependency>
 		</RuntimeDependencies>
 		<Files>
-			<Path fileType="all">/usr</Path>
+			<!-- <Path fileType="all">/usr</Path> -->
 		</Files>
 	</Package>
 
