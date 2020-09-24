@@ -22,7 +22,7 @@
 			<Dependency>perl-Unicode-Map8</Dependency>
 			<Dependency>perl-Unicode-String</Dependency>
 			<Dependency>perl-XML-SAX-Writer</Dependency>
-			<Dependency>perl-IO-stringy</Dependency>
+			<Dependency>perl-IO-Stringy</Dependency>
 			<Dependency>perl-HTML-Parser</Dependency>
 			<Dependency>perl</Dependency>
 		</BuildDependencies>

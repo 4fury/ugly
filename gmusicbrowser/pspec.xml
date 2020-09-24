@@ -13,8 +13,8 @@
 		<PartOf>multimedia.sound</PartOf>
 		<Summary>A customizable open-source jukebox for large collections.</Summary>
 		<Description>An open-source jukebox for large collections of mp3, ogg, flac, etc.., files, written in perl.</Description>
-		<Archive sha1sum="f6b60a559a566091e85385a2ffa8e75c6dd57978" type="zip">
-			https://github.com/squentin/gmusicbrowser/archive/7d0819c1b9be666b4f51148f00c8fc9bd1e455a0.zip
+		<Archive sha1sum="2d1987b82bb55ee8258acab0047a56487f27d2b2" type="zip">
+			https://github.com/squentin/gmusicbrowser/archive/3958a564dc68f81197bb8d9615b92880dc569b1e.zip
 		</Archive>
 		<BuildDependencies>
 			<Dependency>git</Dependency>
@@ -35,13 +35,13 @@
 			<Dependency>mpv-player</Dependency>
 			<Dependency>alsa-utils</Dependency>
 			<Dependency>vorbis-tools</Dependency>
-			<!-- <Dependency>perl-Net-Dbus</Dependency> -->
+			<Dependency>perl-Net-Dbus</Dependency>
 			<Dependency>gst-plugin-ugly</Dependency>
 			<Dependency>gst-plugin-base</Dependency>
 			<Dependency>gst-plugin-good</Dependency>
 			<Dependency>perl-XML-Parser</Dependency>
-			<!-- <Dependency>perl-Gtk3-Notify</Dependency> -->
-			<!-- <Dependency>perl-Locale-gettext</Dependency> -->
+			<Dependency>perl-Gtk3-Notify</Dependency>
+			<Dependency>perl-Locale-gettext</Dependency>
 			<Dependency>perl-Glib-Object-Introspection</Dependency>
 		</RuntimeDependencies>
 		<Files>
@@ -52,7 +52,7 @@
 	<History>
 		<Update release="1">
 			<Date>2020-08-17</Date>
-			<Version>1.1.16</Version>
+			<Version>2020.09.17</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

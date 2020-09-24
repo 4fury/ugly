@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
-		<Name>perl-IO-stringy</Name>
+		<Name>perl-IO-Stringy</Name>
 		<Homepage>https://metacpan.org/pod/IO::Stringy</Homepage>
 		<Packager>
 			<Name>Pisi Linux Admins</Name>
@@ -21,7 +21,7 @@
 	</Source>
 
 	<Package>
-		<Name>perl-IO-stringy</Name>
+		<Name>perl-IO-Stringy</Name>
 		<RuntimeDependencies>
 			<Dependency>perl</Dependency>
 		</RuntimeDependencies>
