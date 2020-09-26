@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>spacefm</Name>
+		<Homepage>https://github.com/thermitegod/spacefm</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<License>LGPLv3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>desktop.misc</PartOf>
+		<Summary>SpaceFM File Manager.</Summary>
+		<Description>
+			SpaceFM is a multi-panel tabbed file and desktop manager for Linux with a customisable menu system, and bash integration. SpaceFM aims to provide a stable, capable file manager with significant customisation capabilities.
+		</Description>
+		<Archive sha1sum="b48b663b6fc758dfbb54a111b998223c482444f9" type="zip">
+			https://github.com/thermitegod/spacefm/archive/1164a37d58b944f79b16e0269746f632f30d5cfb.zip
+		</Archive>
+		<BuildDependencies>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>meson</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>libbsd-devel</Dependency>
+			<Dependency>eudev-devel</Dependency>
+			<Dependency>ffmpegthumbnailer-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>spacefm</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk2</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="all">/</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-09-24</Date>
+			<Version>2.0.0_dev</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

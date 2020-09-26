@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>fox</Name>
+		<Homepage>http://www.fox-toolkit.org/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>LGPLv2.1</License>
+		<IsA>app</IsA>
+		<PartOf>desktop.toolkit</PartOf>
+		<Summary>FOX is a C++ based Toolkit for developing Graphical User Interfaces easily and effectively.</Summary>
+		<Description>
+			FOX toolkit offers a wide, and growing, collection of Controls, and provides state of the art facilities such as drag and drop, selection, as well as OpenGL widgets for 3D graphical manipulation. FOX also implements icons, images, and user-convenience features such as status line help, and tooltips.
+		</Description>
+		<Archive sha1sum="323d3e3619671e0705e4c031c0211558225b131b" type="targz">
+			http://fox-toolkit.org/ftp/fox-1.6.57.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>libSM</Dependency>
+			<Dependency>libICE</Dependency>
+			<Dependency>zlib-devel</Dependency>
+			<Dependency>mesa-devel</Dependency>
+			<Dependency>tiff-devel</Dependency>
+			<Dependency>bzip2-devel</Dependency>
+			<Dependency>libXi-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>libXft-devel</Dependency>
+			<Dependency>libpng-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>libXfixes-devel</Dependency>
+			<Dependency>libXcursor-devel</Dependency>
+			<Dependency>libXrender-devel</Dependency>
+			<Dependency>libxshmfence-devel</Dependency>
+			<Dependency>libjpeg-turbo-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>fox</Name>
+		<RuntimeDependencies>
+			<Dependency>mesa</Dependency>
+			<Dependency>libXi</Dependency>
+			<Dependency>libpng</Dependency>
+			<Dependency>libXft</Dependency>
+			<Dependency>libX11</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-09-26</Date>
+			<Version>1.6.57</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+
