@@ -11,7 +11,7 @@
 		<Summary xml:lang="tr">Musepack SV8 kodlama kitaplığı</Summary>
 		<Description xml:lang="tr">libmpcdec, taşınabilir bir Musepack kodlama kitaplığıdır.</Description>
 		<Description xml:lang="fr">Librairie de décodage portable Musepack.</Description>
-	</Packagee>
+	</Package>
 
 	<Package>
 		<Name>libmpcdec-devel</Name>

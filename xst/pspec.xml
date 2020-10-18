@@ -16,8 +16,8 @@
 			<Dependency>libX11-devel</Dependency>
 			<Dependency>libXext-devel</Dependency>
 		</BuildDependencies>
-		<Archive sha1sum="328e681277318da887934a798bfb2141d358fec5" type="targz">
-			https://github.com/gnotclub/xst/archive/v0.7.1.tar.gz
+		<Archive sha1sum="66b768991e1c9a657122382093dac59abd821885" type="targz">
+			https://github.com/gnotclub/xst/archive/v0.8.4.tar.gz
 		</Archive>
 	</Source>
 
@@ -39,8 +39,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-04-30</Date>
-			<Version>0.7.1</Version>
+			<Date>2020-10-05</Date>
+			<Version>0.8.4</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

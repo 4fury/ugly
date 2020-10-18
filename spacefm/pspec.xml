@@ -16,17 +16,19 @@
 		<Description>
 			SpaceFM is a multi-panel tabbed file and desktop manager for Linux with a customisable menu system, and bash integration. SpaceFM aims to provide a stable, capable file manager with significant customisation capabilities.
 		</Description>
-		<Archive sha1sum="b48b663b6fc758dfbb54a111b998223c482444f9" type="zip">
-			https://github.com/thermitegod/spacefm/archive/1164a37d58b944f79b16e0269746f632f30d5cfb.zip
+		<Archive sha1sum="a5e941cf0f76c3aba8e9398676b32f2feb890849" type="targz">
+			https://github.com/thermitegod/spacefm/archive/v2.0.0.tar.gz
 		</Archive>
 		<BuildDependencies>
-			<Dependency>glib2-devel</Dependency>
 			<Dependency>meson</Dependency>
-			<Dependency>libX11-devel</Dependency>
 			<Dependency>gtk2-devel</Dependency>
-			<Dependency>libbsd-devel</Dependency>
 			<Dependency>eudev-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>libbsd-devel</Dependency>
+			<Dependency>udisks2-devel</Dependency>
 			<Dependency>ffmpegthumbnailer-devel</Dependency>
+			<Dependency>startup-notification-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -34,16 +36,22 @@
 		<Name>spacefm</Name>
 		<RuntimeDependencies>
 			<Dependency>gtk2</Dependency>
+			<Dependency>eudev</Dependency>
+			<Dependency>udisks2</Dependency>
+			<Dependency>ffmpegthumbnailer</Dependency>
+			<Dependency>startup-notification</Dependency>
 		</RuntimeDependencies>
 		<Files>
-			<Path fileType="all">/</Path>
+			<Path fileType="config">/etc</Path>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
 		</Files>
 	</Package>
 
 	<History>
 		<Update release="1">
-			<Date>2020-09-24</Date>
-			<Version>2.0.0_dev</Version>
+			<Date>2020-10-18</Date>
+			<Version>2.0.0</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

@@ -8,7 +8,7 @@ from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
 
 def setup():
-	mesontools.configure("-Ddeprecared-hw=true")
+	mesontools.configure("-Dgtk2=true -Ddeprecared-hw=true")
 
 def build():
 	mesontools.build()

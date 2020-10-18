@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>clamtk</Name>
@@ -17,9 +17,7 @@
 			https://bitbucket.org/davem_/clamtk-gtk3/downloads/clamtk-6.02.tar.xz
 		</Archive>
 		<Patches>
-			<!--
-			<Patch>clamtk-icon.patch</Patch>
-			-->
+			<!-- <Patch>missing.patch</Patch> -->
 		</Patches>
 	</Source>
 

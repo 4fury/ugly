@@ -1,155 +1,144 @@
 <?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>sayonara</Name>
-		<Homepage>https://sayonara-player.com/</Homepage>
-		<Packager>
-			<Name>Pisi Linux Community</Name>
-			<Email>admins@pisilinux.org</Email>
-		</Packager>
-		<License>GPLv3</License>
-		<IsA>app:gui</IsA>
-		<PartOf>multimedia.sound</PartOf>
-		<Summary>
-			Sayonara is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework and uses Gstreamer as audio backend.
-		</Summary>
-		<Description>
-			Although Sayonara is considered as a lightweight player, it holds a lot of features to organize even big music collections.
-		</Description>
-		<Archive sha1sum="12596fed4e99eb6b448dcea1aeeb25c6a2658d1b" type="tarbz2">
-			https://gitlab.com/luciocarreras/sayonara-player/-/archive/1.6.0-beta6/sayonara-player-1.6.0-beta6.tar.bz2
-		</Archive>
-		<BuildDependencies>
-			<Dependency>cmake</Dependency>
-			<Dependency>doxygen</Dependency>
-			<Dependency>zlib-devel</Dependency>
-			<Dependency>glib2-devel</Dependency>
-			<Dependency>libmtp-devel</Dependency>
-			<Dependency>taglib-devel</Dependency>
-			<Dependency>qt5-linguist</Dependency>
-			<Dependency>qt5-sql-odbc</Dependency>
-			<Dependency>qt5-sql-mysql</Dependency>
-			<Dependency>qt5-svg-devel</Dependency>
-			<Dependency>qt5-base-devel</Dependency>
-			<Dependency>qt5-sql-sqlite</Dependency>
-			<Dependency>gstreamer-devel</Dependency>
-			<Dependency>libnotify-devel</Dependency>
-			<Dependency>gst-plugins-ugly</Dependency>
-			<Dependency>gst-plugins-good</Dependency>
-			<Dependency>qt5-sql-postgresql</Dependency>
-			<!-- <Dependency>appstream-qt5-devel</Dependency> -->
-			<Dependency>appstream-glib-devel</Dependency>
-			<Dependency>gst-plugins-bad-devel</Dependency>
-			<Dependency>gst-plugins-base-devel</Dependency>
-		</BuildDependencies>
-	</Source>
+    <Source>
+        <Name>sayonara</Name>
+        <Homepage>https://sayonara-player.com/</Homepage>
+        <Packager>
+            <Name>Pisi Linux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>Sayonara is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework and uses Gstreamer as audio backend.</Summary>
+        <Description>
+            Although Sayonara is considered as a lightweight player, it holds a lot of features to organize even big music collections.
+        </Description>
+        <Archive sha1sum="12596fed4e99eb6b448dcea1aeeb25c6a2658d1b" type="tarbz2">
+            https://gitlab.com/luciocarreras/sayonara-player/-/archive/1.6.0-beta6/sayonara-player-1.6.0-beta6.tar.bz2
+        </Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>ccache</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libmtp-devel</Dependency>
+            <Dependency>taglib-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-sql-odbc</Dependency>
+            <Dependency>qt5-sql-mysql</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>gst-plugins-ugly</Dependency>
+            <Dependency>qt5-sql-postgresql</Dependency>
+            <Dependency>gst-plugins-bad-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+        </BuildDependencies>
+    </Source>
 
-	<Package>
-		<Name>sayonara</Name>
-		<RuntimeDependencies>
-			<Dependency>zlib</Dependency>
-			<Dependency>glib2</Dependency>
-			<Dependency>libgcc</Dependency>
-			<Dependency>libmtp</Dependency>
-			<Dependency>taglib</Dependency>
-			<Dependency>python3</Dependency>
-			<Dependency>qt5-svg</Dependency>
-			<Dependency>qt5-base</Dependency>
-			<Dependency>gstreamer</Dependency>
-			<Dependency>libnotify</Dependency>
-			<Dependency>gstreamer</Dependency>
-			<Dependency>dbus-python3</Dependency>
-			<Dependency>gst-plugins-bad</Dependency>
-			<Dependency>gst-plugins-base</Dependency>
-			<Dependency>gst-plugins-good</Dependency>
-			<Dependency>gst-plugins-ugly</Dependency>
-		</RuntimeDependencies>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
-			<Path fileType="library">/usr/lib/sayonara</Path>
-			<Path fileType="data">/usr/share</Path>
-			<Path fileType="man">/usr/share/man/man1</Path>
-			<Path fileType="doc">/usr/share/doc/sayonara</Path>
-		</Files>
-		<AdditionalFiles>
-			<!--
-			<AdditionalFile owner="root" permission="0644" target="/usr/share/applications/sayonara.desktop">sayonara.desktop</AdditionalFile>
-			<AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/sayonara.png">sayonara.png</AdditionalFile>
-			-->
-		</AdditionalFiles>
-	</Package>
+    <Package>
+        <Name>sayonara</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libmtp</Dependency>
+            <Dependency>taglib</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-plugins-bad</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>gst-plugins-good</Dependency>
+            <Dependency>gst-plugins-ugly</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/sayonara</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <!--
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/sayonara.desktop">sayonara.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/sayonara.png">sayonara.png</AdditionalFile>
+            -->
+        </AdditionalFiles>
+    </Package>
 
-	<History>
-		<Update release="10">
-			<Date>2020-09-07</Date>
-			<Version>1.6.0</Version>
-			<Comment>Beta 6.</Comment>
-			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
-		</Update>
-		<Update release="9">
-			<Date>2020-03-08</Date>
-			<Version>1.4.1</Version>
-			<Comment>Rebuild.</Comment>
-			<Name>Mustafa Cinasal</Name>
-			<Email>muscnsl@gmail.com</Email>
-		</Update>
-		<Update release="8">
-			<Date>2019-06-01</Date>
-			<Version>1.4.1</Version>
-			<Comment>Version bump.</Comment>
-			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
-		</Update>
-		<Update release="7">
-			<Date>2019-05-01</Date>
-			<Version>20190428</Version>
-			<Comment>Version bump.</Comment>
-			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
-		</Update>
-		<Update release="6">
-			<Date>2019-04-14</Date>
-			<Version>20180905</Version>
-			<Comment>Version bump.</Comment>
-			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
-		</Update>
-		<Update release="5">
-			<Date>2017-04-24</Date>
-			<Version>20161030</Version>
-			<Comment>Rebuild with new toolchain</Comment>
-			<Name>Stefan Gronewold(groni)</Name>
-			<Email>groni@pisilinux.org</Email>
-		</Update>
-		<Update release="4">
-			<Date>2016-12-04</Date>
-			<Version>20161030</Version>
-			<Comment>Version bump.</Comment>
-			<Name>Stefan Gronewold(groni)</Name>
-			<Email>groni@pisilinux.org</Email>
-		</Update>
-		<Update release="3">
-			<Date>2016-06-09</Date>
-			<Version>0.9.0</Version>
-			<Comment>Release Bump</Comment>
-			<Name>Pisi Linux Community</Name>
-			<Email>admin@pisilinux.org</Email>
-		</Update>
-		<Update release="2">
-			<Date>2016-05-16</Date>
-			<Version>0.9.0</Version>
-			<Comment>Version bump.</Comment>
-			<Name>Stefan Gronewold(groni)</Name>
-			<Email>groni@pisilinux.org</Email>
-		</Update>
-		<Update release="1">
-			<Date>2016-04-02</Date>
-			<Version>0.8.2</Version>
-			<Comment>First release</Comment>
-			<Name>Stefan Gronewold(groni)</Name>
-			<Email>groni@pisilinux.org</Email>
-		</Update>
-	</History>
+    <History>
+        <Update release="10">
+            <Date>2020-09-17</Date>
+            <Version>1.6.0_beta6</Version>
+            <Comment>Ver. bump</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
+        <Update release="9">
+            <Date>2020-03-08</Date>
+            <Version>1.4.1</Version>
+            <Comment>Rebuild.</Comment>
+            <Name>Mustafa Cinasal</Name>
+            <Email>muscnsl@gmail.com</Email>
+        </Update>
+        <Update release="8">
+            <Date>2019-06-01</Date>
+            <Version>1.4.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
+        <Update release="7">
+            <Date>2019-05-01</Date>
+            <Version>20190428</Version>
+            <Comment>Version bump.</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
+        <Update release="6">
+            <Date>2019-04-14</Date>
+            <Version>20180905</Version>
+            <Comment>Version bump.</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
+        <Update release="5">
+            <Date>2017-04-24</Date>
+            <Version>20161030</Version>
+            <Comment>Rebuild with new toolchain</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="4">
+            <Date>2016-12-04</Date>
+            <Version>20161030</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="3">
+            <Date>2016-06-09</Date>
+            <Version>0.9.0</Version>
+            <Comment>Release Bump</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2016-05-16</Date>
+            <Version>0.9.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2016-04-02</Date>
+            <Version>0.8.2</Version>
+            <Comment>First release</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+    </History>
 </PISI>
