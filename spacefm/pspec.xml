@@ -22,11 +22,14 @@
 		<BuildDependencies>
 			<Dependency>meson</Dependency>
 			<Dependency>gtk2-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>pango-devel</Dependency>
 			<Dependency>eudev-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
 			<Dependency>libbsd-devel</Dependency>
 			<Dependency>udisks2-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
 			<Dependency>ffmpegthumbnailer-devel</Dependency>
 			<Dependency>startup-notification-devel</Dependency>
 		</BuildDependencies>
@@ -35,9 +38,13 @@
 	<Package>
 		<Name>spacefm</Name>
 		<RuntimeDependencies>
+			<!-- <Dependency>git</Dependency> -->
 			<Dependency>gtk2</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>pango</Dependency>
 			<Dependency>eudev</Dependency>
 			<Dependency>udisks2</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>ffmpegthumbnailer</Dependency>
 			<Dependency>startup-notification</Dependency>
 		</RuntimeDependencies>
