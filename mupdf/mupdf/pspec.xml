@@ -9,13 +9,13 @@
 			<Email>suvari@pisilinux.org</Email>
 		</Packager>
 		<License>AGPL3</License>
-		<IsA>app:gui</IsA>
-		<Summary>Lightweight PDF and XPS viewer</Summary>
+		<IsA>app</IsA>
+		<Summary>Lightweight PDF and XPS viewer.</Summary>
 		<Description>
 			MuPDF is a lightweight open source software framework for viewing and converting PDF, XPS, and E-book documents.
 		</Description>
-		<Archive sha1sum="16a2de72b899b35c02dfce5aae7d11cd40767116" type="tarxz">
-			https://mupdf.com/downloads/archive/mupdf-1.17.0-source.tar.xz
+		<Archive sha1sum="fc17bd01d5860e49b009f28a5ddb629e94af4510" type="tarxz">
+			https://mupdf.com/downloads/archive/mupdf-1.18.0-source.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>python3</Dependency>
@@ -38,6 +38,8 @@
 		</BuildDependencies>
 		<Patches>
 			<Patch level="1">pkcs7-fix.patch</Patch>
+			<Patch level="1">CVE-2020-26519.patch</Patch>
+			<Patch level="1">0001-support-PyMuPDF.patch</Patch>
 			<Patch level="1">shared-libs.patch</Patch>
 		</Patches>
 	</Source>
@@ -81,9 +83,9 @@
 
 	<History>
 		<Update release="8">
-			<Date>2020-09-20</Date>
-			<Version>1.17.0</Version>
-			<Comment>Version bump.</Comment>
+			<Date>2020-11-12</Date>
+			<Version>1.18.0</Version>
+			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Update>

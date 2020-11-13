@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>lector</Name>
@@ -10,7 +10,7 @@
 		</Packager>
 		<License>GPLv3</License>
 		<IsA>app:gui</IsA>
-		<Summary>Qt based ebook reader.</Summary>
+		<Summary>Qt based ebook reader written in python3.</Summary>
 		<Description>Lector a new open-source Qt-based ebook app for Linux desktops.</Description>
 		<Archive sha1sum="967d62b3c76b7e6a4461272f3711b55556d70fbb" type="targz">
 			https://github.com/BasioMeusPuga/Lector/archive/0.5.1.tar.gz
@@ -26,14 +26,10 @@
 		<RuntimeDependencies>
 			<Dependency>python3-qt5</Dependency>
 			<Dependency>python3-lxml</Dependency>
+			<Dependency>python3-textile</Dependency>
 			<Dependency>python3-markups</Dependency>
 			<Dependency>python3-xmltodict</Dependency>
 			<Dependency>python3-beautifulsoup4</Dependency>
-			<!--
-			<Dependency>python3-pymupdf</Dependency>
-			<Dependency>python3-textile</Dependency>
-			<Dependency>python3-djvulibre</Dependency>
-			-->
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
@@ -45,7 +41,7 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-03-03</Date>
+			<Date>2020-11-01</Date>
 			<Version>0.5.1</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
