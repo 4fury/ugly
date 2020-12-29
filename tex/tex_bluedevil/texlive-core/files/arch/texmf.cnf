@@ -159,79 +159,79 @@ WEB2C = $TEXMF/web2c
 
 % Plain TeX.  Have the command tex check all directories as a last
 % resort, we may have plain-compatible stuff anywhere.
-TEXINPUTS.tex		   = .;$TEXMF/tex/{plain,generic,}//
+TEXINPUTS.tex           = .;$TEXMF/tex/{plain,generic,}//
 
 % Fontinst needs to read afm files.
-TEXINPUTS.fontinst	  = .;$TEXMF/{tex,fonts/afm}//
+TEXINPUTS.fontinst      = .;$TEXMF/{tex,fonts/afm}//
 
 % Other plain-based formats.
-TEXINPUTS.amstex		= .;$TEXMF/tex/{amstex,plain,generic,}//
-TEXINPUTS.csplain	   = .;$TEXMF/tex/{csplain,plain,generic,}//
-TEXINPUTS.eplain		= .;$TEXMF/tex/{eplain,plain,generic,}//
-TEXINPUTS.ftex		  = .;$TEXMF/tex/{formate,plain,generic,}//
-TEXINPUTS.mex		   = .;$TEXMF/tex/{mex,plain,generic,}//
-TEXINPUTS.texinfo	   = .;$TEXMF/tex/{texinfo,plain,generic,}//
+TEXINPUTS.amstex        = .;$TEXMF/tex/{amstex,plain,generic,}//
+TEXINPUTS.csplain       = .;$TEXMF/tex/{csplain,plain,generic,}//
+TEXINPUTS.eplain        = .;$TEXMF/tex/{eplain,plain,generic,}//
+TEXINPUTS.ftex          = .;$TEXMF/tex/{formate,plain,generic,}//
+TEXINPUTS.mex           = .;$TEXMF/tex/{mex,plain,generic,}//
+TEXINPUTS.texinfo       = .;$TEXMF/tex/{texinfo,plain,generic,}//
 
 % LaTeX 2e specific macros are stored in latex/, macros that can only be
 % used with 2.09 in latex209/.  In addition, we look in the directory
 % latex209, useful for macros that were written for 2.09 and do not
 % mention 2e at all, but can be used with 2e.
-TEXINPUTS.cslatex	   = .;$TEXMF/tex/{cslatex,csplain,latex,generic,}//
-TEXINPUTS.latex		 = .;$TEXMF/tex/{latex,generic,}//
-TEXINPUTS.latex209	  = .;$TEXMF/tex/{latex209,generic,latex,}//
-TEXINPUTS.olatex		= .;$TEXMF/tex/{latex,generic,}//
+TEXINPUTS.cslatex       = .;$TEXMF/tex/{cslatex,csplain,latex,generic,}//
+TEXINPUTS.latex         = .;$TEXMF/tex/{latex,generic,}//
+TEXINPUTS.latex209      = .;$TEXMF/tex/{latex209,generic,latex,}//
+TEXINPUTS.olatex        = .;$TEXMF/tex/{latex,generic,}//
 
 % MLTeX.
-TEXINPUTS.frlatex	   = .;$TEXMF/tex/{french,latex,generic,}//
-TEXINPUTS.frtex		 = .;$TEXMF/tex/{french,plain,generic,}//
-TEXINPUTS.mllatex	   = .;$TEXMF/tex/{latex,generic,}//
-TEXINPUTS.mltex		 = .;$TEXMF/tex/{plain,generic,}//
+TEXINPUTS.frlatex       = .;$TEXMF/tex/{french,latex,generic,}//
+TEXINPUTS.frtex         = .;$TEXMF/tex/{french,plain,generic,}//
+TEXINPUTS.mllatex       = .;$TEXMF/tex/{latex,generic,}//
+TEXINPUTS.mltex         = .;$TEXMF/tex/{plain,generic,}//
 
 % e-TeX.
-TEXINPUTS.elatex		= .;$TEXMF/tex/{latex,generic,}//
-TEXINPUTS.etex		  = .;$TEXMF/tex/{plain,generic,}//
+TEXINPUTS.elatex        = .;$TEXMF/tex/{latex,generic,}//
+TEXINPUTS.etex          = .;$TEXMF/tex/{plain,generic,}//
 
 % pdfTeX.
-TEXINPUTS.pdfcslatex	= .;$TEXMF/tex/{cslatex,csplain,latex,generic,}//
-TEXINPUTS.pdfcsplain	= .;$TEXMF/tex/{csplain,plain,generic,}//
-TEXINPUTS.pdflatex	  = .;$TEXMF/tex/{latex,generic,}//
-TEXINPUTS.pdfmex		= .;$TEXMF/tex/{mex,plain,generic,}//
-TEXINPUTS.utf8mex	   = .;$TEXMF/tex/{mex,plain,generic,}//
-TEXINPUTS.pdftex		= .;$TEXMF/tex/{plain,generic,}//
-TEXINPUTS.pdftexinfo	= .;$TEXMF/tex/{texinfo,plain,generic,}//
-TEXINPUTS.pdfamstex	 = .;$TEXMF/tex/{amstex,plain,generic,}//
+TEXINPUTS.pdfcslatex    = .;$TEXMF/tex/{cslatex,csplain,latex,generic,}//
+TEXINPUTS.pdfcsplain    = .;$TEXMF/tex/{csplain,plain,generic,}//
+TEXINPUTS.pdflatex      = .;$TEXMF/tex/{latex,generic,}//
+TEXINPUTS.pdfmex        = .;$TEXMF/tex/{mex,plain,generic,}//
+TEXINPUTS.utf8mex       = .;$TEXMF/tex/{mex,plain,generic,}//
+TEXINPUTS.pdftex        = .;$TEXMF/tex/{plain,generic,}//
+TEXINPUTS.pdftexinfo    = .;$TEXMF/tex/{texinfo,plain,generic,}//
+TEXINPUTS.pdfamstex     = .;$TEXMF/tex/{amstex,plain,generic,}//
 
 % pdfeTeX.
-TEXINPUTS.pdfelatex	 = .;$TEXMF/tex/{latex,generic,}//
-TEXINPUTS.pdfetex	   = .;$TEXMF/tex/{plain,generic,}//
+TEXINPUTS.pdfelatex     = .;$TEXMF/tex/{latex,generic,}//
+TEXINPUTS.pdfetex       = .;$TEXMF/tex/{plain,generic,}//
 
 % LuaTeX.
-TEXINPUTS.luatex		= .;$TEXMF/tex/{luatex,plain,generic,}//
-TEXINPUTS.luajittex	 = .;$TEXMF/tex/{luatex,plain,generic,}//
-TEXINPUTS.dviluatex	 = .;$TEXMF/tex/{luatex,plain,generic,}//
-TEXINPUTS.lualatex	  = .;$TEXMF/tex/{lualatex,latex,luatex,generic,}//
+TEXINPUTS.luatex        = .;$TEXMF/tex/{luatex,plain,generic,}//
+TEXINPUTS.luajittex     = .;$TEXMF/tex/{luatex,plain,generic,}//
+TEXINPUTS.dviluatex     = .;$TEXMF/tex/{luatex,plain,generic,}//
+TEXINPUTS.lualatex      = .;$TEXMF/tex/{lualatex,latex,luatex,generic,}//
 TEXINPUTS.luajitlatex   = .;$TEXMF/tex/{lualatex,latex,luatex,generic,}//
 TEXINPUTS.dvilualatex   = .;$TEXMF/tex/{lualatex,latex,luatex,generic,}//
 
 % XeTeX.
-TEXINPUTS.xelatex	   = .;$TEXMF/tex/{xelatex,latex,xetex,generic,}//
-TEXINPUTS.xeplain	   = .;$TEXMF/tex/{xeplain,eplain,plain,xetex,generic,}//
-TEXINPUTS.xetex		 = .;$TEXMF/tex/{xetex,plain,generic,}//
+TEXINPUTS.xelatex       = .;$TEXMF/tex/{xelatex,latex,xetex,generic,}//
+TEXINPUTS.xeplain       = .;$TEXMF/tex/{xeplain,eplain,plain,xetex,generic,}//
+TEXINPUTS.xetex         = .;$TEXMF/tex/{xetex,plain,generic,}//
 
 % Omega / Aleph.
-TEXINPUTS.aleph		 = .;$TEXMF/tex/{plain,generic,}//
-TEXINPUTS.elambda	   = .;$TEXMF/tex/{lambda,latex,generic,}//
-TEXINPUTS.eomega		= .;$TEXMF/tex/{plain,generic,}//
-TEXINPUTS.lambda		= .;$TEXMF/tex/{lambda,latex,generic,}//
-TEXINPUTS.lamed		 = .;$TEXMF/tex/{lambda,latex,generic,}//
-TEXINPUTS.omega		 = .;$TEXMF/tex/{plain,generic,}//
+TEXINPUTS.aleph         = .;$TEXMF/tex/{plain,generic,}//
+TEXINPUTS.elambda       = .;$TEXMF/tex/{lambda,latex,generic,}//
+TEXINPUTS.eomega        = .;$TEXMF/tex/{plain,generic,}//
+TEXINPUTS.lambda        = .;$TEXMF/tex/{lambda,latex,generic,}//
+TEXINPUTS.lamed         = .;$TEXMF/tex/{lambda,latex,generic,}//
+TEXINPUTS.omega         = .;$TEXMF/tex/{plain,generic,}//
 
 % p(La)TeX.
-TEXINPUTS.ptex		  = .;$TEXMF/tex/{ptex,plain,generic,}//
-TEXINPUTS.platex		= .;$TEXMF/tex/{platex,latex,generic,}//
+TEXINPUTS.ptex          = .;$TEXMF/tex/{ptex,plain,generic,}//
+TEXINPUTS.platex        = .;$TEXMF/tex/{platex,latex,generic,}//
 
 % epTeX, and for pmpost.
-TEXINPUTS.eptex		 = .;$TEXMF/tex/{ptex,plain,generic,}//
+TEXINPUTS.eptex         = .;$TEXMF/tex/{ptex,plain,generic,}//
 TEX.pmpost = eptex
 
 % p(La)TeX-ng
@@ -245,35 +245,35 @@ TEXINPUTS.euptex  = .;$TEXMF/tex/{uptex,ptex,plain,generic,}//
 TEX.upmpost = euptex
 
 % pBibTeX bibliographies and style files.
-BIBINPUTS.pbibtex	   = .;$TEXMF/{pbibtex,bibtex}/bib//
-BSTINPUTS.pbibtex	   = .;$TEXMF/{pbibtex,bibtex}/bst//
+BIBINPUTS.pbibtex       = .;$TEXMF/{pbibtex,bibtex}/bib//
+BSTINPUTS.pbibtex       = .;$TEXMF/{pbibtex,bibtex}/bst//
 
 % upBibTeX bibliographies and style files.
-BIBINPUTS.upbibtex	  = .;$TEXMF/{upbibtex,pbibtex,bibtex}/bib//
-BSTINPUTS.upbibtex	  = .;$TEXMF/{upbibtex,pbibtex,bibtex}/bst//
+BIBINPUTS.upbibtex      = .;$TEXMF/{upbibtex,pbibtex,bibtex}/bib//
+BSTINPUTS.upbibtex      = .;$TEXMF/{upbibtex,pbibtex,bibtex}/bst//
 
 % ConTeXt.
-TEXINPUTS.context	   = .;$TEXMF/tex/{context,plain,generic,}//
+TEXINPUTS.context       = .;$TEXMF/tex/{context,plain,generic,}//
 
 % jadetex.
-TEXINPUTS.jadetex	   = .;$TEXMF/tex/{jadetex,latex,generic,}//
-TEXINPUTS.pdfjadetex	= .;$TEXMF/tex/{jadetex,latex,generic,}//
+TEXINPUTS.jadetex       = .;$TEXMF/tex/{jadetex,latex,generic,}//
+TEXINPUTS.pdfjadetex    = .;$TEXMF/tex/{jadetex,latex,generic,}//
 
 % XMLTeX.
-TEXINPUTS.xmltex		= .;$TEXMF/tex/{xmltex,latex,generic,}//
-TEXINPUTS.pdfxmltex	 = .;$TEXMF/tex/{xmltex,latex,generic,}//
+TEXINPUTS.xmltex        = .;$TEXMF/tex/{xmltex,latex,generic,}//
+TEXINPUTS.pdfxmltex     = .;$TEXMF/tex/{xmltex,latex,generic,}//
 
 % Miscellany, no longer built.
-TEXINPUTS.lamstex	   = .;$TEXMF/tex/{lamstex,plain,generic,}//
-TEXINPUTS.lollipop	  = .;$TEXMF/tex/{lollipop,plain,generic,}//
-TEXINPUTS.frpdflatex	= .;$TEXMF/tex/{french,latex,generic,}//
-TEXINPUTS.frpdftex	  = .;$TEXMF/tex/{french,plain,generic,}//
+TEXINPUTS.lamstex       = .;$TEXMF/tex/{lamstex,plain,generic,}//
+TEXINPUTS.lollipop      = .;$TEXMF/tex/{lollipop,plain,generic,}//
+TEXINPUTS.frpdflatex    = .;$TEXMF/tex/{french,latex,generic,}//
+TEXINPUTS.frpdftex      = .;$TEXMF/tex/{french,plain,generic,}//
 
 % Earlier entries override later ones, so put this generic one last.
-TEXINPUTS			   = .;$TEXMF/tex/{$progname,generic,}//
+TEXINPUTS               = .;$TEXMF/tex/{$progname,generic,}//
 
 % ttf2tfm.
-TTF2TFMINPUTS =				 .;$TEXMF/ttf2pk//
+TTF2TFMINPUTS =                 .;$TEXMF/ttf2pk//
 
 % Metafont, MetaPost inputs.
 MFINPUTS = .;$TEXMF/metafont//;{$TEXMF/fonts,$VARTEXFONTS}/source//
@@ -617,10 +617,10 @@ TEXMF_RESTRICTED_SCRIPTS = \
 % Do we allow TeX \input or \openin (openin_any), or \openout
 % (openout_any) on filenames starting with `.' (e.g., .rhosts) or
 % outside the current tree (e.g., /etc/passwd)?
-% a (any)		: any file can be opened.
+% a (any)        : any file can be opened.
 % r (restricted) : disallow opening dot files
 % p (paranoid)   : as `r' and disallow going to parent directories, and
-%				  restrict absolute paths to be under $TEXMFOUTPUT.
+%                  restrict absolute paths to be under $TEXMFOUTPUT.
 openin_any = a
 openout_any = p
 
@@ -680,7 +680,7 @@ TEX.pmpost = eptex
 % interactive `e' option.  %d is replaced by the line number and %s by
 % the current filename.  The default is specified at compile-time, and
 % we let that stay in place since different platforms like different values.
-%TEXEDIT = vi +%d '%s'					% default for Unix
+%TEXEDIT = vi +%d '%s'                    % default for Unix
 %TEXEDIT = texworks --position=+%d "%s"   % default for Windows
 %MFEDIT = ${TEXEDIT}
 %MPEDIT = ${TEXEDIT}
@@ -731,8 +731,8 @@ texmf_casefold_search = 1
 % For the vast majority of documents, 60000 or less will do.
 %
 main_memory = 5000000 % words of inimemory available; also applies to inimf&mp
-extra_mem_top = 0	 % extra high memory for chars, tokens, etc.
-extra_mem_bot = 0	 % extra low memory for boxes, glue, breakpoints, etc.
+extra_mem_top = 0     % extra high memory for chars, tokens, etc.
+extra_mem_bot = 0     % extra low memory for boxes, glue, breakpoints, etc.
 
 % ConTeXt needs lots of memory.
 extra_mem_top.context = 2000000
@@ -772,19 +772,19 @@ buf_size = 200000
 %
 trie_size = 1000000
 
-hyph_size = 8191		% prime number of hyphenation exceptions, >610, <32767.
-						% http://primes.utm.edu/curios/page.php/8191.html
-nest_size = 500		 % simultaneous semantic levels (e.g., groups)
-max_in_open = 15		% simultaneous input files and error insertions, 
-						% also applies to MetaPost
-param_size = 10000	  % simultaneous macro parameters, also applies to MP
-save_size  = 100000	 % for saving values outside current group
-stack_size = 5000	   % simultaneous input sources
+hyph_size = 8191        % prime number of hyphenation exceptions, >610, <32767.
+                        % http://primes.utm.edu/curios/page.php/8191.html
+nest_size = 500         % simultaneous semantic levels (e.g., groups)
+max_in_open = 15        % simultaneous input files and error insertions, 
+                        % also applies to MetaPost
+param_size = 10000      % simultaneous macro parameters, also applies to MP
+save_size  = 100000     % for saving values outside current group
+stack_size = 5000       % simultaneous input sources
 
 % These are Omega-specific.
 ocp_buf_size = 500000   % character buffers for ocp filters.
 ocp_stack_size = 10000  % stacks for ocp computations.
-ocp_list_size = 1000	% control for multiple ocps.
+ocp_list_size = 1000    % control for multiple ocps.
 
 % These work best if they are the same as the I/O buffer size, but it
 % doesn't matter much.  Must be a multiple of 8.
@@ -792,7 +792,7 @@ dvi_buf_size = 16384 % TeX
 gf_buf_size = 16384  % MF
 
 % It's probably inadvisable to change these. At any rate, we must have:
-% 45 < error_line	  < 255;
+% 45 < error_line      < 255;
 % 30 < half_error_line < error_line - 15;
 % 60 <= max_print_line;
 % These apply to TeX, Metafont, and MetaPost.
