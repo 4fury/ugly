@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>otter-browser</Name>
+		<Homepage>https://otter-browser.org/</Homepage>
+		<Packager>
+			<Name>Stefan Gronewold (groni)</Name>
+			<Email>groni@pisilinux.org</Email>
+		</Packager>
+		<License>GPL-3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>network.web</PartOf>
+		<Summary>Otter-Browser Controlled by the user, not vice versa.</Summary>
+		<Description>Otter Browser aims to recreate the best aspects of the classic Opera (12.x) UI using Qt5.</Description>
+		<Archive sha1sum="3ab9068b6032efa469c0952b0a18c9e60dfa2a9f" type="targz">
+			https://github.com/OtterBrowser/otter-browser/archive/v1.0.02.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cmake</Dependency>
+			<Dependency>qt5-svg-devel</Dependency>
+			<Dependency>hunspell-devel</Dependency>
+			<Dependency>qt5-webkit-devel</Dependency>
+			<Dependency>qt5-webengine-devel</Dependency>
+			<Dependency>qt5-multimedia-devel</Dependency>
+			<Dependency>qt5-xmlpatterns-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>otter-browser</Name>
+		<RuntimeDependencies>
+			<Dependency>qt5-svg</Dependency>
+			<Dependency>hunspell</Dependency>
+			<Dependency>qt5-webkit</Dependency>
+			<Dependency>qt5-webengine</Dependency>
+			<Dependency>qt5-multimedia</Dependency>
+			<Dependency>qt5-xmlpatterns</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share</Path>
+			<Path fileType="man">/usr/share/man/man1</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="2">
+			<Date>2020-12-31</Date>
+			<Version>1.0.02</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="1">
+			<Date>2020-07-06</Date>
+			<Version>1.0.01</Version>
+			<Comment>First Release</Comment>
+			<Name>Erkan IŞIK</Name>
+			<Email>erkanisik@pisilinux.org</Email>
+		</Update>
+	</History>
+</PISI>
+
