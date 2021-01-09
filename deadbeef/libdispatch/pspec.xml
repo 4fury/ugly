@@ -19,28 +19,39 @@
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
 			<Dependency>llvm-clang</Dependency>
-			<!-- <Dependency>compiler-rt</Dependency> -->
+			<Dependency>llvm-clang-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
 			<Patch level="0">avoid-libkqueue.patch</Patch>
 			<Patch level="0">remove-werror.patch</Patch>
-			<!-- <Patch level="0">system-blocksruntime.patch</Patch> -->
 		</Patches>
 	</Source>
 
 	<Package>
 		<Name>libdispatch</Name>
 		<RuntimeDependencies>
-			<Dependency>compiler-rt</Dependency>
+			<!-- <Dependency></Dependency> -->
 		</RuntimeDependencies>
 		<Files>
-			<Path fileType="all">/</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>libdispatch-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">libdispatch</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
 		</Files>
 	</Package>
 
 	<History>
 		<Update release="1">
-			<Date>2020-09-27</Date>
+			<Date>2020-12-31</Date>
 			<Version>5.3</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
